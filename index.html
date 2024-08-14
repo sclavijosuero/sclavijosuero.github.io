@@ -1,7 +1,114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<body>
-<h1>Sebastian Clavijo Suero</h1>
-<p>Page under construction.</p>
-</body>
+  <head>
+    <!-- Page setup -->
+    <meta charset="utf-8">
+    <title>Sebastian Clavijo Suero - Personal Website</title>
+    <meta name="description" content="Sebastian Clavijo Suero website qa test automation testing blogs blogger cypress plugins accessibility">
+    <meta name="author" content="Engineer in Computer Science, Staff Quality Assurance Engineer">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+  
+    <!-- Stylesheets -->
+    <!-- Reset default styles and add support for google fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+   
+    <!-- Custom styles -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>    
+
+    <!-- Want to add Bootstrap? -->
+    <!-- Visit: https://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
+    
+  </head>
+  
+  <body>
+
+    <header id="header">
+      <img src="images/pic-draw.jpg">
+      <h1>Sebastian Clavijo Suero</h1>
+      <h3>Engineer in Computer Science | Staff Quality Assurance Engineer</h3>
+      
+      <!-- Menu link fragment #id should match a div id. Example: <a href="#home"> links to <div id="home"></div>  -->
+      <ul class="main-menu">
+        <li><a href="#about">about</a></li>
+        <li><a href="#blog">blog</a></li>
+        <li><a href="#plugins">plugins</a></li>
+      </ul>                 
+    </header>
+   
+    <div id="container">
+      <div class="inner">
+        <div id="content"> 
+          
+          <div id="about" class="content-region hide">
+            <h2>About</h2>
+            <p>
+              Passionate about quality products and maps.
+              <br>
+              <li>Test Automation</li>
+              <li>QA Blogger</li>
+              <li>Cypress Independent Contributor</li>
+              <li>Cypress Plugin-ator 😎</li>
+              <li>Accessibility</li>
+              <li>Product Development</li>
+              <li>GIS Devotee</li>
+            </p>
+            <h2>Projects</h2>
+            <p>
+              <a href="https://github.com/sclavijosuero" target="_blank">https://github.com/sclavijosuero</a>
+              <br>
+              <a href="https://www.npmjs.com/~sclavijosuero" target="_blank">https://www.npmjs.com/~sclavijosuero</a>
+            <br>
+            <p class="quote">
+              <i>'I believe I have worked in nearly every role within the world of software and product development: analyst, developer, support, consultant, software engineer, tech lead, and product manager.
+                <br>
+                But one day, I had a realization... Sometimes, you need to reinvent yourself to rediscover your true self.
+                <br>
+                <b>That's how I became a Software QA Engineer.'</b></i>
+                ― Myself
+            </p>
+          </div>
+          
+          <div id="blog" class="content-region hide">
+            <h2>Blog</h2>
+            <p>
+              Check out all my articles in my blog <a href="https://dev.to/sebastianclavijo" target="_blank">https://dev.to/sebastianclavijo</a>.
+            </p>
+            <h3>Articles</h3>
+            <ul id="articles" class="articles-list">
+            </ul>
+          </div>
+          
+          <div id="plugins" class="content-region hide">
+            <h2>Plugins</h2>
+            <ul class="plugins-list">
+              <li><a href="https://github.com/sclavijosuero/wick-a11y" target="_blank">wick-a11y</a>
+                <br>Cypress plugin for performing configurable Accessibility tests using AXE. Flawless integration in Cypress with violations shown graphically on the web page and the Cypress log, and generating HTML document with violations details and screenshot.
+              </li>
+              <li><a href="https://github.com/sclavijosuero/cypress-ajv-schema-validator" target="_blank">cypress-ajv-schema-validator</a>
+                <br>Lightweight JSON Schema validator for Cypress using AJV.
+              </li>
+              <li><a href="https://github.com/sclavijosuero/how-to-create-a-cypress-plugin" target="_blank">how-to-create-a-cypress-plugin</a>
+                <br>Example of how to create a Cypress Plugin from scratch.
+              </li>
+            </up>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <footer>  
+      <a href="https://www.linkedin.com/in/sebastianclavijosuero/" target="_blank">https://www.linkedin.com/in/sebastianclavijosuero/</a>
+
+    </footer>
+    
+    <!-- Load additional JS scripts here -->
+    <script type="text/javascript" src="scripts/script.js"></script>
+    
+  </body>
 </html>
