@@ -6,7 +6,7 @@
   <title>Sebastian Clavijo Suero - Personal Website</title>
   <meta name="description" content="Sebastian Clavijo Suero website qa test automation testing blogs blogger cypress plugins accessibility">
   <meta name="author" content="Engineer in Computer Science, Staff Quality Assurance Engineer">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" type="image/png" href="images/favicon.png">
 
   <!-- Stylesheets -->
@@ -30,7 +30,7 @@
 <body>
 
   <header id="header">
-    <div class="profile">
+    <div class="profile" role="banner">
       <img alt="profile picture" class="profile-picture" src="images/pic-draw.jpg">
       <div class="profile-text">
         <h1>Sebastian Clavijo Suero</h1>
@@ -40,14 +40,14 @@
     </div>
 
     <!-- Menu link fragment #id should match a div id. Example: <a href="#home"> links to <div id="home"></div>  -->
-    <ul class="main-menu">
+    <ul class="main-menu" role="navigation">
       <li><a href="#about">about</a></li>
       <li><a href="#blog">blog</a></li>
       <li><a href="#plugins">plugins</a></li>
     </ul>
   </header>
 
-  <div id="container">
+  <div id="container" role="main">
     <div class="inner">
       <div id="content">
 
@@ -119,7 +119,7 @@
     </div>
   </div>
 
-  <footer>
+  <footer role="contentinfo">
     <a href="https://www.linkedin.com/in/sebastianclavijosuero/"
       target="_blank">https://www.linkedin.com/in/sebastianclavijosuero/</a>
 
