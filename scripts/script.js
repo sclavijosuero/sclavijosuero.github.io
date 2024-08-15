@@ -32,13 +32,19 @@
 
 const loadArticles = () => {
   // Cypress DEV.TO Articles
-  fetch('https://dev.to/search/feed_content?per_page=50&page=0&user_id=1453622&class_name=Article&sort_by=published_at&sort_direction=desc&approved=')
+  fetch('https://dev.to/api/articles?username=sebastianclavijo')
   .then(response => response.json())
   .then(articles => {
     const $articles = $('#articles');
     $articles.empty();
-    articles.result.forEach(article => {
-      $articles.append($(`<li><a href="https://dev.to${article.path}" target="_blank">${article.title}</a></li>`));
+    articles.forEach(article => {
+      $articles.append($(`<li class="article">
+        <a href="${article.url}" target="_blank">
+          <img class="article-img" src="${article.cover_image}">
+          <div class="article-title">${article.title}</div>
+        </a>
+        <div class="article-description">${article.description}</div>
+      </li>`));
     })
   })
 }
