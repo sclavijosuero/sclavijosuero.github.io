@@ -40,7 +40,7 @@ const loadArticles = () => {
     articles.forEach(article => {
       $articles.append($(`<li class="article">
         <a href="${article.url}" target="_blank">
-          <img class="article-img" src="${article.cover_image}">
+          <img alt="cover image of the blog post ${article.title}" class="article-img" src="${article.cover_image}">
           <div class="article-title">${article.title}</div>
         </a>
         <div class="article-description">${article.description}</div>
