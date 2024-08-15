@@ -40,11 +40,13 @@
     </div>
 
     <!-- Menu link fragment #id should match a div id. Example: <a href="#home"> links to <div id="home"></div>  -->
-    <ul class="main-menu" role="navigation">
-      <li><a href="#about">about</a></li>
-      <li><a href="#blog">blog</a></li>
-      <li><a href="#plugins">plugins</a></li>
-    </ul>
+    <div role="navigation">
+      <ul class="main-menu" role="list">
+        <li><a href="#about">about</a></li>
+        <li><a href="#blog">blog</a></li>
+        <li><a href="#plugins">plugins</a></li>
+      </ul>
+    </div>
   </header>
 
   <div id="container" role="main">
@@ -56,7 +58,7 @@
           <p>
             Passionate about quality products and maps.
             <br>
-            <ul id="skills">
+            <ul id="skills" role="list">
               <li>Test Automation</li>
               <li>QA Blogger</li>
               <li>Cypress Independent Contributor</li>
@@ -96,7 +98,7 @@
 
         <div id="plugins" class="content-region hide">
           <h2>Plugins</h2>
-          <ul class="plugins-list">
+          <ul class="plugins-list" role="list">
             <li><a href="https://github.com/sclavijosuero/wick-a11y" target="_blank">wick-a11y</a>
               <br>Cypress plugin for performing configurable Accessibility tests using AXE. Flawless integration in
               Cypress with violations shown graphically on the web page and the Cypress log, and generating HTML
