@@ -93,7 +93,7 @@ blockquote p:last-child {
  */
 
  .title {
-  font-size: 2.7rem; line-height: 1.3;  letter-spacing: -.17rem; margin: 0px;
+  font-size: 2.6rem; line-height: 1.3;  letter-spacing: -.17rem; margin: 0px;
  }
 
  .profile-picture {
@@ -101,9 +101,6 @@ blockquote p:last-child {
   margin-right: 20px;
 }
 
-.profile-text {
-  margin-left: 20px;
-}
 
 /* Full size background image */
 html, #container, .inner { background-color:transparent;}
