@@ -99,13 +99,15 @@ blockquote p:last-child {
  .profile-picture {
   float: left;
   margin-right: 20px;
+  width: 150px;
+  height: 150px
 }
 
 
 /* Full size background image */
 html, #container, .inner { background-color:transparent;}
 html {
-  background:url(../images/background.jpg) center center no-repeat fixed;
+  background:url(../images/background.webp) center center no-repeat fixed;
   background-size:cover;
 }
 body {
