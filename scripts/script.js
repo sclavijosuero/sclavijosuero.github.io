@@ -491,37 +491,37 @@ function renderFallbackPlugins(container) {
     const fallbackPlugins = [
         {
             name: 'wick-a11y',
-            description: 'Cypress plugin for performing configurable Accessibility tests using AXE. Features detailed HTML reports with violation details and fix instructions, voice support for audible feedback at suite/test/violation/DOM levels, shows violations directly in the webpage with an interactive console to interact with violations, and flawless integration in Cypress.',
-            version: '1.4.0',
+            description: 'Cypress plugin for configurable accessibility analysis supporting WCAG 2.2 (A–AAA). It provides a detailed list of violations in the Cypress log, visual feedback directly in the Cypress runner, and generates a comprehensive, severity-based HTML report that includes per-violation details, fix guidance, and a screenshot with interactive elements for each accessibility issue. The plugin uses axe-core and cypress-axe to deliver comprehensive accessibility testing.',
+            version: '2.5.0',
             githubUrl: 'https://github.com/sclavijosuero/wick-a11y',
             npmUrl: 'https://www.npmjs.com/package/wick-a11y',
             icon: 'fas fa-universal-access',
-            pluginImage: null
+            pluginImage: 'https://raw.githubusercontent.com/sclavijosuero/wick-a11y/main/images/overview.png'
         },
         {
             name: 'cypress-schema-validator',
-            description: 'Modern JSON Schema validator for Cypress using both AJV and Zod. Successor to cypress-ajv-schema-validator with enhanced features and better performance.',
-            version: '2.0.0',
+            description: 'Cypress plugin for API schema validation. It leverages the core-ajv-schema-validator powered by the AJV package (for plain JSON schemas, Swagger documents, and OpenAPI schemas) as well as the core-zod-schema-validator powered by the ZOD package (for Zod schemas).',
+            version: '1.0.1',
             githubUrl: 'https://github.com/sclavijosuero/cypress-schema-validator',
             npmUrl: 'https://www.npmjs.com/package/cypress-schema-validator',
             icon: 'fas fa-check-circle',
-            pluginImage: null
+            pluginImage: 'https://raw.githubusercontent.com/sclavijosuero/cypress-schema-validator/main/videos/overview.gif'
         },
         {
             name: 'pw-api-plugin',
-            description: 'Playwright plugin for API testing that supports Playwright native API and Axios. Displays API request and response details in Playwright UI, the Trace Viewer, and HTML test reports.',
-            version: '1.0.0',
+            description: 'Playwright plugin for comprehensive API testing and result presentation using the Playwright UI, Trace Viewer, and HTML Report. It significantly aids debugging processes and supports both Playwright native API and Axios requests.',
+            version: '2.1.0',
             githubUrl: 'https://github.com/sclavijosuero/pw-api-plugin',
             npmUrl: 'https://www.npmjs.com/package/pw-api-plugin',
             icon: 'fas fa-theater-masks',
             pluginImage: 'https://raw.githubusercontent.com/sclavijosuero/pw-api-plugin/main/videos/overview.gif'
         },
         {
-            name: 'playwright-ajv-schema-validator',
-            description: 'Playwright plugin for API schema validation using AJV. Integrates seamlessly with the pw-api-plugin to bring the power of schema validation to Playwright testing.',
+            name: 'playwright-schema-validator',
+            description: 'Playwright plugin for API schema validation. It leverages the core-ajv-schema-validator powered by the AJV package (for plain JSON schemas, Swagger documents, and OpenAPI schemas) as well as the core-zod-schema-validator powered by the ZOD package (for Zod schemas). It delivers results in a clear, user-friendly format, simplifying the process of identifying and addressing schema issues.',
             version: '1.0.0',
-            githubUrl: 'https://github.com/sclavijosuero/playwright-ajv-schema-validator',
-            npmUrl: 'https://www.npmjs.com/package/playwright-ajv-schema-validator',
+            githubUrl: 'https://github.com/sclavijosuero/playwright-schema-validator',
+            npmUrl: 'https://www.npmjs.com/package/playwright-schema-validator',
             icon: 'fas fa-theater-masks',
             pluginImage: 'https://raw.githubusercontent.com/sclavijosuero/playwright-ajv-schema-validator/main/videos/overview.gif'
         },
@@ -537,7 +537,7 @@ function renderFallbackPlugins(container) {
         {
             name: 'core-zod-schema-validator',
             description: 'Core Zod schema validation library that powers multiple testing framework integrations. Framework-agnostic TypeScript-first schema validation.',
-            version: '1.0.0',
+            version: '1.0.1',
             githubUrl: 'https://github.com/sclavijosuero/core-zod-schema-validator',
             npmUrl: 'https://www.npmjs.com/package/core-zod-schema-validator',
             icon: 'fas fa-cogs',
@@ -546,10 +546,20 @@ function renderFallbackPlugins(container) {
         {
             name: 'cypress-ajv-schema-validator',
             description: 'Legacy JSON Schema validator for Cypress using AJV. Now replaced by cypress-schema-validator for new projects.',
-            version: '1.2.0',
+            version: '2.0.2',
             githubUrl: 'https://github.com/sclavijosuero/cypress-ajv-schema-validator',
             npmUrl: 'https://www.npmjs.com/package/cypress-ajv-schema-validator',
             icon: 'fas fa-archive',
+            pluginImage: null,
+            isLegacy: true
+        },
+        {
+            name: 'playwright-ajv-schema-validator',
+            description: 'Playwright plugin for API schema validation against plain JSON schemas, Swagger schema documents. Built on the robust core-ajv-schema-validator plugin and powered by the Ajv JSON Schema Validator, it delivers results in a clear, user-friendly format, simplifying the process of identifying and addressing schema issues.',
+            version: '1.0.2',
+            githubUrl: 'https://github.com/sclavijosuero/playwright-ajv-schema-validator',
+            npmUrl: 'https://www.npmjs.com/package/playwright-ajv-schema-validator',
+            icon: 'fas fa-theater-masks',
             pluginImage: null,
             isLegacy: true
         }
