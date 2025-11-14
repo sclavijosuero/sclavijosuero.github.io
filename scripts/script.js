@@ -29,6 +29,363 @@
   
 })(jQuery);
 
+const GENERIC_LINKS = {
+    cypressNewsletter: 'https://go.cypress.io/cypress-newsletter'
+};
+
+const COMMUNITY_FEATURES = [
+    {
+        title: 'Once upon a time a cy.session()…',
+        articleUrl: 'https://dev.to/sebastianclavijo/once-upon-a-time-a-cysession-1880',
+        outlets: [
+            { name: 'Test Guild News Show (April 8, 2024)', url: 'https://www.linkedin.com/posts/joecolantonio_devsecops-automationtesting-softwaretesting-activity-7183134856497786880-WKZW/' },
+            { name: 'TestGuild Automation in DevSecOps News (April 12, 2024)', url: 'https://www.linkedin.com/pulse/first-ai-software-tester-you-replaced-more-joe-colantonio-r7nxe/' }
+        ]
+    },
+    {
+        title: 'What do a Cypress fixture, a cheese pizza, and the number φ (Phi) have in common?',
+        articleUrl: 'https://dev.to/sebastianclavijo/what-do-the-number-ph-phi-a-cheese-pizza-pie-and-a-cypress-fixture-have-in-common-3c3c',
+        outlets: []
+    },
+    {
+        title: 'And the nominees for “Best Cypress Helper” are: Utility Function, Custom Command, Custom Query, Task, and External Plugin',
+        articleUrl: 'https://dev.to/sebastianclavijo/and-the-nominees-for-best-cypress-helper-are-utility-function-custom-command-custom-query-task-and-external-plugin-3bb5',
+        outlets: [
+            { name: 'Cypress.io Newsletter (April 26, 2024)', url: GENERIC_LINKS.cypressNewsletter },
+            { name: 'Software Testing Weekly Issue #217 (April 29, 2024)', url: 'https://softwaretestingweekly.com/issues/217' }
+        ]
+    },
+    {
+        title: 'The most abused Cypress command ever: cy.wait(TIME)',
+        articleUrl: 'https://dev.to/sebastianclavijo/the-most-abused-cypress-command-ever-cywaittime-15e0',
+        outlets: [
+            { name: 'Software Testing Notes Issue #141 (Aug 21, 2024)', url: 'https://softwaretestingnotes.substack.com/p/issue-141-software-testing-notes' },
+            { name: 'Coding Jag by LamdaTest Issue #206 (Aug 29, 2024)', url: 'https://www.linkedin.com/pulse/why-you-asking-me-test-lambdatest-ccuxe/?trackingId=yOl20%2B3XQ4mxC8OJJSIx2w%3D%3D' }
+        ]
+    },
+    {
+        title: 'The Quirky Guide to Crafting and Publishing Your Cypress npm Plugin',
+        articleUrl: 'https://dev.to/sebastianclavijo/the-quirky-guide-to-crafting-and-publishing-your-cypress-npm-plugin-2pii',
+        outlets: [
+            { name: 'Cypress.io Newsletter (May 29, 2024)', url: GENERIC_LINKS.cypressNewsletter },
+            { name: 'Software Testing Weekly Issue #221 (May 27, 2024)', url: 'https://softwaretestingweekly.com/issues/221' },
+            { name: 'Cypress.io Newsletter (June 27, 2024)', url: GENERIC_LINKS.cypressNewsletter },
+            { name: 'QA Avenue Issue #18: Software Testing Insights (Aug 22, 2024)', url: 'https://qaavenue.substack.com/p/issue-18-software-testing-insights' }
+        ]
+    },
+    {
+        title: 'CYPRESS-AJV-SCHEMA-VALIDATOR Plugin: The Brave Vigilante for Your API Contracts',
+        articleUrl: 'https://dev.to/sebastianclavijo/cypress-ajv-schema-validator-plugin-the-brave-vigilante-for-your-api-contracts-5cfe',
+        outlets: []
+    },
+    {
+        title: 'WICK-A11Y Cypress Plugin: Your Unstoppable Ally for Smashing Accessibility Barriers, Cool as John Wick!',
+        articleUrl: 'https://dev.to/sebastianclavijo/wick-a11y-cypress-plugin-your-unstoppable-ally-for-smashing-accessibility-barriers-cool-as-john-wick-280a',
+        outlets: [
+            { name: 'Software Testing Notes Issue #141 (Aug 21, 2024)', url: 'https://softwaretestingnotes.substack.com/p/issue-141-software-testing-notes' },
+            { name: 'The Automation Insider Issue 14 Newsletter (Aug 27, 2024)', url: 'https://automationinsider.substack.com/p/the-automation-insider-issue-14?r=zfnsk&utm_campaign=post&utm_medium=web&triedRedirect=true' },
+            { name: 'Software Testing Weekly Issue #235 (Sep 3, 2024)', url: 'https://softwaretestingweekly.com/issues/235' }
+        ]
+    },
+    {
+        title: 'The transition from Product Manager to Software QA Engineer. Reinvent yourself! The Career Journey of Sebastian Clavijo',
+        articleUrl: 'https://www.linkedin.com/pulse/qj10-transition-from-product-manager-qa-engineer-warnakulasooriya-xtcac/?trackingId=nDWkrydRSe%2B3gU8vWfU5Uw%3D%3D',
+        outlets: [
+            { name: 'Quality Insights Newsletter (Aug 21, 2024)', url: 'https://www.linkedin.com/pulse/qj10-transition-from-product-manager-qa-engineer-warnakulasooriya-xtcac/?trackingId=%2FeDnqIiXT5eZHR1FqX5LAg%3D%3D' }
+        ]
+    },
+    {
+        title: 'WICK-A11Y "Chapter" 1.2.1 - Voice Support: The Accessibility Cypress Plugin that Talks More Than John Wick in His Movies',
+        articleUrl: 'https://dev.to/sebastianclavijo/wick-a11y-v121-voice-the-accessibility-cypress-plugin-that-talks-more-than-john-wick-in-his-movies-8c8',
+        outlets: []
+    },
+    {
+        title: 'Dynamic Tests in Cypress: To Loop or Not To Loop',
+        articleUrl: 'https://dev.to/sebastianclavijo/dynamic-tests-in-cypress-to-loop-or-not-to-loop-2g22',
+        outlets: [
+            { name: 'Software Testing Weekly Issue #239 (Oct 2, 2024)', url: 'https://softwaretestingweekly.com/issues/239' },
+            { name: 'Software Testing Notes Issue #145 (Oct 3, 2024)', url: 'https://softwaretestingnotes.substack.com/p/issue-145-software-testing-notes' },
+            { name: 'Cypress News 2024 Part 3 (Oct 14, 2024)', url: 'https://www.dlatesterow.pl/cypress-news-2024-cz-3/' }
+        ]
+    },
+    {
+        title: 'CYPRESS-AJV-SCHEMA-VALIDATOR v1.2.0: Boost Debugging Skills from Vigilante to Superhero with Advanced Schema Error Insights!',
+        articleUrl: 'https://dev.to/sebastianclavijo/cypress-ajv-schema-validator-v120-boost-debugging-skills-from-vigilante-to-superhero-with-advanced-schema-error-insights-1hld',
+        outlets: [
+            { name: 'Software Testing Weekly Issue #241 (Oct 14, 2024)', url: 'https://softwaretestingweekly.com/issues/241' }
+        ]
+    },
+    {
+        title: 'But How Much Abstraction is Still Okay in Cypress? To POM or Not To POM',
+        articleUrl: 'https://dev.to/sebastianclavijo/but-how-much-abstraction-is-still-okay-in-cypress-to-pom-or-not-to-pom-511j',
+        outlets: [
+            { name: 'Software Testing Weekly Issue #242 (Oct 21, 2024)', url: 'https://softwaretestingweekly.com/issues/242' },
+            { name: 'Software Testing Notes Issue #147 (Oct 28, 2024)', url: 'https://softwaretestingnotes.substack.com/p/issue-147-software-testing-notes?utm_source=share&utm_medium=android&r=434g0b&triedRedirect=true' },
+            { name: 'QA Avenue Issue #27: Software Testing Insights (Nov 4, 2024)', url: 'https://qaavenue.substack.com/p/issue-27-software-testing-insights' }
+        ]
+    },
+    {
+        title: "Unlocking the Mystery: Deciphering the Enigmatic Code of URL's Glob Patterns in cy.intercept()",
+        articleUrl: 'https://dev.to/sebastianclavijo/unlocking-the-mystery-deciphering-the-enigmatic-code-of-urls-glob-patterns-in-cyintercept-3mgg',
+        outlets: [
+            { name: 'Critical Continuous Quality: MoT Weekly – Issue 492 (Nov 4, 2024)', url: 'https://www.ministryoftesting.com/newsletter/critical-continuous-quality-mot-weekly-issue-492' }
+        ]
+    },
+    {
+        title: 'Behind the Words: Crafting My Career Transition Story from Product Manager to QA Engineer for Quality Insights Newsletter',
+        articleUrl: 'https://dev.to/sebastianclavijo/behind-the-words-crafting-my-career-transition-story-from-product-manager-to-qa-engineer-for-quality-insights-newsletter-4dge',
+        outlets: []
+    },
+    {
+        title: 'WICK-A11Y VIDEO TUTORIAL: Mastering Accessibility Testing in Cypress',
+        articleUrl: 'https://dev.to/sebastianclavijo/wick-a11y-video-tutorial-mastering-accessibility-testing-in-cypress-3211',
+        outlets: []
+    },
+    {
+        title: 'CYPRESS-AJV-SCHEMA-VALIDATOR VIDEO TUTORIAL: Mastering API Schema Testing in Cypress',
+        articleUrl: 'https://dev.to/sebastianclavijo/cypress-ajv-schema-validator-video-tutorial-mastering-api-schema-testing-in-cypress-78',
+        outlets: []
+    },
+    {
+        title: 'WICK-A11Y 1.4.0: Not Everything Needs to Fail a Test!',
+        articleUrl: 'https://dev.to/sebastianclavijo/wick-a11y-140-not-everything-needs-to-fail-a-test-1pe5',
+        outlets: []
+    },
+    {
+        title: 'My Top 19+1 Favorite Cypress Plugins for Testing with Wick-like Precision!',
+        articleUrl: 'https://dev.to/sebastianclavijo/my-top-191-favorite-cypress-plugins-for-testing-with-wick-like-precision-3fhh',
+        outlets: [
+            { name: 'Software Testing Weekly Issue #259 (Feb 24, 2025)', url: 'https://softwaretestingweekly.com/issues/259' },
+            { name: "How To Pick Cypress Plugins You Can Trust – Gleb Bahmutov's Article", url: 'https://glebbahmutov.com/blog/how-to-pick-cypress-plugins/' }
+        ]
+    },
+    {
+        title: 'The Test Drama (The Opening Salvo): Cypress vs Playwright Installation - The Good, The Bad, and the... Bug-ly!',
+        articleUrl: 'https://dev.to/sebastianclavijo/the-test-drama-the-opening-salvo-cypress-vs-playwright-installation-the-good-the-bad-and-4hm6',
+        outlets: [
+            { name: 'Gateway to the MoTaverse: MoT Weekly – Issue 502 (Jan 27, 2025)', url: 'https://www.linkedin.com/pulse/gateway-motaverse-mot-weekly-issue-502-ministry-of-testing-inl6e/' },
+            { name: "Cypress Tips January 2025 – Gleb Bahmutov's Newsletter", url: 'https://cypresstips.substack.com/p/cypress-tips-january-2025' },
+            { name: 'Trending in Testing Weekly Newsletter #51 (Jan 29, 2025)', url: 'https://trendingintesting.com/trending-in-testing-weekly-newsletter-51/' },
+            { name: 'Software Testing Weekly Issue #258 (Feb 18, 2025)', url: 'https://softwaretestingweekly.com/issues/258?#start' }
+        ]
+    },
+    {
+        title: 'The Test Drama: Cypress vs Playwright - Control Your Tests (Part 2): TAGS & TEST FILTERS',
+        articleUrl: 'https://dev.to/sebastianclavijo/the-test-drama-cypress-vs-playwright-control-your-tests-part-2-tags-test-filters-3kh2',
+        outlets: [
+            { name: 'Software Testing Weekly Issue #269 (May 7, 2025)', url: 'https://softwaretestingweekly.com/issues/269' },
+            { name: 'Coding Jag by LamdaTest Issue #243 (May 15, 2025)', url: 'https://www.linkedin.com/pulse/your-website-truly-accessible-find-out-now-lambdatest-s70yf/?trackingId=4R4mViDFOv0gco%2BOiahXYA%3D%3D' },
+            { name: "Cypress Tips April 2025 – Gleb Bahmutov's Newsletter", url: 'https://cypresstips.substack.com/p/cypress-tips-april-2025' }
+        ]
+    },
+    {
+        title: "The Async Nature of Cypress: Don't Mess with the Timelines in Your Cypress Tests 'Dual-Verse'",
+        articleUrl: 'https://dev.to/sebastianclavijo/the-async-nature-of-cypress-dont-mess-with-the-timelines-in-your-cypress-tests-dual-verse-3ehh',
+        outlets: [
+            { name: 'Software Testing Notes Issue #170 (May 7, 2025)', url: 'https://softwaretestingnotes.substack.com/p/issue-170-software-testing-notes' },
+            { name: 'Cypress.io official YouTube Channel - The Bug Bash: Episode 2 (May 13, 2025)', url: 'https://www.youtube.com/watch?v=zVrpZLStpco' },
+            { name: 'Software Testing Weekly Issue #270 (May 14, 2025)', url: 'https://softwaretestingweekly.com/issues/270' }
+        ]
+    },
+    {
+        title: 'Meet the New CYPRESS-SCHEMA-VALIDATOR: When ZOD Joined Forces with AJV for the Ultimate Validation Duo!',
+        articleUrl: 'https://dev.to/sebastianclavijo/meet-the-new-cypress-schema-validator-when-zod-joined-forces-with-ajv-for-the-ultimate-validation-2o73',
+        outlets: [
+            { name: 'Test Guild News Show (Jun 9, 2025)', url: 'https://www.linkedin.com/posts/joecolantonio_devsecops-automationtesting-softwaretesting-activity-7337877625475919872-033I?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAJfhRkBK-_7FuzGe0IFv3r5Eej4IFAScJM' },
+            { name: 'TestGuild Automation in DevSecOps Newsletter (Jun 14, 2025)', url: 'https://www.linkedin.com/pulse/ai-generate-missing-playwright-tests-postman-more-joe-colantonio-gluie/' },
+            { name: 'Software Testing Weekly Issue #275 (Jun 16, 2025)', url: 'https://softwaretestingweekly.com/issues/275' },
+            { name: 'Coding Jag by LamdaTest Issue #248 (Jun 19, 2025)', url: 'https://www.linkedin.com/pulse/ai-writes-code-so-why-devs-slowing-down-lambdatest-ovpdf/' },
+            { name: 'QA Avenue Issue #32: Software Testing Insights (Jun 23, 2025)', url: 'https://qaavenue.substack.com/p/issue-32-software-testing-insights' },
+            { name: 'Software Testing Notes Issue #182 (Aug 6, 2025)', url: 'https://softwaretestingnotes.substack.com/p/issue-182-software-testing-notes' }
+        ]
+    },
+    {
+        title: "The 'second' most abused (and misused) Cypress command ever: cy.contains()",
+        articleUrl: 'https://dev.to/sebastianclavijo/the-second-most-abused-and-misused-cypress-command-ever-cycontains-126j',
+        outlets: [
+            { name: 'Cypress.io Newsletter July edition (Jul 1, 2025)', url: 'https://go.cypress.io/cypress-newsletter-july-2025' },
+            { name: 'Software Testing Weekly Issue #277 (Jul 2, 2025)', url: 'https://softwaretestingweekly.com/issues/277' }
+        ]
+    },
+    {
+        title: 'WICK-A11Y v2.3.0: A Dazzling New Report, WCAG 2.2 AAA, and More Goodies',
+        articleUrl: 'https://dev.to/sebastianclavijo/wick-a11y-v230-a-dazzling-new-report-wcag-22-aaa-and-more-goodies-hd0',
+        outlets: [
+            { name: 'Cypress.io Newsletter October edition (Oct 1, 2025)', url: 'https://go.cypress.io/cypress-newsletter-october-2025' }
+        ]
+    }
+];
+
+const NON_LINK_NEWSLETTERS = new Set([
+    'Cypress.io Newsletter (April 26, 2024)',
+    'Cypress.io Newsletter (May 29, 2024)',
+    'Cypress.io Newsletter (June 27, 2024)'
+]);
+
+const PLUGIN_FEATURE_GROUPS = [
+    {
+        name: 'Cypress',
+        items: [
+            {
+                plugin: 'wick-a11y',
+                repoUrl: 'https://github.com/sclavijosuero/wick-a11y',
+                features: [
+                    { name: 'W3C Org - Official Web Accessibility Evaluation Tools List', url: 'https://www.w3.org/WAI/test-evaluate/tools/list/' },
+                    { name: 'Cypress.io Documentation - Accessibility Testing', url: 'https://docs.cypress.io/app/guides/accessibility-testing?ref=cypress-io.ghost.io' },
+                    { name: 'Cypress.io Product Blog - Open Source Accessibility Plugins in Cypress', url: 'https://www.cypress.io/blog/open-source-accessibility-plugins-in-cypress' },
+                    { name: 'testdev.tools - Wick A11y', url: 'https://testdev.tools/wick-a11y/' },
+                    { name: 'TestGuild - Testing Tool Matcher', url: 'https://testguild.com/tools/cypress' },
+                    { name: 'digitala11y.com - Open Source Accessibility Testing Tools Roundup', url: 'https://www.digitala11y.com/open-source-accessibility-tools/' },
+                    { name: 'Test Guild News Show (Jul 8, 2024)', url: 'https://www.linkedin.com/feed/update/urn:li:activity:7216114421041934336/' },
+                    { name: 'Test Guild News Show (Sep 30, 2024) - Voice Feature', url: 'https://www.linkedin.com/feed/update/urn:li:activity:7246557474520989696/' },
+                    { name: 'Test Guild News Show (Nov 11, 2024)', url: 'https://www.linkedin.com/posts/joecolantonio_how-do-you-automate-across-multiple-systems-activity-7261785050751340545-8CM6?utm_source=share&utm_medium=member_desktop' },
+                    { name: "Joan Esquivel Montero - Cypress Accessibility Testing powered by WICK-A11Y", url: 'https://www.youtube.com/watch?v=LVxyJMW6EJw' },
+                    { name: 'Joan Esquivel Montero - Pruebas Automatizadas de Accesibilidad con Cypress + WickA11y', url: 'https://www.youtube.com/watch?v=96Sz2QCXE7I' },
+                    { name: 'Ioan Solderea - European Accessibility Act 2025: Compliance Deadline Nears', url: 'https://www.youtube.com/watch?v=joP3TNdLjF8' },
+                    { name: 'Ioan Solderea - Wick A11y – Cypress Plugin for Automated Accessibility Checks', url: 'https://www.youtube.com/watch?v=tqeZTopcy50' },
+                    { name: "Peter Michael Souza Jr - 20 Things I'd Tell Myself If I Was Learning Cypress for the First Time", url: 'https://www.petermsouzajr.com/blog/20-things-id-tell-myself-if-i-was-learning-cypress-for-the-first-time' },
+                    { name: 'TestGuild Automation in DevSecOps Newsletter (Jul 12, 2024)', url: 'https://www.linkedin.com/pulse/ai-etl-testing-shift-left-dead-cypress-a11y-more-joe-colantonio-f6l0e/' },
+                    { name: 'The Automation Insider Issue 13 Newsletter', url: 'https://automationinsider.substack.com/p/the-automation-insider-issue-13?r=zfnsk&utm_campaign=post&utm_medium=web&triedRedirect=true' },
+                    { name: "Abigail Armijo - Tools for Accessibility Testing", url: 'https://substack.com/home/post/p-142159238' },
+                    { name: 'Cypress Tips September 2024 – Gleb Bahmutov Newsletter', url: 'https://cypresstips.substack.com/p/cypress-tips-september-2024' },
+                    { name: 'TestGuild Automation in DevSecOps Newsletter (Oct 4, 2024)', url: 'https://www.linkedin.com/pulse/test-accessibility-event-playwright-github-actions-llm-joe-colantonio-ippqe/' },
+                    { name: "James Wadley - Let's talk about wick-a11y…", url: 'https://dev.to/w4dd325/lets-talk-about-wick-a11y-1afa' },
+                    { name: 'A11y-evaluation-tools Sheet', url: 'https://docs.google.com/spreadsheets/d/10CTezA0iDdaWggaqxuHawj-5u8YXdZeWBJsIkuvJ364/edit?gid=347324347#gid=347324347' },
+                    { name: 'TestGuild Automation in DevSecOps Newsletter (Nov 15, 2024)', url: 'https://www.linkedin.com/pulse/digital-testing-al-driven-mobile-attacks-plugins-more-joe-colantonio-lpume' },
+                    { name: 'Cypress Tips December 2024 – Gleb Bahmutov Newsletter', url: 'https://cypresstips.substack.com/p/cypress-tips-december-2024' },
+                    { name: 'Ravindre Ramjiawan - Accessibility tools', url: 'https://techhub.iodigital.com/articles/accessibility-tools' },
+                    { name: 'talent500.com - Exploring Open Source Accessibility Plugins in Cypress', url: 'https://talent500.com/blog/open-source-accessibility-plugins-cypress/' },
+                    { name: "Fatih Soysal - WICK-A11Y 1.4.0: Not Everything Needs to Fail the Test!", url: 'https://fatihsoysal.com/blog/wick-a11y-1-4-0-her-seyin-testi-basarisiz-olmasina-gerek-yok/' },
+                    { name: 'testdriver.ai - How to Effectively Use Accessibility Testing Tools in Your Development Process', url: 'https://testdriver.ai/articles/how-to-effectively-use-accessibility-testing-tools-in-your-development-process' },
+                    { name: 'Software Testing Notes Issue #157', url: 'https://softwaretestingnotes.substack.com/p/issue-157-software-testing-notes' },
+                    { name: "Ioan Solderea - Understanding the European Accessibility Act 2025: Compliance is Key", url: 'https://dev.to/cypress/understanding-the-european-accessibility-act-2025-compliance-is-key-3fif' },
+                    { name: 'Ádám Szentiványi - Comparison of Accessibility Tools', url: 'https://prezi.com/p/aklj2f6-bviu/comparison-of-accessibility-tools/' },
+                    { name: 'Vast Green: The Accessibility Improvement Act - BFSG - Conclusion', url: 'https://vast-green.com/bfsg-abschluss/' },
+                    { name: "Gleb Bahmutov - Check Page Accessibility Using wick-a11y Plugin", url: 'https://www.youtube.com/watch?v=G1tpXv0hv0s' }
+                ]
+            },
+            {
+                plugin: 'cypress-ajv-schema-validator',
+                repoUrl: 'https://github.com/sclavijosuero/cypress-ajv-schema-validator',
+                features: [
+                    { name: 'json-schema.org - Schema Tooling Site', url: 'https://json-schema.org/tools?query=&sortBy=name&sortOrder=ascending&groupBy=toolingTypes&licenses=&languages=&drafts=&toolingTypes=' },
+                    { name: 'Cypress.io Product Blog - Elevate Your Cypress Testing: Top 10 Essential Plugins', url: 'https://www.cypress.io/blog/elevate-your-cypress-testing-top-10-essential-plugins?utm_medium=blog&utm_source=social_media&utm_term=linkedin&utm_content=10_plugins' },
+                    { name: 'testdev.tools - cypress-ajv-schema-validator', url: 'https://testdev.tools/cypress-ajv-schema-validator/' },
+                    { name: 'Joan Esquivel Montero - Cypress API Testing: AJV Schema Validator', url: 'https://www.youtube.com/watch?v=SPmJvH5mYaU' },
+                    { name: 'Murat Ozcan - Schema validation using cypress-ajv-schema-validator vs Optic', url: 'https://www.youtube.com/watch?v=ysCADOh9aJU&t=13s' },
+                    { name: 'Murat Ozcan - Demo comparing API e2e vs Schema testing', url: 'https://www.youtube.com/watch?v=ePjcKMq4c2o' },
+                    { name: "Murat Ozcan's Udemy Course - Epic Test Arch.", url: 'https://www.udemy.com/course/epic-test-arch-test-everything-everywhere-all-at-once/?couponCode=NEWYEARCAREER' },
+                    { name: "Peter Michael Souza Jr - 20 Things I'd Tell Myself If I Was Learning Cypress for the First Time", url: 'https://www.petermsouzajr.com/blog/20-things-id-tell-myself-if-i-was-learning-cypress-for-the-first-time' },
+                    { name: 'Software Testing Notes Issue #157', url: 'https://softwaretestingnotes.substack.com/p/issue-157-software-testing-notes' },
+                    { name: 'S. Chathurang - API Schema Validation with Cypress', url: 'https://dev.to/cypress/api-schema-validation-with-cypress-185m' },
+                    { name: 'Cypress News 2025 cz. 2', url: 'https://www.dlatesterow.pl/cypress-news-2025-cz-2/' },
+                    { name: 'Cypress News 2025 cz. 3', url: 'https://www.dlatesterow.pl/cypress-news-2025-cz-3/' }
+                ]
+            },
+            {
+                plugin: 'cypress-schema-validator',
+                repoUrl: 'https://github.com/sclavijosuero/cypress-schema-validator',
+                features: [
+                    { name: 'TestGuild - Testing Tool Matcher', url: 'https://testguild.com/tools/cypress' },
+                    { name: 'Test Guild News Show (Jun 9, 2025)', url: 'https://www.linkedin.com/posts/joecolantonio_devsecops-automationtesting-softwaretesting-activity-7337877625475919872-033I?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAJfhRkBK-_7FuzGe0IFv3r5Eej4IFAScJM' },
+                    { name: 'Razvan Vancea - Cypress API Schema Validator Tutorial', url: 'https://www.youtube.com/watch?v=tUwNqvcdjwg' },
+                    { name: 'TestGuild Automation in DevSecOps Newsletter (Jun 14, 2025)', url: 'https://www.linkedin.com/pulse/ai-generate-missing-playwright-tests-postman-more-joe-colantonio-gluie/' },
+                    { name: 'Software Testing Weekly Issue #275', url: 'https://softwaretestingweekly.com/issues/275' },
+                    { name: 'Coding Jag by LamdaTest Issue #248', url: 'https://www.linkedin.com/pulse/ai-writes-code-so-why-devs-slowing-down-lambdatest-ovpdf/' },
+                    { name: 'Software Testing Notes Issue #182', url: 'https://softwaretestingnotes.substack.com/p/issue-182-software-testing-notes' }
+                ]
+            }
+        ]
+    },
+    {
+        name: 'Playwright',
+        items: [
+            {
+                plugin: 'playwright-ajv-schema-validator',
+                repoUrl: 'https://github.com/sclavijosuero/playwright-ajv-schema-validator',
+                features: [
+                    { name: 'json-schema.org - Schema Tooling Site', url: 'https://json-schema.org/tools?query=&sortBy=name&sortOrder=ascending&groupBy=toolingTypes&licenses=&languages=&drafts=&toolingTypes=' },
+                    { name: 'testingmaster.in - Awesome Playwright plugins', url: 'https://testingmasterdotin.github.io/awesome-playwright/' },
+                    { name: 'Software Testing Weekly Issue #266', url: 'https://softwaretestingweekly.com/issues/266' }
+                ]
+            },
+            {
+                plugin: 'playwright-schema-validator',
+                repoUrl: 'https://github.com/sclavijosuero/playwright-schema-validator',
+                features: [
+                    { name: 'Razvan Vancea - Playwright API Schema Validator Tutorial', url: 'https://www.youtube.com/watch?v=3R9DsDoPDow' }
+                ]
+            },
+            {
+                plugin: 'pw-api-plugin',
+                repoUrl: 'https://github.com/sclavijosuero/pw-api-plugin',
+                features: [
+                    { name: 'testingmaster.in - Awesome Playwright plugins', url: 'https://testingmasterdotin.github.io/awesome-playwright/' },
+                    { name: "Alan Void - Esse plugin para PLAYWRIGHT é muito bom!", url: 'https://www.youtube.com/watch?v=-VzclPt6eFA' },
+                    { name: 'Test Guild News Show (Mar 3, 2025)', url: 'https://www.linkedin.com/feed/update/urn:li:activity:7302376476731916288/' },
+                    { name: 'Test Guild Automation in DevSecOps Newsletter (Mar 7, 2025)', url: 'https://www.linkedin.com/pulse/visual-api-testing-playwright-jmeter-book-more-joe-colantonio-cwmze/' },
+                    { name: 'testdriver.ai - How to Enhance API Testing in Playwright with the New PW-API-PLUGIN', url: 'https://testdriver.ai/articles/how-to-enhance-api-testing-in-playwright-with-the-new-pw-api-plugin' },
+                    { name: 'Test Guild - The Best Open Source API Testing Tools for 2025', url: 'https://testguild.com/12-open-source-api-testing-tools-rest-soap-services/#Playwright_for_API_testing' },
+                    { name: "JoanMedia - Boost Your Testing Workflow with Playwright's PW-API-PLUGIN", url: 'https://www.youtube.com/watch?v=fdbs-UQQfRY' },
+                    { name: 'Software Testing Weekly Issue #273', url: 'https://softwaretestingweekly.com/issues/273' }
+                ]
+            }
+        ]
+    },
+    {
+        name: 'Platform-agnostic',
+        items: [
+            {
+                plugin: 'core-ajv-schema-validator',
+                repoUrl: 'https://github.com/sclavijosuero/core-ajv-schema-validator',
+                features: [
+                    { name: 'json-schema.org - Schema Tooling Site', url: 'https://json-schema.org/tools?query=&sortBy=name&sortOrder=ascending&groupBy=toolingTypes&licenses=&languages=&drafts=&toolingTypes=' },
+                    { name: 'testingmaster.in - Awesome Playwright plugins', url: 'https://testingmasterdotin.github.io/awesome-playwright/' }
+                ]
+            },
+            {
+                plugin: 'core-zod-schema-validator',
+                repoUrl: 'https://github.com/sclavijosuero/core-zod-schema-validator',
+                features: [
+                    { name: 'Cypress.io YouTube - The Bug Bash: Episode 3 (May 27, 2025)', url: 'https://www.youtube.com/watch?v=SRTASYXHqeo' }
+                ]
+            }
+        ]
+    }
+];
+
+function createPluginHighlightsSection() {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'blog-features plugin-features';
+    wrapper.innerHTML = `
+        <details class="feature-panel" id="plugin-highlights">
+            <summary class="feature-summary">
+                <div class="feature-summary-text">
+                    <p class="feature-eyebrow">Plugin spotlight</p>
+                    <h3>Where these tools were featured</h3>
+                    <p class="feature-summary-copy">Industry lists, newsletters, talks, and videos showcasing these open source projects.</p>
+                </div>
+                <div class="feature-summary-meta">
+                    <span class="feature-chip" id="plugin-features-count">Loading...</span>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                </div>
+            </summary>
+            <div class="feature-body">
+                <p class="feature-intro">
+                    Curated shout-outs grouped by framework so you can see how Cypress, Playwright, and platform-agnostic packages have been amplified.
+                </p>
+                <div class="plugin-features-list" id="plugin-features-content">
+                    <!-- Plugin mentions injected via JS -->
+                </div>
+                <button type="button" class="feature-collapse-btn" id="plugin-collapse-btn">
+                    <span>Collapse highlights</span>
+                    <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+                </button>
+            </div>
+        </details>
+    `;
+    return wrapper;
+}
 
 const loadArticles = () => {
   // Cypress DEV.TO Articles
@@ -56,6 +413,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeScrollEffects();
     loadBlogArticles();
     loadPlugins();
+    renderBlogFeatures();
 });
 
 // ===== NAVIGATION ===== 
@@ -212,6 +570,264 @@ function createArticleCard(article) {
                 </div>
             </div>
         </a>
+    `;
+}
+
+// ===== BLOG FEATURE CALLOUTS =====
+function renderBlogFeatures() {
+    const container = document.getElementById('blog-features-content');
+    const countChip = document.getElementById('blog-features-count');
+    const collapseBtn = document.getElementById('feature-collapse-btn');
+    const featurePanel = document.getElementById('community-highlights');
+    
+    if (!container) {
+        return;
+    }
+
+    const featuredArticles = COMMUNITY_FEATURES.filter(feature => feature.outlets && feature.outlets.length);
+    if (!featuredArticles.length) {
+        container.innerHTML = '<p class="feature-mentions feature-mentions--empty">Community highlights coming soon.</p>';
+        return;
+    }
+
+    const featuresHtml = featuredArticles.map(feature => createFeatureEntry(feature)).join('');
+    container.innerHTML = featuresHtml;
+
+    if (countChip) {
+        countChip.innerHTML = '<span>40+</span><span>shout-outs</span>';
+    }
+
+    collapseBtn?.addEventListener('click', () => {
+        if (featurePanel?.open) {
+            featurePanel.open = false;
+            featurePanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+}
+
+function createFeatureEntry(feature) {
+    const mentionCount = feature.outlets.length;
+    const mentionLabel = mentionCount === 1 ? 'feature' : 'features';
+    const metaLabel = mentionCount ? `${mentionCount} ${mentionLabel}` : 'Original spotlight';
+
+    const normalizedOutlets = feature.outlets.map(normalizeOutlet);
+
+    const mentionsMarkup = mentionCount
+        ? `
+            <ul class="feature-mentions">
+                ${normalizedOutlets.map(renderNormalizedOutlet).join('')}
+            </ul>
+        `
+        : `<p class="feature-mentions feature-mentions--empty">Shared directly on dev.to</p>`;
+
+    return `
+        <article class="feature-article">
+            <div class="feature-article-header">
+                <div>
+                    <h4>
+                        <a href="${feature.articleUrl}" target="_blank" rel="noopener">
+                            ${feature.title}
+                        </a>
+                    </h4>
+                </div>
+                <span class="feature-article-meta">${metaLabel}</span>
+            </div>
+            ${mentionsMarkup}
+        </article>
+    `;
+}
+
+function normalizeOutlet(outlet) {
+    const trimmedName = outlet.name.trim();
+    const newsletterMatch = trimmedName.match(/\(([^)]+)\)/);
+
+    if (NON_LINK_NEWSLETTERS.has(trimmedName)) {
+        const formattedDate = formatMonthYear(newsletterMatch ? newsletterMatch[1] : '');
+        return {
+            label: 'Cypress.io Newsletter',
+            dateLabel: formattedDate ? ` - ${formattedDate}` : '',
+            href: null
+        };
+    }
+
+    const cypressNewsletterMatch = trimmedName.match(/^Cypress\.io Newsletter\s*\(([^)]+)\)/i);
+    if (cypressNewsletterMatch) {
+        const formattedDate = formatMonthYear(cypressNewsletterMatch[1]);
+        return {
+            label: 'Cypress.io Newsletter',
+            dateLabel: formattedDate ? ` - ${formattedDate}` : '',
+            href: outlet.url || null
+        };
+    }
+
+    const dateMatch = trimmedName.match(/^(.*)\(([^)]+)\)$/);
+    if (dateMatch) {
+        const label = dateMatch[1].trim().replace(/[-–—]\s*$/, '');
+        const formattedDate = formatFullDate(dateMatch[2]);
+        return {
+            label,
+            dateLabel: formattedDate ? ` (${formattedDate})` : '',
+            href: outlet.url || null
+        };
+    }
+
+    return {
+        label: outlet.name,
+        dateLabel: '',
+        href: outlet.url || null
+    };
+}
+
+function renderNormalizedOutlet(outlet) {
+    const text = `${outlet.label}${outlet.dateLabel}`;
+    if (outlet.href) {
+        return `
+            <li>
+                <a href="${outlet.href}" target="_blank" rel="noopener">
+                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    <span>${text}</span>
+                </a>
+            </li>
+        `;
+    }
+
+    return `
+        <li>
+            <span class="feature-mention-text">${text}</span>
+        </li>
+    `;
+}
+
+function formatFullDate(rawDate) {
+    const parsedDate = parseDate(rawDate);
+    if (!parsedDate) {
+        return rawDate;
+    }
+
+    return parsedDate.toLocaleDateString('en-US', {
+        month: 'long',
+        day: 'numeric',
+        year: 'numeric'
+    });
+}
+
+function formatMonthYear(rawDate) {
+    const parsedDate = parseDate(rawDate);
+    if (!parsedDate) {
+        return rawDate;
+    }
+
+    const month = parsedDate.toLocaleString('en-US', { month: 'long' });
+    return `${month}, ${parsedDate.getFullYear()}`;
+}
+
+function parseDate(rawDate) {
+    if (!rawDate) {
+        return null;
+    }
+
+    const normalized = rawDate
+        .replace(/\s+/g, ' ')
+        .replace(/(\d+)(st|nd|rd|th)/gi, '$1')
+        .trim();
+
+    let parsed = Date.parse(normalized);
+    if (!Number.isNaN(parsed)) {
+        return new Date(parsed);
+    }
+
+    parsed = Date.parse(`${normalized} 1`);
+    if (!Number.isNaN(parsed)) {
+        return new Date(parsed);
+    }
+
+    return null;
+}
+
+// ===== PLUGIN FEATURE CALLOUTS =====
+function renderPluginFeatures() {
+    const container = document.getElementById('plugin-features-content');
+    const countChip = document.getElementById('plugin-features-count');
+    const collapseBtn = document.getElementById('plugin-collapse-btn');
+    const panel = document.getElementById('plugin-highlights');
+
+    if (!container) {
+        return;
+    }
+
+    const groupsHtml = PLUGIN_FEATURE_GROUPS.map(createPluginGroupSection).join('');
+    container.innerHTML = groupsHtml;
+
+    if (countChip) {
+        countChip.innerHTML = '<span>60+</span><span>spotlights</span>';
+    }
+
+    collapseBtn?.addEventListener('click', () => {
+        if (panel?.open) {
+            panel.open = false;
+            panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+}
+
+function createPluginGroupSection(group) {
+    const pluginCards = group.items
+        .filter(item => item.features.length > 0)
+        .map(createPluginFeatureCard)
+        .join('');
+
+    if (!pluginCards) {
+        return '';
+    }
+
+    return `
+        <section class="plugin-feature-group">
+            <h4 class="feature-group-title">${group.name}</h4>
+            <div class="plugin-feature-list">
+                ${pluginCards}
+            </div>
+        </section>
+    `;
+}
+
+function createPluginFeatureCard(plugin) {
+    const mentions = plugin.features.map(renderPluginMention).join('');
+
+    return `
+        <article class="feature-article plugin-feature-article">
+            <div class="feature-article-header">
+                <div>
+                    <h4>
+                        <a href="${plugin.repoUrl}" target="_blank" rel="noopener">
+                            ${plugin.plugin}
+                        </a>
+                    </h4>
+                </div>
+                <span class="feature-article-meta">${plugin.features.length} mention${plugin.features.length === 1 ? '' : 's'}</span>
+            </div>
+            <ul class="feature-mentions">
+                ${mentions}
+            </ul>
+        </article>
+    `;
+}
+
+function renderPluginMention(mention) {
+    if (mention.url) {
+        return `
+            <li>
+                <a href="${mention.url}" target="_blank" rel="noopener">
+                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    <span>${mention.name}</span>
+                </a>
+            </li>
+        `;
+    }
+
+    return `
+        <li>
+            <span class="feature-mention-text">${mention.name}</span>
+        </li>
     `;
 }
 
@@ -583,6 +1199,11 @@ function renderFallbackPlugins(container) {
         const card = createFallbackPluginCard(plugin);
         container.appendChild(card);
     });
+
+    // Add plugin highlights section before tutorials
+    const pluginHighlightsSection = createPluginHighlightsSection();
+    container.appendChild(pluginHighlightsSection);
+    renderPluginFeatures();
 
     // Add tutorial section
     const tutorialSection = document.createElement('div');
