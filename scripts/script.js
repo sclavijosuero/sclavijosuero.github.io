@@ -233,6 +233,7 @@ const PLUGIN_FEATURE_GROUPS = [
                     { name: 'W3C Org - Official Web Accessibility Evaluation Tools List', url: 'https://www.w3.org/WAI/test-evaluate/tools/list/' },
                     { name: 'Cypress.io Documentation - Accessibility Testing', url: 'https://docs.cypress.io/app/guides/accessibility-testing?ref=cypress-io.ghost.io' },
                     { name: 'Cypress.io Product Blog - Open Source Accessibility Plugins in Cypress', url: 'https://www.cypress.io/blog/open-source-accessibility-plugins-in-cypress' },
+                    { name: 'Cypress Conference’25 - Miloš Jovanović session: Cross-Browser Consistency: Mitigating Testing Discrepancies with Cypress', url: 'https://www.youtube.com/watch?v=8vmFDl0bfnY' },
                     { name: 'testdev.tools - Wick A11y', url: 'https://testdev.tools/wick-a11y/' },
                     { name: 'TestGuild - Testing Tool Matcher', url: 'https://testguild.com/tools/cypress' },
                     { name: 'digitala11y.com - Open Source Accessibility Testing Tools Roundup', url: 'https://www.digitala11y.com/open-source-accessibility-tools/' },
