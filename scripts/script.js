@@ -230,70 +230,85 @@ const PLUGIN_FEATURE_GROUPS = [
                 plugin: 'wick-a11y',
                 repoUrl: 'https://github.com/sclavijosuero/wick-a11y',
                 features: [
-                    { name: 'W3C Org - Official Web Accessibility Evaluation Tools List', url: 'https://www.w3.org/WAI/test-evaluate/tools/list/' },
-                    { name: 'Cypress.io Documentation - Accessibility Testing', url: 'https://docs.cypress.io/app/guides/accessibility-testing?ref=cypress-io.ghost.io' },
-                    { name: 'Cypress.io Product Blog - Open Source Accessibility Plugins in Cypress', url: 'https://www.cypress.io/blog/open-source-accessibility-plugins-in-cypress' },
-                    { name: 'Cypress Conference’25 - Miloš Jovanović session: Cross-Browser Consistency: Mitigating Testing Discrepancies with Cypress', url: 'https://www.youtube.com/watch?v=8vmFDl0bfnY' },
-                    { name: 'testdev.tools - Wick A11y', url: 'https://testdev.tools/wick-a11y/' },
-                    { name: 'TestGuild - Testing Tool Matcher', url: 'https://testguild.com/tools/cypress' },
-                    { name: 'digitala11y.com - Open Source Accessibility Testing Tools Roundup', url: 'https://www.digitala11y.com/open-source-accessibility-tools/' },
-                    { name: 'Test Guild News Show (Jul 8, 2024)', url: 'https://www.linkedin.com/feed/update/urn:li:activity:7216114421041934336/' },
-                    { name: 'Test Guild News Show (Sep 30, 2024) - Voice Feature', url: 'https://www.linkedin.com/feed/update/urn:li:activity:7246557474520989696/' },
-                    { name: 'Test Guild News Show (Nov 11, 2024)', url: 'https://www.linkedin.com/posts/joecolantonio_how-do-you-automate-across-multiple-systems-activity-7261785050751340545-8CM6?utm_source=share&utm_medium=member_desktop' },
-                    { name: "Joan Esquivel Montero - Cypress Accessibility Testing powered by WICK-A11Y", url: 'https://www.youtube.com/watch?v=LVxyJMW6EJw' },
-                    { name: 'Joan Esquivel Montero - Pruebas Automatizadas de Accesibilidad con Cypress + WickA11y', url: 'https://www.youtube.com/watch?v=96Sz2QCXE7I' },
-                    { name: 'Ioan Solderea - European Accessibility Act 2025: Compliance Deadline Nears', url: 'https://www.youtube.com/watch?v=joP3TNdLjF8' },
-                    { name: 'Ioan Solderea - Wick A11y – Cypress Plugin for Automated Accessibility Checks', url: 'https://www.youtube.com/watch?v=tqeZTopcy50' },
-                    { name: "Peter Michael Souza Jr - 20 Things I'd Tell Myself If I Was Learning Cypress for the First Time", url: 'https://www.petermsouzajr.com/blog/20-things-id-tell-myself-if-i-was-learning-cypress-for-the-first-time' },
-                    { name: 'TestGuild Automation in DevSecOps Newsletter (Jul 12, 2024)', url: 'https://www.linkedin.com/pulse/ai-etl-testing-shift-left-dead-cypress-a11y-more-joe-colantonio-f6l0e/' },
-                    { name: 'The Automation Insider Issue 13 Newsletter', url: 'https://automationinsider.substack.com/p/the-automation-insider-issue-13?r=zfnsk&utm_campaign=post&utm_medium=web&triedRedirect=true' },
-                    { name: "Abigail Armijo - Tools for Accessibility Testing", url: 'https://substack.com/home/post/p-142159238' },
-                    { name: 'Cypress Tips September 2024 – Gleb Bahmutov Newsletter', url: 'https://cypresstips.substack.com/p/cypress-tips-september-2024' },
-                    { name: 'TestGuild Automation in DevSecOps Newsletter (Oct 4, 2024)', url: 'https://www.linkedin.com/pulse/test-accessibility-event-playwright-github-actions-llm-joe-colantonio-ippqe/' },
-                    { name: "James Wadley - Let's talk about wick-a11y…", url: 'https://dev.to/w4dd325/lets-talk-about-wick-a11y-1afa' },
-                    { name: 'A11y-evaluation-tools Sheet', url: 'https://docs.google.com/spreadsheets/d/10CTezA0iDdaWggaqxuHawj-5u8YXdZeWBJsIkuvJ364/edit?gid=347324347#gid=347324347' },
-                    { name: 'TestGuild Automation in DevSecOps Newsletter (Nov 15, 2024)', url: 'https://www.linkedin.com/pulse/digital-testing-al-driven-mobile-attacks-plugins-more-joe-colantonio-lpume' },
-                    { name: 'Cypress Tips December 2024 – Gleb Bahmutov Newsletter', url: 'https://cypresstips.substack.com/p/cypress-tips-december-2024' },
-                    { name: 'Ravindre Ramjiawan - Accessibility tools', url: 'https://techhub.iodigital.com/articles/accessibility-tools' },
-                    { name: 'talent500.com - Exploring Open Source Accessibility Plugins in Cypress', url: 'https://talent500.com/blog/open-source-accessibility-plugins-cypress/' },
-                    { name: "Fatih Soysal - WICK-A11Y 1.4.0: Not Everything Needs to Fail the Test!", url: 'https://fatihsoysal.com/blog/wick-a11y-1-4-0-her-seyin-testi-basarisiz-olmasina-gerek-yok/' },
-                    { name: 'testdriver.ai - How to Effectively Use Accessibility Testing Tools in Your Development Process', url: 'https://testdriver.ai/articles/how-to-effectively-use-accessibility-testing-tools-in-your-development-process' },
-                    { name: 'Software Testing Notes Issue #157', url: 'https://softwaretestingnotes.substack.com/p/issue-157-software-testing-notes' },
-                    { name: "Ioan Solderea - Understanding the European Accessibility Act 2025: Compliance is Key", url: 'https://dev.to/cypress/understanding-the-european-accessibility-act-2025-compliance-is-key-3fif' },
-                    { name: 'Ádám Szentiványi - Comparison of Accessibility Tools', url: 'https://prezi.com/p/aklj2f6-bviu/comparison-of-accessibility-tools/' },
-                    { name: 'Vast Green: The Accessibility Improvement Act - BFSG - Conclusion', url: 'https://vast-green.com/bfsg-abschluss/' },
-                    { name: "Gleb Bahmutov - Check Page Accessibility Using wick-a11y Plugin", url: 'https://www.youtube.com/watch?v=G1tpXv0hv0s' }
+                    { name: '🌐 W3C Org - Official Web Accessibility Evaluation Tools List', url: 'https://www.w3.org/WAI/test-evaluate/tools/list/' },
+                    { name: '🌐 Cypress.io Documentation - Accessibility Testing', url: 'https://docs.cypress.io/app/guides/accessibility-testing?ref=cypress-io.ghost.io' },
+                    { name: '🌐 Cypress.io Product Blog - Open Source Accessibility Plugins in Cypress', url: 'https://www.cypress.io/blog/open-source-accessibility-plugins-in-cypress' },
+                    { name: '🌐 Cypress Conference’25 - Miloš Jovanović session: Cross-Browser Consistency: Mitigating Testing Discrepancies with Cypress', url: 'https://www.youtube.com/watch?v=8vmFDl0bfnY' },
+                    { name: '🌐 testdev.tools - Wick A11y', url: 'https://testdev.tools/wick-a11y/' },
+                    { name: '🌐 TestGuild - Testing Tool Matcher', url: 'https://testguild.com/tools/cypress' },
+                    { name: '🌐 digitala11y.com - Open Source Accessibility Testing Tools Roundup', url: 'https://www.digitala11y.com/open-source-accessibility-tools/' },
+
+                    { name: '⚖️ myparto.com - Accessibility Statement', url: 'https://www.myparto.com/en/content/AccessibilityStatement.html' },
+                    { name: '⚖️ ws-autoteile.com - Accessibility Statement', url: 'https://www.ws-autoteile.com/en/content/AccessibilityStatement.html' },
+
+
+                    { name: '📽️ Test Guild News Show (Jul 8, 2024)', url: 'https://www.linkedin.com/feed/update/urn:li:activity:7216114421041934336/' },
+                    { name: '📽️ Test Guild News Show (Sep 30, 2024) - Voice Feature', url: 'https://www.linkedin.com/feed/update/urn:li:activity:7246557474520989696/' },
+                    { name: '📽️ Test Guild News Show (Nov 11, 2024)', url: 'https://www.linkedin.com/posts/joecolantonio_how-do-you-automate-across-multiple-systems-activity-7261785050751340545-8CM6?utm_source=share&utm_medium=member_desktop' },
+                    { name: "📽️ Gleb Bahmutov - Check Page Accessibility Using wick-a11y Plugin (Oct 7, 2025)", url: 'https://www.youtube.com/watch?v=G1tpXv0hv0s' },
+                    { name: "📽️ Joan Esquivel Montero - Cypress Accessibility Testing powered by WICK-A11Y", url: 'https://www.youtube.com/watch?v=LVxyJMW6EJw' },
+                    { name: '📽️ Joan Esquivel Montero - Pruebas Automatizadas de Accesibilidad con Cypress + WickA11y', url: 'https://www.youtube.com/watch?v=96Sz2QCXE7I' },
+                    { name: '📽️ Ioan Solderea - European Accessibility Act 2025: Compliance Deadline Nears', url: 'https://www.youtube.com/watch?v=joP3TNdLjF8' },
+                    { name: '📽️ Ioan Solderea - Wick A11y – Cypress Plugin for Automated Accessibility Checks', url: 'https://www.youtube.com/watch?v=tqeZTopcy50' },
+                    { name: "📽️ Peter Michael Souza Jr - 20 Things I'd Tell Myself If I Was Learning Cypress for the First Time - Video & Article", url: 'https://www.petermsouzajr.com/blog/20-things-id-tell-myself-if-i-was-learning-cypress-for-the-first-time' },
+
+                    { name: '📰 TestGuild Automation in DevSecOps Newsletter (Jul 12, 2024)', url: 'https://www.linkedin.com/pulse/ai-etl-testing-shift-left-dead-cypress-a11y-more-joe-colantonio-f6l0e/' },
+                    { name: '📰 The Automation Insider Issue 13 Newsletter', url: 'https://automationinsider.substack.com/p/the-automation-insider-issue-13?r=zfnsk&utm_campaign=post&utm_medium=web&triedRedirect=true' },
+                    { name: "📰 Abigail Armijo - Tools for Accessibility Testing", url: 'https://substack.com/home/post/p-142159238' },
+                    { name: '📰 Cypress Tips September 2024 – Gleb Bahmutov Newsletter', url: 'https://cypresstips.substack.com/p/cypress-tips-september-2024' },
+                    { name: '📰 TestGuild Automation in DevSecOps Newsletter (Oct 4, 2024)', url: 'https://www.linkedin.com/pulse/test-accessibility-event-playwright-github-actions-llm-joe-colantonio-ippqe/' },
+                    { name: "📰 James Wadley - Let's talk about wick-a11y…", url: 'https://dev.to/w4dd325/lets-talk-about-wick-a11y-1afa' },
+                    { name: '📰 A11y-evaluation-tools Sheet', url: 'https://docs.google.com/spreadsheets/d/10CTezA0iDdaWggaqxuHawj-5u8YXdZeWBJsIkuvJ364/edit?gid=347324347#gid=347324347' },
+                    { name: '📰 TestGuild Automation in DevSecOps Newsletter (Nov 15, 2024)', url: 'https://www.linkedin.com/pulse/digital-testing-al-driven-mobile-attacks-plugins-more-joe-colantonio-lpume' },
+                    { name: '📰 Cypress Tips December 2024 – Gleb Bahmutov Newsletter', url: 'https://cypresstips.substack.com/p/cypress-tips-december-2024' },
+                    { name: '📰 Ravindre Ramjiawan - Accessibility tools', url: 'https://techhub.iodigital.com/articles/accessibility-tools' },
+                    { name: '📰 talent500.com - Exploring Open Source Accessibility Plugins in Cypress', url: 'https://talent500.com/blog/open-source-accessibility-plugins-cypress/' },
+                    { name: "📰 Fatih Soysal - WICK-A11Y 1.4.0: Not Everything Needs to Fail the Test!", url: 'https://fatihsoysal.com/blog/wick-a11y-1-4-0-her-seyin-testi-basarisiz-olmasina-gerek-yok/' },
+                    { name: '📰 testdriver.ai - How to Effectively Use Accessibility Testing Tools in Your Development Process', url: 'https://testdriver.ai/articles/how-to-effectively-use-accessibility-testing-tools-in-your-development-process' },
+                    { name: '📰 Software Testing Notes Issue #157', url: 'https://softwaretestingnotes.substack.com/p/issue-157-software-testing-notes' },
+                    { name: "📰 Ioan Solderea - Understanding the European Accessibility Act 2025: Compliance is Key", url: 'https://dev.to/cypress/understanding-the-european-accessibility-act-2025-compliance-is-key-3fif' },
+                    { name: '📰 Ádám Szentiványi - Comparison of Accessibility Tools', url: 'https://prezi.com/p/aklj2f6-bviu/comparison-of-accessibility-tools/' },
+                    { name: '📰 Vast Green: The Accessibility Improvement Act - BFSG - Conclusion', url: 'https://vast-green.com/bfsg-abschluss/' },
+                    { name: '📰 q2bstudio.com - WICK-A11Y v2.3.0: Informe deslumbrante, WCAG 2.2 AAA y más novedades', url: 'https://www.q2bstudio.com/nuestro-blog/21237/wick-a11y-v2-3-0-informe-deslumbrante-wcag-2-2-aaa-y-mas-novedades' },
+
+                    { name: "✏️ Gleb Bahmutov - Testing The Swag Store Course (Bonus 74: Check accessibility issues)", url: 'https://cypress.tips/courses/swag-store/lessons/bonus74' },
+                    { name: "✏️ Gleb Bahmutov - TDD Calculator Course (Lesson e6 & e7: Catch accessibility issues)", url: 'https://cypress.tips/courses/tdd-calculator/lessons/e6' }
                 ]
             },
             {
                 plugin: 'cypress-ajv-schema-validator',
                 repoUrl: 'https://github.com/sclavijosuero/cypress-ajv-schema-validator',
                 features: [
-                    { name: 'json-schema.org - Schema Tooling Site', url: 'https://json-schema.org/tools?query=&sortBy=name&sortOrder=ascending&groupBy=toolingTypes&licenses=&languages=&drafts=&toolingTypes=' },
-                    { name: 'Cypress.io Product Blog - Elevate Your Cypress Testing: Top 10 Essential Plugins', url: 'https://www.cypress.io/blog/elevate-your-cypress-testing-top-10-essential-plugins?utm_medium=blog&utm_source=social_media&utm_term=linkedin&utm_content=10_plugins' },
-                    { name: 'testdev.tools - cypress-ajv-schema-validator', url: 'https://testdev.tools/cypress-ajv-schema-validator/' },
-                    { name: 'Joan Esquivel Montero - Cypress API Testing: AJV Schema Validator', url: 'https://www.youtube.com/watch?v=SPmJvH5mYaU' },
-                    { name: 'Murat Ozcan - Schema validation using cypress-ajv-schema-validator vs Optic', url: 'https://www.youtube.com/watch?v=ysCADOh9aJU&t=13s' },
-                    { name: 'Murat Ozcan - Demo comparing API e2e vs Schema testing', url: 'https://www.youtube.com/watch?v=ePjcKMq4c2o' },
-                    { name: "Murat Ozcan's Udemy Course - Epic Test Arch.", url: 'https://www.udemy.com/course/epic-test-arch-test-everything-everywhere-all-at-once/?couponCode=NEWYEARCAREER' },
-                    { name: "Peter Michael Souza Jr - 20 Things I'd Tell Myself If I Was Learning Cypress for the First Time", url: 'https://www.petermsouzajr.com/blog/20-things-id-tell-myself-if-i-was-learning-cypress-for-the-first-time' },
-                    { name: 'Software Testing Notes Issue #157', url: 'https://softwaretestingnotes.substack.com/p/issue-157-software-testing-notes' },
-                    { name: 'S. Chathurang - API Schema Validation with Cypress', url: 'https://dev.to/cypress/api-schema-validation-with-cypress-185m' },
-                    { name: 'Cypress News 2025 cz. 2', url: 'https://www.dlatesterow.pl/cypress-news-2025-cz-2/' },
-                    { name: 'Cypress News 2025 cz. 3', url: 'https://www.dlatesterow.pl/cypress-news-2025-cz-3/' }
+                    { name: '🌐 json-schema.org - Schema Tooling Site', url: 'https://json-schema.org/tools?query=&sortBy=name&sortOrder=ascending&groupBy=toolingTypes&licenses=&languages=&drafts=&toolingTypes=' },
+                    { name: '🌐 Cypress.io Product Blog - Elevate Your Cypress Testing: Top 10 Essential Plugins', url: 'https://www.cypress.io/blog/elevate-your-cypress-testing-top-10-essential-plugins?utm_medium=blog&utm_source=social_media&utm_term=linkedin&utm_content=10_plugins' },
+                    { name: '🌐 testdev.tools - cypress-ajv-schema-validator', url: 'https://testdev.tools/cypress-ajv-schema-validator/' },
+
+                    { name: '📽️ Joan Esquivel Montero - Cypress API Testing: AJV Schema Validator', url: 'https://www.youtube.com/watch?v=SPmJvH5mYaU' },
+                    { name: '📽️ Murat Ozcan - Schema validation using cypress-ajv-schema-validator vs Optic', url: 'https://www.youtube.com/watch?v=ysCADOh9aJU&t=13s' },
+                    { name: '📽️ Murat Ozcan - Demo comparing API e2e vs Schema testing', url: 'https://www.youtube.com/watch?v=ePjcKMq4c2o' },
+
+                    { name: "📰 Peter Michael Souza Jr - 20 Things I'd Tell Myself If I Was Learning Cypress for the First Time - Video & Article", url: 'https://www.petermsouzajr.com/blog/20-things-id-tell-myself-if-i-was-learning-cypress-for-the-first-time' },
+                    { name: '📰 Software Testing Notes Issue #157', url: 'https://softwaretestingnotes.substack.com/p/issue-157-software-testing-notes' },
+                    { name: '📰 S. Chathurang - API Schema Validation with Cypress', url: 'https://dev.to/cypress/api-schema-validation-with-cypress-185m' },
+                    { name: '📰 Cypress News 2025 cz. 2', url: 'https://www.dlatesterow.pl/cypress-news-2025-cz-2/' },
+                    { name: '📰 Cypress News 2025 cz. 3', url: 'https://www.dlatesterow.pl/cypress-news-2025-cz-3/' },
+
+                    { name: "✏️ Murat Ozcan's Udemy Course - Epic Test Arch.", url: 'https://www.udemy.com/course/epic-test-arch-test-everything-everywhere-all-at-once/?couponCode=NEWYEARCAREER' }
                 ]
             },
             {
                 plugin: 'cypress-schema-validator',
                 repoUrl: 'https://github.com/sclavijosuero/cypress-schema-validator',
                 features: [
-                    { name: 'TestGuild - Testing Tool Matcher', url: 'https://testguild.com/tools/cypress' },
-                    { name: 'Test Guild News Show (Jun 9, 2025)', url: 'https://www.linkedin.com/posts/joecolantonio_devsecops-automationtesting-softwaretesting-activity-7337877625475919872-033I?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAJfhRkBK-_7FuzGe0IFv3r5Eej4IFAScJM' },
-                    { name: 'Razvan Vancea - Cypress API Schema Validator Tutorial', url: 'https://www.youtube.com/watch?v=tUwNqvcdjwg' },
-                    { name: 'TestGuild Automation in DevSecOps Newsletter (Jun 14, 2025)', url: 'https://www.linkedin.com/pulse/ai-generate-missing-playwright-tests-postman-more-joe-colantonio-gluie/' },
-                    { name: 'Software Testing Weekly Issue #275', url: 'https://softwaretestingweekly.com/issues/275' },
-                    { name: 'Coding Jag by LamdaTest Issue #248', url: 'https://www.linkedin.com/pulse/ai-writes-code-so-why-devs-slowing-down-lambdatest-ovpdf/' },
-                    { name: 'Software Testing Notes Issue #182', url: 'https://softwaretestingnotes.substack.com/p/issue-182-software-testing-notes' }
+                    { name: '🌐 TestGuild - Testing Tool Matcher', url: 'https://testguild.com/tools/cypress' },
+ 
+                    { name: '📽️ Test Guild News Show (Jun 9, 2025)', url: 'https://www.linkedin.com/posts/joecolantonio_devsecops-automationtesting-softwaretesting-activity-7337877625475919872-033I?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAJfhRkBK-_7FuzGe0IFv3r5Eej4IFAScJM' },
+                    { name: '📽️ Razvan Vancea - Cypress API Schema Validator Tutorial', url: 'https://www.youtube.com/watch?v=tUwNqvcdjwg' },
+ 
+                    { name: '📰 TestGuild Automation in DevSecOps Newsletter (Jun 14, 2025)', url: 'https://www.linkedin.com/pulse/ai-generate-missing-playwright-tests-postman-more-joe-colantonio-gluie/' },
+                    { name: '📰 Software Testing Weekly Issue #275', url: 'https://softwaretestingweekly.com/issues/275' },
+                    { name: '📰 Coding Jag by LamdaTest Issue #248', url: 'https://www.linkedin.com/pulse/ai-writes-code-so-why-devs-slowing-down-lambdatest-ovpdf/' },
+                    { name: '📰 Software Testing Notes Issue #182', url: 'https://softwaretestingnotes.substack.com/p/issue-182-software-testing-notes' }
                 ]
             }
         ]
@@ -305,30 +320,33 @@ const PLUGIN_FEATURE_GROUPS = [
                 plugin: 'playwright-ajv-schema-validator',
                 repoUrl: 'https://github.com/sclavijosuero/playwright-ajv-schema-validator',
                 features: [
-                    { name: 'json-schema.org - Schema Tooling Site', url: 'https://json-schema.org/tools?query=&sortBy=name&sortOrder=ascending&groupBy=toolingTypes&licenses=&languages=&drafts=&toolingTypes=' },
-                    { name: 'testingmaster.in - Awesome Playwright plugins', url: 'https://testingmasterdotin.github.io/awesome-playwright/' },
-                    { name: 'Software Testing Weekly Issue #266', url: 'https://softwaretestingweekly.com/issues/266' }
+                    { name: '🌐 json-schema.org - Schema Tooling Site', url: 'https://json-schema.org/tools?query=&sortBy=name&sortOrder=ascending&groupBy=toolingTypes&licenses=&languages=&drafts=&toolingTypes=' },
+                    { name: '🌐 testingmaster.in - Awesome Playwright plugins (Playwrihght Ajv Schema Validator)', url: 'https://testingmasterdotin.github.io/awesome-playwright/' },
+
+                    { name: '📰 Software Testing Weekly Issue #266', url: 'https://softwaretestingweekly.com/issues/266' }
                 ]
             },
             {
                 plugin: 'playwright-schema-validator',
                 repoUrl: 'https://github.com/sclavijosuero/playwright-schema-validator',
                 features: [
-                    { name: 'Razvan Vancea - Playwright API Schema Validator Tutorial', url: 'https://www.youtube.com/watch?v=3R9DsDoPDow' }
+                    { name: '📽️ Razvan Vancea - Playwright API Schema Validator Tutorial', url: 'https://www.youtube.com/watch?v=3R9DsDoPDow' }
                 ]
             },
             {
                 plugin: 'pw-api-plugin',
                 repoUrl: 'https://github.com/sclavijosuero/pw-api-plugin',
                 features: [
-                    { name: 'testingmaster.in - Awesome Playwright plugins', url: 'https://testingmasterdotin.github.io/awesome-playwright/' },
-                    { name: "Alan Void - Esse plugin para PLAYWRIGHT é muito bom!", url: 'https://www.youtube.com/watch?v=-VzclPt6eFA' },
-                    { name: 'Test Guild News Show (Mar 3, 2025)', url: 'https://www.linkedin.com/feed/update/urn:li:activity:7302376476731916288/' },
-                    { name: 'Test Guild Automation in DevSecOps Newsletter (Mar 7, 2025)', url: 'https://www.linkedin.com/pulse/visual-api-testing-playwright-jmeter-book-more-joe-colantonio-cwmze/' },
-                    { name: 'testdriver.ai - How to Enhance API Testing in Playwright with the New PW-API-PLUGIN', url: 'https://testdriver.ai/articles/how-to-enhance-api-testing-in-playwright-with-the-new-pw-api-plugin' },
-                    { name: 'Test Guild - The Best Open Source API Testing Tools for 2025', url: 'https://testguild.com/12-open-source-api-testing-tools-rest-soap-services/#Playwright_for_API_testing' },
-                    { name: "JoanMedia - Boost Your Testing Workflow with Playwright's PW-API-PLUGIN", url: 'https://www.youtube.com/watch?v=fdbs-UQQfRY' },
-                    { name: 'Software Testing Weekly Issue #273', url: 'https://softwaretestingweekly.com/issues/273' }
+                    { name: '🌐 testingmaster.in - Awesome Playwright plugins (PwAPI Plugin)', url: 'https://testingmasterdotin.github.io/awesome-playwright/' },
+                    { name: '🌐 Test Guild - The Best Open Source API Testing Tools for 2025', url: 'https://testguild.com/12-open-source-api-testing-tools-rest-soap-services/#Playwright_for_API_testing' },
+
+                    { name: "📽️ Alan Void - Esse plugin para PLAYWRIGHT é muito bom!", url: 'https://www.youtube.com/watch?v=-VzclPt6eFA' },
+                    { name: '📽️ Test Guild News Show (Mar 3, 2025)', url: 'https://www.linkedin.com/feed/update/urn:li:activity:7302376476731916288/' },
+                    { name: "📽️ JoanMedia - Boost Your Testing Workflow with Playwright's PW-API-PLUGIN", url: 'https://www.youtube.com/watch?v=fdbs-UQQfRY' },
+
+                    { name: '📰 Test Guild Automation in DevSecOps Newsletter (Mar 7, 2025)', url: 'https://www.linkedin.com/pulse/visual-api-testing-playwright-jmeter-book-more-joe-colantonio-cwmze/' },
+                    { name: '📰 testdriver.ai - How to Enhance API Testing in Playwright with the New PW-API-PLUGIN', url: 'https://testdriver.ai/articles/how-to-enhance-api-testing-in-playwright-with-the-new-pw-api-plugin' },
+                    { name: '📰 Software Testing Weekly Issue #273', url: 'https://softwaretestingweekly.com/issues/273' }
                 ]
             }
         ]
@@ -340,15 +358,14 @@ const PLUGIN_FEATURE_GROUPS = [
                 plugin: 'core-ajv-schema-validator',
                 repoUrl: 'https://github.com/sclavijosuero/core-ajv-schema-validator',
                 features: [
-                    { name: 'json-schema.org - Schema Tooling Site', url: 'https://json-schema.org/tools?query=&sortBy=name&sortOrder=ascending&groupBy=toolingTypes&licenses=&languages=&drafts=&toolingTypes=' },
-                    { name: 'testingmaster.in - Awesome Playwright plugins', url: 'https://testingmasterdotin.github.io/awesome-playwright/' }
+                    { name: '🌐 json-schema.org - Schema Tooling Site', url: 'https://json-schema.org/tools?query=&sortBy=name&sortOrder=ascending&groupBy=toolingTypes&licenses=&languages=&drafts=&toolingTypes=' }
                 ]
             },
             {
                 plugin: 'core-zod-schema-validator',
                 repoUrl: 'https://github.com/sclavijosuero/core-zod-schema-validator',
                 features: [
-                    { name: 'Cypress.io YouTube - The Bug Bash: Episode 3 (May 27, 2025)', url: 'https://www.youtube.com/watch?v=SRTASYXHqeo' }
+                    { name: '📽️ Cypress.io YouTube - The Bug Bash: Episode 3 (May 27, 2025)', url: 'https://www.youtube.com/watch?v=SRTASYXHqeo' }
                 ]
             }
         ]
