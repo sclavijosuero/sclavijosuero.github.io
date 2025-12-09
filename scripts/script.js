@@ -38,8 +38,8 @@ const COMMUNITY_FEATURES = [
         title: 'Once upon a time a cy.session()…',
         articleUrl: 'https://dev.to/sebastianclavijo/once-upon-a-time-a-cysession-1880',
         outlets: [
-            { name: 'Test Guild News Show (April 8, 2024)', url: 'https://www.linkedin.com/posts/joecolantonio_devsecops-automationtesting-softwaretesting-activity-7183134856497786880-WKZW/' },
-            { name: 'TestGuild Automation in DevSecOps News (April 12, 2024)', url: 'https://www.linkedin.com/pulse/first-ai-software-tester-you-replaced-more-joe-colantonio-r7nxe/' }
+            { name: '📽️ Test Guild News Show (April 8, 2024)', url: 'https://www.linkedin.com/posts/joecolantonio_devsecops-automationtesting-softwaretesting-activity-7183134856497786880-WKZW/' },
+            { name: '📰 TestGuild Automation in DevSecOps News (April 12, 2024)', url: 'https://www.linkedin.com/pulse/first-ai-software-tester-you-replaced-more-joe-colantonio-r7nxe/' }
         ]
     },
     {
@@ -51,26 +51,26 @@ const COMMUNITY_FEATURES = [
         title: 'And the nominees for “Best Cypress Helper” are: Utility Function, Custom Command, Custom Query, Task, and External Plugin',
         articleUrl: 'https://dev.to/sebastianclavijo/and-the-nominees-for-best-cypress-helper-are-utility-function-custom-command-custom-query-task-and-external-plugin-3bb5',
         outlets: [
-            { name: 'Cypress.io Newsletter (April 26, 2024)', url: GENERIC_LINKS.cypressNewsletter },
-            { name: 'Software Testing Weekly Issue #217 (April 29, 2024)', url: 'https://softwaretestingweekly.com/issues/217' }
+            { name: '📰 Cypress.io Newsletter (April 26, 2024)', url: GENERIC_LINKS.cypressNewsletter },
+            { name: '📰 Software Testing Weekly Issue #217 (April 29, 2024)', url: 'https://softwaretestingweekly.com/issues/217' }
         ]
     },
     {
         title: 'The most abused Cypress command ever: cy.wait(TIME)',
         articleUrl: 'https://dev.to/sebastianclavijo/the-most-abused-cypress-command-ever-cywaittime-15e0',
         outlets: [
-            { name: 'Software Testing Notes Issue #141 (Aug 21, 2024)', url: 'https://softwaretestingnotes.substack.com/p/issue-141-software-testing-notes' },
-            { name: 'Coding Jag by LamdaTest Issue #206 (Aug 29, 2024)', url: 'https://www.linkedin.com/pulse/why-you-asking-me-test-lambdatest-ccuxe/?trackingId=yOl20%2B3XQ4mxC8OJJSIx2w%3D%3D' }
+            { name: '📰 Software Testing Notes Issue #141 (Aug 21, 2024)', url: 'https://softwaretestingnotes.substack.com/p/issue-141-software-testing-notes' },
+            { name: '📰 Coding Jag by LamdaTest Issue #206 (Aug 29, 2024)', url: 'https://www.linkedin.com/pulse/why-you-asking-me-test-lambdatest-ccuxe/?trackingId=yOl20%2B3XQ4mxC8OJJSIx2w%3D%3D' }
         ]
     },
     {
         title: 'The Quirky Guide to Crafting and Publishing Your Cypress npm Plugin',
         articleUrl: 'https://dev.to/sebastianclavijo/the-quirky-guide-to-crafting-and-publishing-your-cypress-npm-plugin-2pii',
         outlets: [
-            { name: 'Cypress.io Newsletter (May 29, 2024)', url: GENERIC_LINKS.cypressNewsletter },
-            { name: 'Software Testing Weekly Issue #221 (May 27, 2024)', url: 'https://softwaretestingweekly.com/issues/221' },
-            { name: 'Cypress.io Newsletter (June 27, 2024)', url: GENERIC_LINKS.cypressNewsletter },
-            { name: 'QA Avenue Issue #18: Software Testing Insights (Aug 22, 2024)', url: 'https://qaavenue.substack.com/p/issue-18-software-testing-insights' }
+            { name: '📰 Cypress.io Newsletter (May 29, 2024)', url: GENERIC_LINKS.cypressNewsletter },
+            { name: '📰 Software Testing Weekly Issue #221 (May 27, 2024)', url: 'https://softwaretestingweekly.com/issues/221' },
+            { name: '📰 Cypress.io Newsletter (June 27, 2024)', url: GENERIC_LINKS.cypressNewsletter },
+            { name: '📰 QA Avenue Issue #18: Software Testing Insights (Aug 22, 2024)', url: 'https://qaavenue.substack.com/p/issue-18-software-testing-insights' }
         ]
     },
     {
@@ -82,16 +82,16 @@ const COMMUNITY_FEATURES = [
         title: 'WICK-A11Y Cypress Plugin: Your Unstoppable Ally for Smashing Accessibility Barriers, Cool as John Wick!',
         articleUrl: 'https://dev.to/sebastianclavijo/wick-a11y-cypress-plugin-your-unstoppable-ally-for-smashing-accessibility-barriers-cool-as-john-wick-280a',
         outlets: [
-            { name: 'Software Testing Notes Issue #141 (Aug 21, 2024)', url: 'https://softwaretestingnotes.substack.com/p/issue-141-software-testing-notes' },
-            { name: 'The Automation Insider Issue 14 Newsletter (Aug 27, 2024)', url: 'https://automationinsider.substack.com/p/the-automation-insider-issue-14?r=zfnsk&utm_campaign=post&utm_medium=web&triedRedirect=true' },
-            { name: 'Software Testing Weekly Issue #235 (Sep 3, 2024)', url: 'https://softwaretestingweekly.com/issues/235' }
+            { name: '📰 Software Testing Notes Issue #141 (Aug 21, 2024)', url: 'https://softwaretestingnotes.substack.com/p/issue-141-software-testing-notes' },
+            { name: '📰 The Automation Insider Issue 14 Newsletter (Aug 27, 2024)', url: 'https://automationinsider.substack.com/p/the-automation-insider-issue-14?r=zfnsk&utm_campaign=post&utm_medium=web&triedRedirect=true' },
+            { name: '📰 Software Testing Weekly Issue #235 (Sep 3, 2024)', url: 'https://softwaretestingweekly.com/issues/235' }
         ]
     },
     {
         title: 'The transition from Product Manager to Software QA Engineer. Reinvent yourself! The Career Journey of Sebastian Clavijo',
         articleUrl: 'https://www.linkedin.com/pulse/qj10-transition-from-product-manager-qa-engineer-warnakulasooriya-xtcac/?trackingId=nDWkrydRSe%2B3gU8vWfU5Uw%3D%3D',
         outlets: [
-            { name: 'Quality Insights Newsletter (Aug 21, 2024)', url: 'https://www.linkedin.com/pulse/qj10-transition-from-product-manager-qa-engineer-warnakulasooriya-xtcac/?trackingId=%2FeDnqIiXT5eZHR1FqX5LAg%3D%3D' }
+            { name: '📰 Quality Insights Newsletter (Aug 21, 2024)', url: 'https://www.linkedin.com/pulse/qj10-transition-from-product-manager-qa-engineer-warnakulasooriya-xtcac/?trackingId=%2FeDnqIiXT5eZHR1FqX5LAg%3D%3D' }
         ]
     },
     {
@@ -103,32 +103,32 @@ const COMMUNITY_FEATURES = [
         title: 'Dynamic Tests in Cypress: To Loop or Not To Loop',
         articleUrl: 'https://dev.to/sebastianclavijo/dynamic-tests-in-cypress-to-loop-or-not-to-loop-2g22',
         outlets: [
-            { name: 'Software Testing Weekly Issue #239 (Oct 2, 2024)', url: 'https://softwaretestingweekly.com/issues/239' },
-            { name: 'Software Testing Notes Issue #145 (Oct 3, 2024)', url: 'https://softwaretestingnotes.substack.com/p/issue-145-software-testing-notes' },
-            { name: 'Cypress News 2024 Part 3 (Oct 14, 2024)', url: 'https://www.dlatesterow.pl/cypress-news-2024-cz-3/' }
+            { name: '📰 Software Testing Weekly Issue #239 (Oct 2, 2024)', url: 'https://softwaretestingweekly.com/issues/239' },
+            { name: '📰 Software Testing Notes Issue #145 (Oct 3, 2024)', url: 'https://softwaretestingnotes.substack.com/p/issue-145-software-testing-notes' },
+            { name: '📰 Cypress News 2024 Part 3 (Oct 14, 2024)', url: 'https://www.dlatesterow.pl/cypress-news-2024-cz-3/' }
         ]
     },
     {
         title: 'CYPRESS-AJV-SCHEMA-VALIDATOR v1.2.0: Boost Debugging Skills from Vigilante to Superhero with Advanced Schema Error Insights!',
         articleUrl: 'https://dev.to/sebastianclavijo/cypress-ajv-schema-validator-v120-boost-debugging-skills-from-vigilante-to-superhero-with-advanced-schema-error-insights-1hld',
         outlets: [
-            { name: 'Software Testing Weekly Issue #241 (Oct 14, 2024)', url: 'https://softwaretestingweekly.com/issues/241' }
+            { name: '📰 Software Testing Weekly Issue #241 (Oct 14, 2024)', url: 'https://softwaretestingweekly.com/issues/241' }
         ]
     },
     {
         title: 'But How Much Abstraction is Still Okay in Cypress? To POM or Not To POM',
         articleUrl: 'https://dev.to/sebastianclavijo/but-how-much-abstraction-is-still-okay-in-cypress-to-pom-or-not-to-pom-511j',
         outlets: [
-            { name: 'Software Testing Weekly Issue #242 (Oct 21, 2024)', url: 'https://softwaretestingweekly.com/issues/242' },
-            { name: 'Software Testing Notes Issue #147 (Oct 28, 2024)', url: 'https://softwaretestingnotes.substack.com/p/issue-147-software-testing-notes?utm_source=share&utm_medium=android&r=434g0b&triedRedirect=true' },
-            { name: 'QA Avenue Issue #27: Software Testing Insights (Nov 4, 2024)', url: 'https://qaavenue.substack.com/p/issue-27-software-testing-insights' }
+            { name: '📰 Software Testing Weekly Issue #242 (Oct 21, 2024)', url: 'https://softwaretestingweekly.com/issues/242' },
+            { name: '📰 Software Testing Notes Issue #147 (Oct 28, 2024)', url: 'https://softwaretestingnotes.substack.com/p/issue-147-software-testing-notes?utm_source=share&utm_medium=android&r=434g0b&triedRedirect=true' },
+            { name: '📰 QA Avenue Issue #27: Software Testing Insights (Nov 4, 2024)', url: 'https://qaavenue.substack.com/p/issue-27-software-testing-insights' }
         ]
     },
     {
         title: "Unlocking the Mystery: Deciphering the Enigmatic Code of URL's Glob Patterns in cy.intercept()",
         articleUrl: 'https://dev.to/sebastianclavijo/unlocking-the-mystery-deciphering-the-enigmatic-code-of-urls-glob-patterns-in-cyintercept-3mgg',
         outlets: [
-            { name: 'Critical Continuous Quality: MoT Weekly – Issue 492 (Nov 4, 2024)', url: 'https://www.ministryoftesting.com/newsletter/critical-continuous-quality-mot-weekly-issue-492' }
+            { name: '📰 Critical Continuous Quality: MoT Weekly – Issue 492 (Nov 4, 2024)', url: 'https://www.ministryoftesting.com/newsletter/critical-continuous-quality-mot-weekly-issue-492' }
         ]
     },
     {
@@ -155,63 +155,67 @@ const COMMUNITY_FEATURES = [
         title: 'My Top 19+1 Favorite Cypress Plugins for Testing with Wick-like Precision!',
         articleUrl: 'https://dev.to/sebastianclavijo/my-top-191-favorite-cypress-plugins-for-testing-with-wick-like-precision-3fhh',
         outlets: [
-            { name: 'Software Testing Weekly Issue #259 (Feb 24, 2025)', url: 'https://softwaretestingweekly.com/issues/259' },
-            { name: "How To Pick Cypress Plugins You Can Trust – Gleb Bahmutov's Article", url: 'https://glebbahmutov.com/blog/how-to-pick-cypress-plugins/' }
+            { name: '📰 Software Testing Weekly Issue #259 (Feb 24, 2025)', url: 'https://softwaretestingweekly.com/issues/259' },
+            { name: "📰 How To Pick Cypress Plugins You Can Trust – Gleb Bahmutov's Article", url: 'https://glebbahmutov.com/blog/how-to-pick-cypress-plugins/' }
         ]
     },
     {
         title: 'The Test Drama (The Opening Salvo): Cypress vs Playwright Installation - The Good, The Bad, and the... Bug-ly!',
         articleUrl: 'https://dev.to/sebastianclavijo/the-test-drama-the-opening-salvo-cypress-vs-playwright-installation-the-good-the-bad-and-4hm6',
         outlets: [
-            { name: 'Gateway to the MoTaverse: MoT Weekly – Issue 502 (Jan 27, 2025)', url: 'https://www.linkedin.com/pulse/gateway-motaverse-mot-weekly-issue-502-ministry-of-testing-inl6e/' },
-            { name: "Cypress Tips January 2025 – Gleb Bahmutov's Newsletter", url: 'https://cypresstips.substack.com/p/cypress-tips-january-2025' },
-            { name: 'Trending in Testing Weekly Newsletter #51 (Jan 29, 2025)', url: 'https://trendingintesting.com/trending-in-testing-weekly-newsletter-51/' },
-            { name: 'Software Testing Weekly Issue #258 (Feb 18, 2025)', url: 'https://softwaretestingweekly.com/issues/258?#start' }
+            { name: '📰 Gateway to the MoTaverse: MoT Weekly – Issue 502 (Jan 27, 2025)', url: 'https://www.linkedin.com/pulse/gateway-motaverse-mot-weekly-issue-502-ministry-of-testing-inl6e/' },
+            { name: "📰 Cypress Tips January 2025 – Gleb Bahmutov's Newsletter", url: 'https://cypresstips.substack.com/p/cypress-tips-january-2025' },
+            { name: '📰 Trending in Testing Weekly Newsletter #51 (Jan 29, 2025)', url: 'https://trendingintesting.com/trending-in-testing-weekly-newsletter-51/' },
+            { name: '📰 Software Testing Weekly Issue #258 (Feb 18, 2025)', url: 'https://softwaretestingweekly.com/issues/258?#start' }
         ]
     },
     {
         title: 'The Test Drama: Cypress vs Playwright - Control Your Tests (Part 2): TAGS & TEST FILTERS',
         articleUrl: 'https://dev.to/sebastianclavijo/the-test-drama-cypress-vs-playwright-control-your-tests-part-2-tags-test-filters-3kh2',
         outlets: [
-            { name: 'Software Testing Weekly Issue #269 (May 7, 2025)', url: 'https://softwaretestingweekly.com/issues/269' },
-            { name: 'Coding Jag by LamdaTest Issue #243 (May 15, 2025)', url: 'https://www.linkedin.com/pulse/your-website-truly-accessible-find-out-now-lambdatest-s70yf/?trackingId=4R4mViDFOv0gco%2BOiahXYA%3D%3D' },
-            { name: "Cypress Tips April 2025 – Gleb Bahmutov's Newsletter", url: 'https://cypresstips.substack.com/p/cypress-tips-april-2025' }
+            { name: '📰 Software Testing Weekly Issue #269 (May 7, 2025)', url: 'https://softwaretestingweekly.com/issues/269' },
+            { name: '📰 Coding Jag by LamdaTest Issue #243 (May 15, 2025)', url: 'https://www.linkedin.com/pulse/your-website-truly-accessible-find-out-now-lambdatest-s70yf/?trackingId=4R4mViDFOv0gco%2BOiahXYA%3D%3D' },
+            { name: "📰 Cypress Tips April 2025 – Gleb Bahmutov's Newsletter", url: 'https://cypresstips.substack.com/p/cypress-tips-april-2025' }
         ]
     },
     {
         title: "The Async Nature of Cypress: Don't Mess with the Timelines in Your Cypress Tests 'Dual-Verse'",
         articleUrl: 'https://dev.to/sebastianclavijo/the-async-nature-of-cypress-dont-mess-with-the-timelines-in-your-cypress-tests-dual-verse-3ehh',
         outlets: [
-            { name: 'Software Testing Notes Issue #170 (May 7, 2025)', url: 'https://softwaretestingnotes.substack.com/p/issue-170-software-testing-notes' },
-            { name: 'Cypress.io official YouTube Channel - The Bug Bash: Episode 2 (May 13, 2025)', url: 'https://www.youtube.com/watch?v=zVrpZLStpco' },
-            { name: 'Software Testing Weekly Issue #270 (May 14, 2025)', url: 'https://softwaretestingweekly.com/issues/270' }
+            { name: '📽️ Cypress.io official YouTube Channel - The Bug Bash: Episode 2 (May 13, 2025)', url: 'https://www.youtube.com/watch?v=zVrpZLStpco' },
+
+            { name: '📰 Software Testing Notes Issue #170 (May 7, 2025)', url: 'https://softwaretestingnotes.substack.com/p/issue-170-software-testing-notes' },
+            { name: '📰 Software Testing Weekly Issue #270 (May 14, 2025)', url: 'https://softwaretestingweekly.com/issues/270' }
         ]
     },
     {
         title: 'Meet the New CYPRESS-SCHEMA-VALIDATOR: When ZOD Joined Forces with AJV for the Ultimate Validation Duo!',
         articleUrl: 'https://dev.to/sebastianclavijo/meet-the-new-cypress-schema-validator-when-zod-joined-forces-with-ajv-for-the-ultimate-validation-2o73',
         outlets: [
-            { name: 'Test Guild News Show (Jun 9, 2025)', url: 'https://www.linkedin.com/posts/joecolantonio_devsecops-automationtesting-softwaretesting-activity-7337877625475919872-033I?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAJfhRkBK-_7FuzGe0IFv3r5Eej4IFAScJM' },
-            { name: 'TestGuild Automation in DevSecOps Newsletter (Jun 14, 2025)', url: 'https://www.linkedin.com/pulse/ai-generate-missing-playwright-tests-postman-more-joe-colantonio-gluie/' },
-            { name: 'Software Testing Weekly Issue #275 (Jun 16, 2025)', url: 'https://softwaretestingweekly.com/issues/275' },
-            { name: 'Coding Jag by LamdaTest Issue #248 (Jun 19, 2025)', url: 'https://www.linkedin.com/pulse/ai-writes-code-so-why-devs-slowing-down-lambdatest-ovpdf/' },
-            { name: 'QA Avenue Issue #32: Software Testing Insights (Jun 23, 2025)', url: 'https://qaavenue.substack.com/p/issue-32-software-testing-insights' },
-            { name: 'Software Testing Notes Issue #182 (Aug 6, 2025)', url: 'https://softwaretestingnotes.substack.com/p/issue-182-software-testing-notes' }
+            { name: '📽️ Test Guild News Show (Jun 9, 2025)', url: 'https://www.linkedin.com/posts/joecolantonio_devsecops-automationtesting-softwaretesting-activity-7337877625475919872-033I?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAJfhRkBK-_7FuzGe0IFv3r5Eej4IFAScJM' },
+
+            { name: '📰 TestGuild Automation in DevSecOps Newsletter (Jun 14, 2025)', url: 'https://www.linkedin.com/pulse/ai-generate-missing-playwright-tests-postman-more-joe-colantonio-gluie/' },
+            { name: '📰 Software Testing Weekly Issue #275 (Jun 16, 2025)', url: 'https://softwaretestingweekly.com/issues/275' },
+            { name: '📰 Coding Jag by LamdaTest Issue #248 (Jun 19, 2025)', url: 'https://www.linkedin.com/pulse/ai-writes-code-so-why-devs-slowing-down-lambdatest-ovpdf/' },
+            { name: '📰 QA Avenue Issue #32: Software Testing Insights (Jun 23, 2025)', url: 'https://qaavenue.substack.com/p/issue-32-software-testing-insights' },
+            { name: '📰 Software Testing Notes Issue #182 (Aug 6, 2025)', url: 'https://softwaretestingnotes.substack.com/p/issue-182-software-testing-notes' }
         ]
     },
     {
         title: "The 'second' most abused (and misused) Cypress command ever: cy.contains()",
         articleUrl: 'https://dev.to/sebastianclavijo/the-second-most-abused-and-misused-cypress-command-ever-cycontains-126j',
         outlets: [
-            { name: 'Cypress.io Newsletter July edition (Jul 1, 2025)', url: 'https://go.cypress.io/cypress-newsletter-july-2025' },
-            { name: 'Software Testing Weekly Issue #277 (Jul 2, 2025)', url: 'https://softwaretestingweekly.com/issues/277' }
+            { name: '📰 Cypress.io Newsletter July edition (Jul 1, 2025)', url: 'https://go.cypress.io/cypress-newsletter-july-2025' },
+            { name: '📰 Software Testing Weekly Issue #277 (Jul 2, 2025)', url: 'https://softwaretestingweekly.com/issues/277' }
         ]
     },
     {
         title: 'WICK-A11Y v2.3.0: A Dazzling New Report, WCAG 2.2 AAA, and More Goodies',
         articleUrl: 'https://dev.to/sebastianclavijo/wick-a11y-v230-a-dazzling-new-report-wcag-22-aaa-and-more-goodies-hd0',
         outlets: [
-            { name: 'Cypress.io Newsletter October edition (Oct 1, 2025)', url: 'https://go.cypress.io/cypress-newsletter-october-2025' }
+            { name: '📰 Cypress.io Newsletter October edition (Oct 1, 2025)', url: 'https://go.cypress.io/cypress-newsletter-october-2025' },
+            { name: '📰 q2bstudio.com - WICK-A11Y v2.3.0: Informe deslumbrante, WCAG 2.2 AAA y más novedades', url: 'https://www.q2bstudio.com/nuestro-blog/21237/wick-a11y-v2-3-0-informe-deslumbrante-wcag-2-2-aaa-y-mas-novedades' }
+
         ]
     }
 ];
@@ -269,7 +273,6 @@ const PLUGIN_FEATURE_GROUPS = [
                     { name: "📰 Ioan Solderea - Understanding the European Accessibility Act 2025: Compliance is Key", url: 'https://dev.to/cypress/understanding-the-european-accessibility-act-2025-compliance-is-key-3fif' },
                     { name: '📰 Ádám Szentiványi - Comparison of Accessibility Tools', url: 'https://prezi.com/p/aklj2f6-bviu/comparison-of-accessibility-tools/' },
                     { name: '📰 Vast Green: The Accessibility Improvement Act - BFSG - Conclusion', url: 'https://vast-green.com/bfsg-abschluss/' },
-                    { name: '📰 q2bstudio.com - WICK-A11Y v2.3.0: Informe deslumbrante, WCAG 2.2 AAA y más novedades', url: 'https://www.q2bstudio.com/nuestro-blog/21237/wick-a11y-v2-3-0-informe-deslumbrante-wcag-2-2-aaa-y-mas-novedades' },
 
                     { name: "✏️ Gleb Bahmutov - Testing The Swag Store Course (Bonus 74: Check accessibility issues)", url: 'https://cypress.tips/courses/swag-store/lessons/bonus74' },
                     { name: "✏️ Gleb Bahmutov - TDD Calculator Course (Lesson e6 & e7: Catch accessibility issues)", url: 'https://cypress.tips/courses/tdd-calculator/lessons/e6' }
