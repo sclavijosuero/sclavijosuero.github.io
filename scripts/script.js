@@ -244,6 +244,7 @@ const PLUGIN_FEATURE_GROUPS = [
 
                     { name: '⚖️ myparto.com - Accessibility Statement', url: 'https://www.myparto.com/en/content/AccessibilityStatement.html' },
                     { name: '⚖️ ws-autoteile.com - Accessibility Statement', url: 'https://www.ws-autoteile.com/en/content/AccessibilityStatement.html' },
+                    { name: '⚖️ autoteileservice24.de - Accessibility Statement', url: 'https://www.autoteileservice24.de/en/content/AccessibilityStatement.html' },
 
 
                     { name: '📽️ Test Guild News Show (Jul 8, 2024)', url: 'https://www.linkedin.com/feed/update/urn:li:activity:7216114421041934336/' },
@@ -275,7 +276,8 @@ const PLUGIN_FEATURE_GROUPS = [
                     { name: '📰 Vast Green: The Accessibility Improvement Act - BFSG - Conclusion', url: 'https://vast-green.com/bfsg-abschluss/' },
 
                     { name: "✏️ Gleb Bahmutov - Testing The Swag Store Course (Bonus 74: Check accessibility issues)", url: 'https://cypress.tips/courses/swag-store/lessons/bonus74' },
-                    { name: "✏️ Gleb Bahmutov - TDD Calculator Course (Lesson e6 & e7: Catch accessibility issues)", url: 'https://cypress.tips/courses/tdd-calculator/lessons/e6' }
+                    { name: "✏️ Gleb Bahmutov - TDD Calculator Course (Lesson e6 & e7: Catch accessibility issues)", url: 'https://cypress.tips/courses/tdd-calculator/lessons/e6' },
+                    { name: "✏️ Alexander Thalhammer - Accessibility in Angular Workshop", url: 'https://lxt.dev/Angular-A11Y-Quick-Intro.pdf' }
                 ]
             },
             {
@@ -1128,7 +1130,7 @@ function renderFallbackPlugins(container) {
     const fallbackPlugins = [
         {
             name: 'wick-a11y',
-            description: 'Cypress plugin for configurable accessibility analysis supporting WCAG 2.2 (A–AAA). It provides a detailed list of violations in the Cypress log, visual feedback directly in the Cypress runner, and generates a comprehensive, severity-based HTML report that includes per-violation details, fix guidance, and a screenshot with interactive elements for each accessibility issue. The plugin uses axe-core and cypress-axe to deliver comprehensive accessibility testing.',
+            description: 'Cypress plugin for configurable accessibility analysis supporting WCAG 2.2 (A-AAA). It provides a detailed list of violations in the Cypress log, visual feedback directly in the Cypress runner, and generates a comprehensive, severity-based HTML report that includes per-violation details, fix guidance, and a screenshot with interactive elements for each accessibility issue. The plugin uses axe-core and cypress-axe to deliver comprehensive accessibility testing.',
             version: '2.5.0',
             githubUrl: 'https://github.com/sclavijosuero/wick-a11y',
             npmUrl: 'https://www.npmjs.com/package/wick-a11y',
@@ -1143,6 +1145,15 @@ function renderFallbackPlugins(container) {
             npmUrl: 'https://www.npmjs.com/package/cypress-schema-validator',
             icon: 'fas fa-check-circle',
             pluginImage: 'https://raw.githubusercontent.com/sclavijosuero/cypress-schema-validator/main/videos/overview.gif'
+        },
+        {
+            name: 'cypress-flaky-test-audit',
+            description: 'A Cypress plugin that tracks the order in which Cypress commands are entered into the command queue and delivers detailed, per-command analytics for your test runs. It helps identify flaky tests, performance bottlenecks, and commands that don’t execute, and presents audit results in the browser console, terminal output, and an HTML report with visual graphs of Cypress command execution',
+            version: '1.0.0',
+            githubUrl: 'https://github.com/sclavijosuero/cypress-flaky-test-audit',
+            npmUrl: 'https://www.npmjs.com/package/cypress-flaky-test-audit',
+            icon: 'fas fa-random',
+            pluginImage: 'https://raw.githubusercontent.com/sclavijosuero/cypress-flaky-test-audit/main/assets/overview.gif'
         },
         {
             name: 'pw-api-plugin',
