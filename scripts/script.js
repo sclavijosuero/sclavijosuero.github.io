@@ -1135,7 +1135,7 @@ function renderFallbackPlugins(container) {
             githubUrl: 'https://github.com/sclavijosuero/wick-a11y',
             npmUrl: 'https://www.npmjs.com/package/wick-a11y',
             icon: 'fas fa-universal-access',
-            pluginImage: 'https://raw.githubusercontent.com/sclavijosuero/wick-a11y/main/images/overview.png'
+            pluginImage: 'https://raw.githubusercontent.com/sclavijosuero/wick-a11y/main/images/full-overview.gif'
         },
         {
             name: 'cypress-schema-validator',
