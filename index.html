@@ -296,7 +296,13 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 Sebastian Clavijo Suero. Built with passion, tested with precision.</p>
+                <p>&copy; <span id="footer-year"></span> Sebastian Clavijo Suero. Built with passion, tested with precision.</p>
+                <script>
+                  document.addEventListener('DOMContentLoaded', function() {
+                    var year = new Date().getFullYear();
+                    document.getElementById('footer-year').textContent = year;
+                  });
+                </script>
                 <div class="footer-links">
                     <a href="https://sclavijosuero.github.io" target="_blank">sclavijosuero.github.io</a>
                 </div>
