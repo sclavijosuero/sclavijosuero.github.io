@@ -1076,7 +1076,7 @@ body {
 .feature-mentions a {
     color: var(--text-primary);
     display: inline-flex;
-    align-items: center;
+    align-items: baseline;
     gap: var(--spacing-xs);
     font-size: 0.95rem;
 }
