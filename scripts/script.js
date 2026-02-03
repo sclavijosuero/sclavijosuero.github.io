@@ -214,7 +214,6 @@ const COMMUNITY_FEATURES = [
         articleUrl: 'https://dev.to/sebastianclavijo/wick-a11y-v220-x-cypress-v15-parabellum-for-axe-essibility-barriers-2fam',
         outlets: [
             { name: '📰 q2bstudio.com - Parabellum para Barreras de Accesibilidad', url: 'https://www.q2bstudio.com/nuestro-blog/18096/parabellum-para-barreras-de-accesibilidad' }
-
         ]
     },
     {
@@ -223,24 +222,24 @@ const COMMUNITY_FEATURES = [
         outlets: [
             { name: '📰 Cypress.io Newsletter October edition (Oct 1, 2025)', url: 'https://go.cypress.io/cypress-newsletter-october-2025' },
             { name: '📰 q2bstudio.com - WICK-A11Y v2.3.0: Informe deslumbrante, WCAG 2.2 AAA y más novedades', url: 'https://www.q2bstudio.com/nuestro-blog/21237/wick-a11y-v2-3-0-informe-deslumbrante-wcag-2-2-aaa-y-mas-novedades' }
-
         ]
     },
     {
         title: 'CYPRESS-FLAKY-TEST-AUDIT: thriving in the Cypress "Dual-Verse" for once!',
         articleUrl: 'https://dev.to/sebastianclavijo/cypress-flaky-testaudit-thriving-in-the-cypress-dual-verse-for-once-l4o',
         outlets: [
-            { name: '📰 Software Testing Notes Issue #201 (Jan 2026)', url: 'https://softwaretestingnotes.substack.com/p/issue-201-software-testing-notes' },
-            { name: '📰 Cypress Tips January 2026 -  Gleb Bahmutov Newsletter', url: 'https://cypresstips.substack.com/p/cypress-tips-january-2026' }
+            { name: '📰 Software Testing Weekly issue #298 (Jan 2026)', url: 'https://softwaretestingweekly.com/issues/298' },
+            { name: '📰 Cypress Tips January 2026 -  Gleb Bahmutov Newsletter', url: 'https://cypresstips.substack.com/p/cypress-tips-january-2026' },
+            { name: '📰 Ministry of Testing - Cypress Content (Jan 2026)', url: 'https://www.ministryoftesting.com/software-testing-tools/cypress' }
         ]
     },
     {
         title: 'Cypress.Promise.all() and cy.mapChain(): Two Hidden Gems for Cypress You Won’t Let Go Once You Try Them',
         articleUrl: 'https://dev.to/sebastianclavijo/cypresspromiseall-and-cymapchain-two-hidden-gems-for-cypress-you-wont-let-go-once-you-try-20mj',
         outlets: [
-            { name: '📰 Software Testing Weekly issue #298 (Jan 2026)', url: 'https://softwaretestingweekly.com/issues/298' },
+            { name: '📰 Software Testing Notes Issue #201 (Jan 2026)', url: 'https://softwaretestingnotes.substack.com/p/issue-201-software-testing-notes' },
             { name: '📰 Cypress Tips January 2026 -  Gleb Bahmutov Newsletter', url: 'https://cypresstips.substack.com/p/cypress-tips-january-2026' },
-            { name: '📰 Ministry of Testing - Cypress Content (Jan 2026)', url: 'https://www.ministryoftesting.com/software-testing-tools/cypress' }
+            { name: '📰 Software Testing Weekly issue #301 (Feb 2026)', url: 'https://softwaretestingweekly.com/issues/301' },
         ]
     }
 ];
@@ -719,7 +718,7 @@ function normalizeOutlet(outlet) {
     const dateMatch = trimmedName.match(/^(.*)\(([^)]+)\)$/);
     if (dateMatch) {
         const label = dateMatch[1].trim().replace(/[-–—]\s*$/, '');
-        const formattedDate = formatFullDate(dateMatch[2]);
+        const formattedDate = formatMonthYear(dateMatch[2]);
         return {
             label,
             dateLabel: formattedDate ? ` (${formattedDate})` : '',
