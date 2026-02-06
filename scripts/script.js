@@ -314,6 +314,7 @@ const PLUGIN_FEATURE_GROUPS = [
                     { name: '📽️ Razvan Vancea - Cypress API Schema Validator Tutorial', url: 'https://www.youtube.com/watch?v=tUwNqvcdjwg' },
 
                     { name: '📰 TestGuild Automation in DevSecOps Newsletter (Jun 2025)', url: 'https://www.linkedin.com/pulse/ai-generate-missing-playwright-tests-postman-more-joe-colantonio-gluie/' },
+                    { name: "📰 Peter Michael Souza Jr - 20 Things I'd Tell Myself If I Was Learning Cypress for the First Time - Video & Article", url: 'https://www.petermsouzajr.com/blog/20-things-id-tell-myself-if-i-was-learning-cypress-for-the-first-time' },
                     { name: '📰 Software Testing Weekly Issue #275', url: 'https://softwaretestingweekly.com/issues/275' },
                     { name: '📰 Coding Jag by LamdaTest Issue #248', url: 'https://www.linkedin.com/pulse/ai-writes-code-so-why-devs-slowing-down-lambdatest-ovpdf/' },
                     { name: '📰 Software Testing Notes Issue #182', url: 'https://softwaretestingnotes.substack.com/p/issue-182-software-testing-notes' }
@@ -331,11 +332,11 @@ const PLUGIN_FEATURE_GROUPS = [
                     { name: '📽️ Murat Ozcan - Schema validation using cypress-ajv-schema-validator vs Optic', url: 'https://www.youtube.com/watch?v=ysCADOh9aJU&t=13s' },
                     { name: '📽️ Murat Ozcan - Demo comparing API e2e vs Schema testing', url: 'https://www.youtube.com/watch?v=ePjcKMq4c2o' },
 
-                    { name: "📰 Peter Michael Souza Jr - 20 Things I'd Tell Myself If I Was Learning Cypress for the First Time - Video & Article", url: 'https://www.petermsouzajr.com/blog/20-things-id-tell-myself-if-i-was-learning-cypress-for-the-first-time' },
                     { name: '📰 Software Testing Notes Issue #157', url: 'https://softwaretestingnotes.substack.com/p/issue-157-software-testing-notes' },
                     { name: '📰 S. Chathurang - API Schema Validation with Cypress', url: 'https://dev.to/cypress/api-schema-validation-with-cypress-185m' },
                     { name: '📰 Cypress News 2025 cz. 2', url: 'https://www.dlatesterow.pl/cypress-news-2025-cz-2/' },
                     { name: '📰 Cypress News 2025 cz. 3', url: 'https://www.dlatesterow.pl/cypress-news-2025-cz-3/' },
+                    { name: '📰 Cypress News 2026 cz. 1', url: 'https://www.dlatesterow.pl/cypress-news-2026-cz-1/' },
 
                     { name: "✏️ Murat Ozcan's Udemy Course - Epic Test Arch.", url: 'https://www.udemy.com/course/epic-test-arch-test-everything-everywhere-all-at-once/?couponCode=NEWYEARCAREER' }
                 ]
