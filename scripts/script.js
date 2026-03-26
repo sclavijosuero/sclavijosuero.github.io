@@ -1260,7 +1260,7 @@ function renderFallbackPlugins(container) {
             version: '1.0.2',
             githubUrl: 'https://github.com/sclavijosuero/playwright-ajv-schema-validator',
             npmUrl: 'https://www.npmjs.com/package/playwright-ajv-schema-validator',
-            icon: 'fas fa-theater-masks',
+            icon: 'fas fa-archive',
             pluginImage: null,
             isLegacy: true
         }
