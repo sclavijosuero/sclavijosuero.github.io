@@ -1206,7 +1206,7 @@ function renderFallbackPlugins(container) {
             githubUrl: 'https://github.com/sclavijosuero/wick-dom-observer',
             npmUrl: 'https://www.npmjs.com/package/wick-dom-observer',
             icon: 'fas fa-random',
-            pluginImage: 'https://github.com/sclavijosuero/wick-dom-observer/blob/main/assets/images/overview.png'
+            pluginImage: 'https://raw.githubusercontent.com/sclavijosuero/wick-dom-observer/refs/heads/main/assets/images/overview.png'
         },
         {
             name: 'pw-api-plugin',
