@@ -174,7 +174,7 @@ const COMMUNITY_FEATURES = [
         articleUrl: 'https://dev.to/sebastianclavijo/the-test-drama-cypress-vs-playwright-control-your-tests-part-2-tags-test-filters-3kh2',
         outlets: [
             { name: '📰 Software Testing Weekly Issue #269 (May 2025)', url: 'https://softwaretestingweekly.com/issues/269' },
-            { name: '📰 Coding Jag by LamdaTest Issue #243 (May 2025)', url: 'https://www.linkedin.com/pulse/your-website-truly-accessible-find-out-now-lambdatest-s70yf/?trackingId=4R4mViDFOv0gco%2BOiahXYA%3D%3D' },
+            { name: '📰 Coding Jag by LamdaTest Issue #243 (May 2025)', url: 'https://www.linkedin.com/pulse/your-website-truly-accessible-find-out-now-lambdatest-s70yf/' },
             { name: "📰 Cypress Tips April 2025 – Gleb Bahmutov's Newsletter", url: 'https://cypresstips.substack.com/p/cypress-tips-april-2025' }
         ]
     },
@@ -192,9 +192,9 @@ const COMMUNITY_FEATURES = [
         title: 'Meet the New CYPRESS-SCHEMA-VALIDATOR: When ZOD Joined Forces with AJV for the Ultimate Validation Duo!',
         articleUrl: 'https://dev.to/sebastianclavijo/meet-the-new-cypress-schema-validator-when-zod-joined-forces-with-ajv-for-the-ultimate-validation-2o73',
         outlets: [
-            { name: '📽️ Test Guild News Show (Jun 9, 2025)', url: 'https://www.linkedin.com/posts/joecolantonio_devsecops-automationtesting-softwaretesting-activity-7337877625475919872-033I?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAJfhRkBK-_7FuzGe0IFv3r5Eej4IFAScJM' },
+            { name: '📽️ Test Guild News Show (Jun, 2025)', url: 'https://www.linkedin.com/posts/joecolantonio_devsecops-automationtesting-softwaretesting-activity-7337877625475919872-033I/' },
 
-            { name: '📰 TestGuild Automation in DevSecOps Newsletter (Jun 14, 2025)', url: 'https://www.linkedin.com/pulse/ai-generate-missing-playwright-tests-postman-more-joe-colantonio-gluie/' },
+            { name: '📰 TestGuild Automation in DevSecOps Newsletter (Jun 2025)', url: 'https://www.linkedin.com/pulse/ai-generate-missing-playwright-tests-postman-more-joe-colantonio-gluie/' },
             { name: '📰 Software Testing Weekly Issue #275 (Jun 2025)', url: 'https://softwaretestingweekly.com/issues/275' },
             { name: '📰 Coding Jag by LamdaTest Issue #248 (Jun 2025)', url: 'https://www.linkedin.com/pulse/ai-writes-code-so-why-devs-slowing-down-lambdatest-ovpdf/' },
             { name: '📰 QA Avenue Issue #32: Software Testing Insights (Jun 2025)', url: 'https://qaavenue.substack.com/p/issue-32-software-testing-insights' },
@@ -220,7 +220,7 @@ const COMMUNITY_FEATURES = [
         title: 'WICK-A11Y v2.3.0: A Dazzling New Report, WCAG 2.2 AAA, and More Goodies',
         articleUrl: 'https://dev.to/sebastianclavijo/wick-a11y-v230-a-dazzling-new-report-wcag-22-aaa-and-more-goodies-hd0',
         outlets: [
-            { name: '📰 Cypress.io Newsletter October edition (Oct 1, 2025)', url: 'https://go.cypress.io/cypress-newsletter-october-2025' },
+            { name: '📰 Cypress.io Newsletter October edition (Oct 2025)', url: 'https://go.cypress.io/cypress-newsletter-october-2025' },
             { name: '📰 q2bstudio.com - WICK-A11Y v2.3.0: Informe deslumbrante, WCAG 2.2 AAA y más novedades', url: 'https://www.q2bstudio.com/nuestro-blog/21237/wick-a11y-v2-3-0-informe-deslumbrante-wcag-2-2-aaa-y-mas-novedades' }
         ]
     },
@@ -240,6 +240,15 @@ const COMMUNITY_FEATURES = [
             { name: '📰 Software Testing Notes Issue #201 (Jan 2026)', url: 'https://softwaretestingnotes.substack.com/p/issue-201-software-testing-notes' },
             { name: '📰 Cypress Tips January 2026 -  Gleb Bahmutov Newsletter', url: 'https://cypresstips.substack.com/p/cypress-tips-january-2026' },
             { name: '📰 Software Testing Weekly issue #301 (Feb 2026)', url: 'https://softwaretestingweekly.com/issues/301' },
+        ]
+    },
+    {
+        title: 'WICK-A11Y v3.0.1: Cypress v16 Ready - Upgrade Without Fear (Fully Backward Compatible)',
+        articleUrl: 'https://dev.to/sebastianclavijo/wick-a11y-v301-cypress-v16-ready-upgrade-without-fear-fully-backward-compatible-77m',
+        outlets: [
+            { name: '📽️ Test Guild News Show (Mar 2025)', url: 'https://www.linkedin.com/feed/update/urn:li:activity:7439410355727982592/' },
+
+            { name: '📰 TestGuild Automation in DevSecOps Newsletter (Mar 2025)', url: 'https://www.linkedin.com/pulse/automation-debt-ai-validation-crisis-cypress-trust-gate-colantonio-ouate' }
         ]
     }
 ];
@@ -280,6 +289,7 @@ const PLUGIN_FEATURE_GROUPS = [
                     { name: '📽️ Ioan Solderea - European Accessibility Act 2025: Compliance Deadline Nears', url: 'https://www.youtube.com/watch?v=joP3TNdLjF8' },
                     { name: '📽️ Ioan Solderea - Wick A11y – Cypress Plugin for Automated Accessibility Checks', url: 'https://www.youtube.com/watch?v=tqeZTopcy50' },
                     { name: "📽️ Peter Michael Souza Jr - 20 Things I'd Tell Myself If I Was Learning Cypress for the First Time - Video & Article", url: 'https://www.petermsouzajr.com/blog/20-things-id-tell-myself-if-i-was-learning-cypress-for-the-first-time' },
+                    { name: '📽️ Test Guild News Show (Mar 2025)', url: 'https://www.linkedin.com/feed/update/urn:li:activity:7439410355727982592/' },
 
                     { name: '📰 TestGuild Automation in DevSecOps Newsletter (Jul 2024)', url: 'https://www.linkedin.com/pulse/ai-etl-testing-shift-left-dead-cypress-a11y-more-joe-colantonio-f6l0e/' },
                     { name: '📰 The Automation Insider Issue 13 Newsletter', url: 'https://automationinsider.substack.com/p/the-automation-insider-issue-13?r=zfnsk&utm_campaign=post&utm_medium=web&triedRedirect=true' },
@@ -298,6 +308,7 @@ const PLUGIN_FEATURE_GROUPS = [
                     { name: "📰 Ioan Solderea - Understanding the European Accessibility Act 2025: Compliance is Key", url: 'https://dev.to/cypress/understanding-the-european-accessibility-act-2025-compliance-is-key-3fif' },
                     { name: '📰 Ádám Szentiványi - Comparison of Accessibility Tools', url: 'https://prezi.com/p/aklj2f6-bviu/comparison-of-accessibility-tools/' },
                     { name: '📰 Vast Green: The Accessibility Improvement Act - BFSG - Conclusion', url: 'https://vast-green.com/bfsg-abschluss/' },
+                    { name: '📰 TestGuild Automation in DevSecOps Newsletter (Mar 2025)', url: 'https://www.linkedin.com/pulse/automation-debt-ai-validation-crisis-cypress-trust-gate-colantonio-ouate' },
 
                     { name: "✏️ Gleb Bahmutov - Testing The Swag Store Course (Bonus 74: Check accessibility issues)", url: 'https://cypress.tips/courses/swag-store/lessons/bonus74' },
                     { name: "✏️ Gleb Bahmutov - TDD Calculator Course (Lesson e6 & e7: Catch accessibility issues)", url: 'https://cypress.tips/courses/tdd-calculator/lessons/e6' },
@@ -1164,7 +1175,7 @@ function renderFallbackPlugins(container) {
         {
             name: 'wick-a11y',
             description: 'Cypress plugin for configurable accessibility analysis supporting WCAG 2.2 (A-AAA). It provides a detailed list of violations in the Cypress log, visual feedback directly in the Cypress runner, and generates a comprehensive, severity-based HTML report that includes per-violation details, fix guidance, and a screenshot with interactive elements for each accessibility issue. The plugin uses axe-core and cypress-axe to deliver comprehensive accessibility testing.',
-            version: '2.5.0',
+            version: '3.0.1',
             githubUrl: 'https://github.com/sclavijosuero/wick-a11y',
             npmUrl: 'https://www.npmjs.com/package/wick-a11y',
             icon: 'fas fa-universal-access',
@@ -1187,6 +1198,15 @@ function renderFallbackPlugins(container) {
             npmUrl: 'https://www.npmjs.com/package/cypress-flaky-test-audit',
             icon: 'fas fa-random',
             pluginImage: 'https://raw.githubusercontent.com/sclavijosuero/cypress-flaky-test-audit/main/assets/overview.gif'
+        },
+        {
+            name: 'wick-dom-observer',
+            description: 'Cypress commands to reliably detect UI elements that may appear/disappear quickly: clickAndWatchForElement (click + observe) and watchForElement (observe only). It supports required/optional appearance, optional disappearance checks, custom timeout/polling, and minimum visible duration (mustLast) with a synchronous assertion callback.',
+            version: '1.0.2',
+            githubUrl: 'https://github.com/sclavijosuero/wick-dom-observer',
+            npmUrl: 'https://www.npmjs.com/package/wick-dom-observer',
+            icon: 'fas fa-random',
+            pluginImage: 'https://github.com/sclavijosuero/wick-dom-observer/blob/main/assets/images/overview.png'
         },
         {
             name: 'pw-api-plugin',
