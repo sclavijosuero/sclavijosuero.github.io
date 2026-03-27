@@ -632,7 +632,7 @@ function createArticleCard(article) {
                 <div class="article-meta">
                     <span class="article-date">${publishedDate}</span>
                     <div class="article-tags">
-                        ${article.tag_list.slice(0, 2).map(tag => `<span class="article-tag">#${tag}</span>`).join('')}
+                        ${article.tag_list.map(tag => `<span class="article-tag">#${tag}</span>`).join('')}
                     </div>
                 </div>
             </div>
@@ -858,7 +858,13 @@ function createPluginGroupSection(group) {
 }
 
 function createPluginFeatureCard(plugin) {
-    const mentions = plugin.features.map(renderPluginMention).join('');
+    let lastMentionType = null;
+    const mentions = plugin.features.map(mention => {
+        const mentionType = getMentionType(mention.name);
+        const isNewGroup = mentionType !== lastMentionType;
+        lastMentionType = mentionType;
+        return renderPluginMention(mention, isNewGroup);
+    }).join('');
 
     return `
         <article class="feature-article plugin-feature-article">
@@ -879,10 +885,16 @@ function createPluginFeatureCard(plugin) {
     `;
 }
 
-function renderPluginMention(mention) {
+function getMentionType(name = '') {
+    const firstChar = Array.from(name.trim())[0] || '';
+    return firstChar;
+}
+
+function renderPluginMention(mention, isNewGroup) {
+    const groupClass = isNewGroup ? ' feature-mention-group-start' : '';
     if (mention.url) {
         return `
-            <li>
+            <li class="feature-mention${groupClass}">
                 <a href="${mention.url}" target="_blank" rel="noopener">
                     <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                     <span>${mention.name}</span>
@@ -892,7 +904,7 @@ function renderPluginMention(mention) {
     }
 
     return `
-        <li>
+        <li class="feature-mention${groupClass}">
             <span class="feature-mention-text">${mention.name}</span>
         </li>
     `;
@@ -1174,6 +1186,7 @@ function renderFallbackPlugins(container) {
     const fallbackPlugins = [
         {
             name: 'wick-a11y',
+            group: 'green',
             description: 'Cypress plugin for configurable accessibility analysis supporting WCAG 2.2 (A-AAA). It provides a detailed list of violations in the Cypress log, visual feedback directly in the Cypress runner, and generates a comprehensive, severity-based HTML report that includes per-violation details, fix guidance, and a screenshot with interactive elements for each accessibility issue. The plugin uses axe-core and cypress-axe to deliver comprehensive accessibility testing.',
             version: '3.0.1',
             githubUrl: 'https://github.com/sclavijosuero/wick-a11y',
@@ -1183,6 +1196,7 @@ function renderFallbackPlugins(container) {
         },
         {
             name: 'cypress-schema-validator',
+            group: 'green',
             description: 'Cypress plugin for API schema validation. It leverages the core-ajv-schema-validator powered by the AJV package (for plain JSON schemas, Swagger documents, and OpenAPI schemas) as well as the core-zod-schema-validator powered by the ZOD package (for Zod schemas).',
             version: '1.0.1',
             githubUrl: 'https://github.com/sclavijosuero/cypress-schema-validator',
@@ -1192,6 +1206,7 @@ function renderFallbackPlugins(container) {
         },
         {
             name: 'cypress-flaky-test-audit',
+            group: 'green',
             description: 'A Cypress plugin that tracks the order in which Cypress commands are entered into the command queue and delivers detailed, per-command analytics for your test runs. It helps identify flaky tests, performance bottlenecks, and commands that don’t execute, and presents audit results in the browser console, terminal output, and an HTML report with visual graphs of Cypress command execution',
             version: '1.0.0',
             githubUrl: 'https://github.com/sclavijosuero/cypress-flaky-test-audit',
@@ -1201,6 +1216,7 @@ function renderFallbackPlugins(container) {
         },
         {
             name: 'wick-dom-observer',
+            group: 'green',
             description: 'Cypress commands to reliably detect UI elements that may appear/disappear quickly: clickAndWatchForElement (click + observe) and watchForElement (observe only). It supports required/optional appearance, optional disappearance checks, custom timeout/polling, and minimum visible duration (mustLast) with a synchronous assertion callback.',
             version: '1.0.2',
             githubUrl: 'https://github.com/sclavijosuero/wick-dom-observer',
@@ -1210,6 +1226,7 @@ function renderFallbackPlugins(container) {
         },
         {
             name: 'pw-api-plugin',
+            group: 'red',
             description: 'Playwright plugin for comprehensive API testing and result presentation using the Playwright UI, Trace Viewer, and HTML Report. It significantly aids debugging processes and supports both Playwright native API and Axios requests.',
             version: '2.1.0',
             githubUrl: 'https://github.com/sclavijosuero/pw-api-plugin',
@@ -1219,6 +1236,7 @@ function renderFallbackPlugins(container) {
         },
         {
             name: 'playwright-schema-validator',
+            group: 'red',
             description: 'Playwright plugin for API schema validation. It leverages the core-ajv-schema-validator powered by the AJV package (for plain JSON schemas, Swagger documents, and OpenAPI schemas) as well as the core-zod-schema-validator powered by the ZOD package (for Zod schemas). It delivers results in a clear, user-friendly format, simplifying the process of identifying and addressing schema issues.',
             version: '1.0.0',
             githubUrl: 'https://github.com/sclavijosuero/playwright-schema-validator',
@@ -1228,6 +1246,7 @@ function renderFallbackPlugins(container) {
         },
         {
             name: 'core-ajv-schema-validator',
+            group: 'blue',
             description: 'Core AJV schema validation library that powers multiple testing framework integrations. Framework-agnostic JSON schema validation.',
             version: '1.0.0',
             githubUrl: 'https://github.com/sclavijosuero/core-ajv-schema-validator',
@@ -1237,6 +1256,7 @@ function renderFallbackPlugins(container) {
         },
         {
             name: 'core-zod-schema-validator',
+            group: 'blue',
             description: 'Core Zod schema validation library that powers multiple testing framework integrations. Framework-agnostic TypeScript-first schema validation.',
             version: '1.0.1',
             githubUrl: 'https://github.com/sclavijosuero/core-zod-schema-validator',
@@ -1246,6 +1266,7 @@ function renderFallbackPlugins(container) {
         },
         {
             name: 'cypress-ajv-schema-validator',
+            group: 'legacy',
             description: 'Legacy JSON Schema validator for Cypress using AJV. Now replaced by cypress-schema-validator for new projects.',
             version: '2.0.2',
             githubUrl: 'https://github.com/sclavijosuero/cypress-ajv-schema-validator',
@@ -1256,6 +1277,7 @@ function renderFallbackPlugins(container) {
         },
         {
             name: 'playwright-ajv-schema-validator',
+            group: 'legacy',
             description: 'Playwright plugin for API schema validation against plain JSON schemas, Swagger schema documents. Built on the robust core-ajv-schema-validator plugin and powered by the Ajv JSON Schema Validator, it delivers results in a clear, user-friendly format, simplifying the process of identifying and addressing schema issues.',
             version: '1.0.2',
             githubUrl: 'https://github.com/sclavijosuero/playwright-ajv-schema-validator',
@@ -1279,13 +1301,32 @@ function renderFallbackPlugins(container) {
 
     container.innerHTML = '';
 
-    // Render regular plugins
-    fallbackPlugins.forEach(plugin => {
+    const activePlugins = fallbackPlugins.filter(plugin => !plugin.isLegacy);
+    const legacyPlugins = fallbackPlugins.filter(plugin => plugin.isLegacy);
+
+    // Render active plugins
+    activePlugins.forEach(plugin => {
         const card = createFallbackPluginCard(plugin);
         container.appendChild(card);
     });
 
-    // Add plugin highlights section before tutorials
+    // Render legacy plugins with divider directly after active ones
+    if (legacyPlugins.length) {
+        const legacyHeading = document.createElement('div');
+        legacyHeading.className = 'plugin-group-heading';
+        legacyHeading.innerHTML = `
+            <h3>Legacy Plugins</h3>
+            <p>Maintained for backward compatibility. For new projects adopt the latest schema validators above.</p>
+        `;
+        container.appendChild(legacyHeading);
+
+        legacyPlugins.forEach(plugin => {
+            const card = createFallbackPluginCard(plugin);
+            container.appendChild(card);
+        });
+    }
+
+    // Add plugin highlights section after legacy
     const pluginHighlightsSection = createPluginHighlightsSection();
     container.appendChild(pluginHighlightsSection);
     renderPluginFeatures();
@@ -1307,7 +1348,8 @@ function renderFallbackPlugins(container) {
 
 function createFallbackPluginCard(plugin) {
     const card = document.createElement('div');
-    card.className = plugin.isLegacy ? 'plugin-card legacy-plugin' : 'plugin-card';
+    const groupClass = plugin.isLegacy ? 'plugin-legacy legacy-plugin' : plugin.group ? `plugin-${plugin.group}` : '';
+    card.className = `plugin-card ${groupClass}`.trim();
 
     // Generate GitHub overview image URL
     const githubOverviewImage = getGithubOverviewImage(plugin.githubUrl);
