@@ -625,24 +625,26 @@ body {
 }
 
 .career-strip {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: var(--spacing-sm);
-    background: var(--bg-tertiary);
+    background: linear-gradient(135deg, rgba(15, 118, 110, 0.08), rgba(99, 102, 241, 0.08));
     border: 1px solid var(--border-color);
-    border-radius: var(--border-radius-md);
+    border-radius: var(--border-radius-lg);
     padding: var(--spacing-sm);
     margin: var(--spacing-md) 0;
 }
 
 .career-strip span {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius-sm);
     padding: 0.4rem 0.8rem;
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
 }
 
 .about-quote {
