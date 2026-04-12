@@ -229,7 +229,7 @@ const COMMUNITY_FEATURES = [
         articleUrl: 'https://dev.to/sebastianclavijo/cypress-flaky-testaudit-thriving-in-the-cypress-dual-verse-for-once-l4o',
         outlets: [
             { name: '📰 Software Testing Weekly issue #298 (Jan 2026)', url: 'https://softwaretestingweekly.com/issues/298' },
-            { name: '📰 Cypress Tips January 2026 -  Gleb Bahmutov Newsletter', url: 'https://cypresstips.substack.com/p/cypress-tips-january-2026' },
+            { name: '📰 Gleb Bahmutov Newsletter – Cypress Tips January 2026', url: 'https://cypresstips.substack.com/p/cypress-tips-january-2026' },
             { name: '📰 Ministry of Testing - Cypress Content (Jan 2026)', url: 'https://www.ministryoftesting.com/software-testing-tools/cypress' }
         ]
     },
@@ -238,7 +238,7 @@ const COMMUNITY_FEATURES = [
         articleUrl: 'https://dev.to/sebastianclavijo/cypresspromiseall-and-cymapchain-two-hidden-gems-for-cypress-you-wont-let-go-once-you-try-20mj',
         outlets: [
             { name: '📰 Software Testing Notes Issue #201 (Jan 2026)', url: 'https://softwaretestingnotes.substack.com/p/issue-201-software-testing-notes' },
-            { name: '📰 Cypress Tips January 2026 -  Gleb Bahmutov Newsletter', url: 'https://cypresstips.substack.com/p/cypress-tips-january-2026' },
+            { name: '📰 Gleb Bahmutov Newsletter – Cypress Tips January 2026', url: 'https://cypresstips.substack.com/p/cypress-tips-january-2026' },
             { name: '📰 Software Testing Weekly issue #301 (Feb 2026)', url: 'https://softwaretestingweekly.com/issues/301' },
         ]
     },
@@ -294,7 +294,7 @@ const PLUGIN_FEATURE_GROUPS = [
                     { name: '📰 TestGuild Automation in DevSecOps Newsletter (Jul 2024)', url: 'https://www.linkedin.com/pulse/ai-etl-testing-shift-left-dead-cypress-a11y-more-joe-colantonio-f6l0e/' },
                     { name: '📰 The Automation Insider Issue 13 Newsletter', url: 'https://automationinsider.substack.com/p/the-automation-insider-issue-13?r=zfnsk&utm_campaign=post&utm_medium=web&triedRedirect=true' },
                     { name: "📰 Abigail Armijo - Tools for Accessibility Testing", url: 'https://substack.com/home/post/p-142159238' },
-                    { name: '📰 Cypress Tips September 2024 – Gleb Bahmutov Newsletter', url: 'https://cypresstips.substack.com/p/cypress-tips-september-2024' },
+                    { name: '📰 Gleb Bahmutov Newsletter - Cypress Tips September 2024', url: 'https://cypresstips.substack.com/p/cypress-tips-september-2024' },
                     { name: '📰 TestGuild Automation in DevSecOps Newsletter (Oct 2024)', url: 'https://www.linkedin.com/pulse/test-accessibility-event-playwright-github-actions-llm-joe-colantonio-ippqe/' },
                     { name: "📰 James Wadley - Let's talk about wick-a11y…", url: 'https://dev.to/w4dd325/lets-talk-about-wick-a11y-1afa' },
                     { name: '📰 A11y-evaluation-tools Sheet', url: 'https://docs.google.com/spreadsheets/d/10CTezA0iDdaWggaqxuHawj-5u8YXdZeWBJsIkuvJ364/edit?gid=347324347#gid=347324347' },
@@ -359,7 +359,7 @@ const PLUGIN_FEATURE_GROUPS = [
                 repoUrl: 'https://github.com/sclavijosuero/cypress-flaky-test-audit',
                 features: [
                     { name: '📰 Software Testing Weekly issue #298', url: 'https://softwaretestingweekly.com/issues/298' },
-                    { name: '📰 Cypress Tips January 2026 -  Gleb Bahmutov Newsletter', url: 'https://cypresstips.substack.com/p/cypress-tips-january-2026' }
+                    { name: '📰 Gleb Bahmutov Newsletter - Cypress Tips January 2026', url: 'https://cypresstips.substack.com/p/cypress-tips-january-2026' }
                 ]
             },
             {
