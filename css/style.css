@@ -1425,7 +1425,7 @@ summary:focus-visible,
 }
 
 .plugin-card.plugin-legacy {
-    --plugin-card-accent: #565e6d;
+    --plugin-card-accent: #ffc107;
     --plugin-card-overlay: rgba(86, 94, 109, 0.08);
     --plugin-link-bg: rgba(86, 94, 109, 0.08);
     --plugin-link-border: rgba(86, 94, 109, 0.25);
