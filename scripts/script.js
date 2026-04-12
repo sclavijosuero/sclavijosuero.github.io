@@ -842,7 +842,7 @@ function renderPluginFeatures() {
     container.innerHTML = groupsHtml;
 
     if (countChip) {
-        countChip.innerHTML = '<span>70+</span><span>spotlights</span>';
+        countChip.innerHTML = '<span>80+</span><span>spotlights</span>';
     }
 
     collapseBtn?.addEventListener('click', () => {
