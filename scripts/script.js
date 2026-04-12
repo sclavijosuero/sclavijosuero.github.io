@@ -250,6 +250,13 @@ const COMMUNITY_FEATURES = [
 
             { name: '📰 TestGuild Automation in DevSecOps Newsletter (Mar 2025)', url: 'https://www.linkedin.com/pulse/automation-debt-ai-validation-crisis-cypress-trust-gate-colantonio-ouate' }
         ]
+    },
+    {
+        title: 'WICK-DOM-OBSERVER: The Deterministic Cypress Plugin for Fast Spinners, Blinking Toasts, Optional Overlays, and UI’s Most Wanted',
+        articleUrl: 'https://dev.to/sebastianclavijo/wick-dom-observer-the-deterministic-cypress-plugin-for-fast-spinners-blinking-toasts-optional-4e59',
+        outlets: [
+            { name: '📰 Gleb Bahmutov Newsletter – Cypress Tips March 2026', url: 'https://cypresstips.substack.com/p/cypress-tips-january-2026' }
+        ]
     }
 ];
 
