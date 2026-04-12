@@ -299,7 +299,7 @@ const PLUGIN_FEATURE_GROUPS = [
                     { name: "📰 James Wadley - Let's talk about wick-a11y…", url: 'https://dev.to/w4dd325/lets-talk-about-wick-a11y-1afa' },
                     { name: '📰 A11y-evaluation-tools Sheet', url: 'https://docs.google.com/spreadsheets/d/10CTezA0iDdaWggaqxuHawj-5u8YXdZeWBJsIkuvJ364/edit?gid=347324347#gid=347324347' },
                     { name: '📰 TestGuild Automation in DevSecOps Newsletter (Nov 2024)', url: 'https://www.linkedin.com/pulse/digital-testing-al-driven-mobile-attacks-plugins-more-joe-colantonio-lpume' },
-                    { name: '📰 Cypress Tips December 2024 – Gleb Bahmutov Newsletter', url: 'https://cypresstips.substack.com/p/cypress-tips-december-2024' },
+                    { name: '📰 Gleb Bahmutov Newsletter – Cypress Tips December 2024', url: 'https://cypresstips.substack.com/p/cypress-tips-december-2024' },
                     { name: '📰 Ravindre Ramjiawan - Accessibility tools', url: 'https://techhub.iodigital.com/articles/accessibility-tools' },
                     { name: '📰 talent500.com - Exploring Open Source Accessibility Plugins in Cypress', url: 'https://talent500.com/blog/open-source-accessibility-plugins-cypress/' },
                     { name: "📰 Fatih Soysal - WICK-A11Y 1.4.0: Not Everything Needs to Fail the Test!", url: 'https://fatihsoysal.com/blog/wick-a11y-1-4-0-her-seyin-testi-basarisiz-olmasina-gerek-yok/' },
@@ -308,7 +308,9 @@ const PLUGIN_FEATURE_GROUPS = [
                     { name: "📰 Ioan Solderea - Understanding the European Accessibility Act 2025: Compliance is Key", url: 'https://dev.to/cypress/understanding-the-european-accessibility-act-2025-compliance-is-key-3fif' },
                     { name: '📰 Ádám Szentiványi - Comparison of Accessibility Tools', url: 'https://prezi.com/p/aklj2f6-bviu/comparison-of-accessibility-tools/' },
                     { name: '📰 Vast Green: The Accessibility Improvement Act - BFSG - Conclusion', url: 'https://vast-green.com/bfsg-abschluss/' },
-                    { name: '📰 TestGuild Automation in DevSecOps Newsletter (Mar 2025)', url: 'https://www.linkedin.com/pulse/automation-debt-ai-validation-crisis-cypress-trust-gate-colantonio-ouate' },
+                    { name: '📰 TestGuild Automation in DevSecOps Newsletter (Mar 2026)', url: 'https://www.linkedin.com/pulse/automation-debt-ai-validation-crisis-cypress-trust-gate-colantonio-ouate' },
+                    { name: '📰 Gleb Bahmutov - Testing A11y Using Cypress And wick-a11y Plugin', url: 'https://glebbahmutov.com/blog/testing-a11y/' },
+                    { name: '📰 Vitaly Skadorva - Accessible web testing with Cypress and wick-a11y', url: 'https://dev.to/vitalyskadorva/accessible-web-testing-with-cypress-and-wick-a11y-2ppb' },
 
                     { name: "✏️ Gleb Bahmutov - Testing The Swag Store Course (Bonus 74: Check accessibility issues)", url: 'https://cypress.tips/courses/swag-store/lessons/bonus74' },
                     { name: "✏️ Gleb Bahmutov - TDD Calculator Course (Lesson e6 & e7: Catch accessibility issues)", url: 'https://cypress.tips/courses/tdd-calculator/lessons/e6' },
@@ -358,6 +360,13 @@ const PLUGIN_FEATURE_GROUPS = [
                 features: [
                     { name: '📰 Software Testing Weekly issue #298', url: 'https://softwaretestingweekly.com/issues/298' },
                     { name: '📰 Cypress Tips January 2026 -  Gleb Bahmutov Newsletter', url: 'https://cypresstips.substack.com/p/cypress-tips-january-2026' }
+                ]
+            },
+            {
+                plugin: 'wick-dom-observer',
+                repoUrl: 'https://github.com/sclavijosuero/wick-dom-observer',
+                features: [
+                    { name: '📰 Gleb Bahmutov Newsletter – Cypress Tips March 2026', url: 'https://cypresstips.substack.com/p/cypress-tips-march-2026' }
                 ]
             }
         ]
