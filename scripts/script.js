@@ -794,7 +794,9 @@ function createArticlesArchiveMarkup(articles) {
                     </div>
                     <span class="article-year-meta">
                         <span class="article-year-count">${yearArticles.length}</span>
-                        <span class="article-year-toggle-icon" aria-hidden="true">▾</span>
+                        <span class="article-year-toggle-icon" aria-hidden="true">
+                            <i class="fa-solid fa-angle-down"></i>
+                        </span>
                     </span>
                 </summary>
                 <div class="article-year-content">
