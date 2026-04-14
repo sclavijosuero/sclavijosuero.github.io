@@ -599,20 +599,12 @@ function loadBlogArticles() {
 
     showLoading(blogLoading);
 
-    // Use fetch API directly
-    fetch('https://dev.to/api/articles?username=sebastianclavijo&per_page=30')
-        .then(response => {
-            console.log('Response status:', response.status);
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.json();
-        })
+    fetchAllBlogArticles('sebastianclavijo')
         .then(articles => {
             console.log('Articles fetched:', articles.length);
 
             if (articles && articles.length > 0) {
-                renderSimpleBlogContent(articles, blogContent);
+                renderBlogArchive(articles, blogContent);
                 hideLoading(blogLoading);
                 blogContent.classList.add('loaded');
             } else {
@@ -626,9 +618,209 @@ function loadBlogArticles() {
         });
 }
 
-function renderSimpleBlogContent(articles, container) {
-    const articlesHtml = articles.map(article => createArticleCard(article)).join('');
-    container.innerHTML = `<div class="articles-grid">${articlesHtml}</div>`;
+async function fetchAllBlogArticles(username) {
+    const perPage = 100;
+    const maxPages = 20;
+    const allArticles = [];
+    const seenIds = new Set();
+    let page = 1;
+
+    while (page <= maxPages) {
+        const response = await fetch(`https://dev.to/api/articles?username=${username}&per_page=${perPage}&page=${page}`);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const pageArticles = await response.json();
+        if (!Array.isArray(pageArticles) || pageArticles.length === 0) {
+            break;
+        }
+
+        pageArticles.forEach(article => {
+            if (!seenIds.has(article.id)) {
+                seenIds.add(article.id);
+                allArticles.push(article);
+            }
+        });
+
+        if (pageArticles.length < perPage) {
+            break;
+        }
+
+        page += 1;
+    }
+
+    return allArticles;
+}
+
+function renderBlogArchive(articles, container) {
+    const normalizedArticles = articles
+        .map(article => {
+            const publishedAt = article.published_at ? new Date(article.published_at) : null;
+            return {
+                ...article,
+                publishedAt,
+                publishedYear: publishedAt && !Number.isNaN(publishedAt.getTime())
+                    ? String(publishedAt.getFullYear())
+                    : 'Unknown'
+            };
+        })
+        .sort((a, b) => {
+            const first = a.publishedAt ? a.publishedAt.getTime() : 0;
+            const second = b.publishedAt ? b.publishedAt.getTime() : 0;
+            return second - first;
+        });
+
+    const years = [...new Set(normalizedArticles.map(article => article.publishedYear))];
+    const tags = [...new Set(normalizedArticles.flatMap(article => article.tag_list || []))]
+        .filter(Boolean)
+        .sort((a, b) => a.localeCompare(b));
+
+    container.innerHTML = `
+        <div class="articles-controls" aria-label="Article archive filters">
+            <div class="articles-control-field">
+                <label for="article-search">Search articles</label>
+                <input id="article-search" type="search" placeholder="Search by title or description">
+            </div>
+            <div class="articles-control-field">
+                <label for="article-year-filter">Year</label>
+                <select id="article-year-filter">
+                    <option value="all">All years</option>
+                    ${years.map(year => `<option value="${year}">${year}</option>`).join('')}
+                </select>
+            </div>
+            <div class="articles-control-field">
+                <label for="article-tag-filter">Tag</label>
+                <select id="article-tag-filter">
+                    <option value="all">All tags</option>
+                    ${tags.map(tag => `<option value="${tag}">#${tag}</option>`).join('')}
+                </select>
+            </div>
+        </div>
+        <p class="articles-results-count" id="articles-results-count"></p>
+        <div class="articles-archive" id="articles-archive"></div>
+    `;
+
+    const searchInput = container.querySelector('#article-search');
+    const yearFilter = container.querySelector('#article-year-filter');
+    const tagFilter = container.querySelector('#article-tag-filter');
+    const resultsCount = container.querySelector('#articles-results-count');
+    const archiveContainer = container.querySelector('#articles-archive');
+
+    const state = {
+        query: '',
+        year: 'all',
+        tag: 'all'
+    };
+
+    const render = () => {
+        const filtered = normalizedArticles.filter(article => {
+            const title = (article.title || '').toLowerCase();
+            const description = (article.description || '').toLowerCase();
+            const matchesQuery = !state.query || title.includes(state.query) || description.includes(state.query);
+            const matchesYear = state.year === 'all' || article.publishedYear === state.year;
+            const matchesTag = state.tag === 'all' || (article.tag_list || []).includes(state.tag);
+            return matchesQuery && matchesYear && matchesTag;
+        });
+
+        resultsCount.textContent = `${filtered.length} article${filtered.length === 1 ? '' : 's'} shown`;
+        archiveContainer.innerHTML = createArticlesArchiveMarkup(filtered);
+        wireArticlePreviewLinks(archiveContainer);
+    };
+
+    searchInput?.addEventListener('input', (event) => {
+        state.query = event.target.value.trim().toLowerCase();
+        render();
+    });
+
+    yearFilter?.addEventListener('change', (event) => {
+        state.year = event.target.value;
+        render();
+    });
+
+    tagFilter?.addEventListener('change', (event) => {
+        state.tag = event.target.value;
+        render();
+    });
+
+    render();
+}
+
+function wireArticlePreviewLinks(container) {
+    container.querySelectorAll('.article-year-preview-link').forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.stopPropagation();
+        });
+
+        link.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.stopPropagation();
+            }
+        });
+    });
+}
+
+function createArticlesArchiveMarkup(articles) {
+    if (!articles.length) {
+        return '<p class="articles-archive-empty">No articles match the current filters.</p>';
+    }
+
+    const groupedByYear = articles.reduce((groups, article) => {
+        const year = article.publishedYear;
+        if (!groups[year]) {
+            groups[year] = [];
+        }
+        groups[year].push(article);
+        return groups;
+    }, {});
+
+    const sortedYears = Object.keys(groupedByYear).sort((a, b) => {
+        if (a === 'Unknown') return 1;
+        if (b === 'Unknown') return -1;
+        return Number(b) - Number(a);
+    });
+
+    return sortedYears.map((year, index) => {
+        const yearArticles = groupedByYear[year];
+        const previewItems = yearArticles.map(createYearPreviewItem).join('');
+        return `
+            <details class="article-year-group" ${index === 0 ? 'open' : ''}>
+                <summary class="article-year-summary">
+                    <div class="article-year-summary-main">
+                        <span class="article-year-title">${year}</span>
+                        <ul class="article-year-preview" aria-hidden="true">
+                            ${previewItems}
+                        </ul>
+                    </div>
+                    <span class="article-year-meta">
+                        <span class="article-year-count">${yearArticles.length}</span>
+                        <span class="article-year-toggle-icon" aria-hidden="true">▾</span>
+                    </span>
+                </summary>
+                <div class="article-year-content">
+                    <div class="articles-grid">
+                        ${yearArticles.map(article => createArticleCard(article)).join('')}
+                    </div>
+                </div>
+            </details>
+        `;
+    }).join('');
+}
+
+function createYearPreviewItem(article) {
+    const tags = (article.tag_list || []).slice(0, 4);
+    const tagsMarkup = tags.length
+        ? `<span class="article-year-preview-tags">${tags.map(tag => `<span class="article-year-preview-tag">#${tag}</span>`).join('')}</span>`
+        : '';
+
+    return `
+        <li class="article-year-preview-item">
+            <a href="${article.url}" target="_blank" rel="noopener" class="article-year-preview-link">
+                <span class="article-year-preview-title">${article.title}</span>
+                ${tagsMarkup}
+            </a>
+        </li>
+    `;
 }
 
 function createArticleCard(article) {
