@@ -366,7 +366,8 @@ const PLUGIN_FEATURE_GROUPS = [
                 repoUrl: 'https://github.com/sclavijosuero/cypress-flaky-test-audit',
                 features: [
                     { name: '📰 Software Testing Weekly issue #298', url: 'https://softwaretestingweekly.com/issues/298' },
-                    { name: '📰 Gleb Bahmutov Newsletter - Cypress Tips January 2026', url: 'https://cypresstips.substack.com/p/cypress-tips-january-2026' }
+                    { name: '📰 Gleb Bahmutov Newsletter - Cypress Tips January 2026', url: 'https://cypresstips.substack.com/p/cypress-tips-january-2026' },
+                    { name: '📰 David Ingraham - Your Cypress Tests Are Slower Than You Think', url: 'https://medium.com/@dingraham01/your-cypress-tests-are-slower-than-you-think-218cb74761fd' }
                 ]
             },
             {
