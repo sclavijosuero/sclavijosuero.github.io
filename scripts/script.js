@@ -255,7 +255,8 @@ const COMMUNITY_FEATURES = [
         title: 'WICK-DOM-OBSERVER: The Deterministic Cypress Plugin for Fast Spinners, Blinking Toasts, Optional Overlays, and UI’s Most Wanted',
         articleUrl: 'https://dev.to/sebastianclavijo/wick-dom-observer-the-deterministic-cypress-plugin-for-fast-spinners-blinking-toasts-optional-4e59',
         outlets: [
-            { name: '📰 Gleb Bahmutov Newsletter – Cypress Tips March 2026', url: 'https://cypresstips.substack.com/p/cypress-tips-january-2026' }
+            { name: '📰 Gleb Bahmutov Newsletter – Cypress Tips March 2026', url: 'https://cypresstips.substack.com/p/cypress-tips-january-2026' },
+            { name: '📰 Software Testing Weekly issue #308', url: 'https://softwaretestingweekly.com/issues/308' }
         ]
     }
 ];
@@ -374,7 +375,8 @@ const PLUGIN_FEATURE_GROUPS = [
                 plugin: 'wick-dom-observer',
                 repoUrl: 'https://github.com/sclavijosuero/wick-dom-observer',
                 features: [
-                    { name: '📰 Gleb Bahmutov Newsletter – Cypress Tips March 2026', url: 'https://cypresstips.substack.com/p/cypress-tips-march-2026' }
+                    { name: '📰 Gleb Bahmutov Newsletter – Cypress Tips March 2026', url: 'https://cypresstips.substack.com/p/cypress-tips-march-2026' },
+                    { name: '📰 Software Testing Weekly issue #308', url: 'https://softwaretestingweekly.com/issues/308' }
                 ]
             }
         ]
