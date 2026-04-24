@@ -246,9 +246,9 @@ const COMMUNITY_FEATURES = [
         title: 'WICK-A11Y v3.0.1: Cypress v16 Ready - Upgrade Without Fear (Fully Backward Compatible)',
         articleUrl: 'https://dev.to/sebastianclavijo/wick-a11y-v301-cypress-v16-ready-upgrade-without-fear-fully-backward-compatible-77m',
         outlets: [
-            { name: '📽️ Test Guild News Show (Mar 2025)', url: 'https://www.linkedin.com/feed/update/urn:li:activity:7439410355727982592/' },
+            { name: '📽️ TestGuild News Show (March, 2026)', url: 'https://www.linkedin.com/feed/update/urn:li:activity:7439410355727982592/' },
 
-            { name: '📰 TestGuild Automation in DevSecOps Newsletter (Mar 2025)', url: 'https://www.linkedin.com/pulse/automation-debt-ai-validation-crisis-cypress-trust-gate-colantonio-ouate' }
+            { name: '📰 TestGuild Automation in DevSecOps Newsletter (March, 2026)', url: 'https://www.linkedin.com/pulse/automation-debt-ai-validation-crisis-cypress-trust-gate-colantonio-ouate' }
         ]
     },
     {
