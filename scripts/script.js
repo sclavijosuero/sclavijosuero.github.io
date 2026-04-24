@@ -319,6 +319,7 @@ const PLUGIN_FEATURE_GROUPS = [
                     { name: '📰 TestGuild Automation in DevSecOps Newsletter (Mar 2026)', url: 'https://www.linkedin.com/pulse/automation-debt-ai-validation-crisis-cypress-trust-gate-colantonio-ouate' },
                     { name: '📰 Gleb Bahmutov - Testing A11y Using Cypress And wick-a11y Plugin', url: 'https://glebbahmutov.com/blog/testing-a11y/' },
                     { name: '📰 Vitaly Skadorva - Accessible web testing with Cypress and wick-a11y', url: 'https://dev.to/vitalyskadorva/accessible-web-testing-with-cypress-and-wick-a11y-2ppb' },
+                    { name: '📰 Cypress.io - Plugin Select: wick-a11y', url: 'https://www.linkedin.com/posts/cypress.io_wick-a11y-plugin-select-accessibility-activity-7452385761556996098-s5YW/' },
 
                     { name: "✏️ Gleb Bahmutov - Testing The Swag Store Course (Bonus 74: Check accessibility issues)", url: 'https://cypress.tips/courses/swag-store/lessons/bonus74' },
                     { name: "✏️ Gleb Bahmutov - TDD Calculator Course (Lesson e6 & e7: Catch accessibility issues)", url: 'https://cypress.tips/courses/tdd-calculator/lessons/e6' },
