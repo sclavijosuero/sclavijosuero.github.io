@@ -202,6 +202,13 @@ const COMMUNITY_FEATURES = [
         ]
     },
     {
+        title: "Stand Out in the QA Crowd: Just Do You, but 'wick' Style!",
+        articleUrl: 'https://dev.to/sebastianclavijo/stand-out-in-the-qa-crowd-just-do-you-but-wick-style-368i',
+        outlets: [
+            { name: '📰 Ministry of Testing Observatory (Apr 2026)', url: 'https://www.ministryoftesting.com/observatory' }
+        ]
+    },
+    {
         title: "The 'second' most abused (and misused) Cypress command ever: cy.contains()",
         articleUrl: 'https://dev.to/sebastianclavijo/the-second-most-abused-and-misused-cypress-command-ever-cycontains-126j',
         outlets: [
@@ -247,7 +254,7 @@ const COMMUNITY_FEATURES = [
         articleUrl: 'https://dev.to/sebastianclavijo/wick-a11y-v301-cypress-v16-ready-upgrade-without-fear-fully-backward-compatible-77m',
         outlets: [
             { name: '📽️ TestGuild News Show (March, 2026)', url: 'https://www.linkedin.com/feed/update/urn:li:activity:7439410355727982592/' },
-
+            
             { name: '📰 TestGuild Automation in DevSecOps Newsletter (March, 2026)', url: 'https://www.linkedin.com/pulse/automation-debt-ai-validation-crisis-cypress-trust-gate-colantonio-ouate' }
         ]
     },
@@ -257,6 +264,13 @@ const COMMUNITY_FEATURES = [
         outlets: [
             { name: '📰 Gleb Bahmutov Newsletter – Cypress Tips March 2026', url: 'https://cypresstips.substack.com/p/cypress-tips-january-2026' },
             { name: '📰 Software Testing Weekly issue #308', url: 'https://softwaretestingweekly.com/issues/308' }
+        ]
+    },
+    {
+        title: 'The Cypress i18n Mistake: Testing Words Instead of Meaning - i18next is your partner',
+        articleUrl: 'https://dev.to/sebastianclavijo/the-cypress-i18n-mistake-testing-words-instead-of-meaning-i18next-is-your-partner-k8n',
+        outlets: [
+            { name: '📰 Software Testing Weekly issue #313', url: 'https://softwaretestingweekly.com/issues/313' }
         ]
     }
 ];
@@ -319,6 +333,7 @@ const PLUGIN_FEATURE_GROUPS = [
                     { name: '📰 TestGuild Automation in DevSecOps Newsletter (Mar 2026)', url: 'https://www.linkedin.com/pulse/automation-debt-ai-validation-crisis-cypress-trust-gate-colantonio-ouate' },
                     { name: '📰 Gleb Bahmutov - Testing A11y Using Cypress And wick-a11y Plugin', url: 'https://glebbahmutov.com/blog/testing-a11y/' },
                     { name: '📰 Vitaly Skadorva - Accessible web testing with Cypress and wick-a11y', url: 'https://dev.to/vitalyskadorva/accessible-web-testing-with-cypress-and-wick-a11y-2ppb' },
+                    { name: '📰 Gleb Bahmutov Newsletter - Cypress Tips March 2026', url: 'https://cypresstips.substack.com/p/cypress-tips-march-2026' },
                     { name: '📰 Cypress.io - Plugin Select: wick-a11y', url: 'https://www.linkedin.com/posts/cypress.io_wick-a11y-plugin-select-accessibility-activity-7452385761556996098-s5YW/' },
 
                     { name: "✏️ Gleb Bahmutov - Testing The Swag Store Course (Bonus 74: Check accessibility issues)", url: 'https://cypress.tips/courses/swag-store/lessons/bonus74' },
