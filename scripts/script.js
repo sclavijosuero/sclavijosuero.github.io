@@ -336,6 +336,7 @@ const PLUGIN_FEATURE_GROUPS = [
                     { name: "📰 Ioan Solderea - Understanding the European Accessibility Act 2025: Compliance is Key", url: 'https://dev.to/cypress/understanding-the-european-accessibility-act-2025-compliance-is-key-3fif' },
                     { name: '📰 Ádám Szentiványi - Comparison of Accessibility Tools', url: 'https://prezi.com/p/aklj2f6-bviu/comparison-of-accessibility-tools/' },
                     { name: '📰 Vast Green: The Accessibility Improvement Act - BFSG - Conclusion', url: 'https://vast-green.com/bfsg-abschluss/' },
+                    { name: '📰 Kite Metric: Understanding the European Accessibility Act (EAA) 2025: Ensuring Digital Inclusion', url: 'https://kitemetric.com/blogs/understanding-the-european-accessibility-act-eaa-2025-ensuring-digital-inclusion#recommended-accessibility-testing-tools' },
                     { name: '📰 TestGuild Automation in DevSecOps Newsletter (Mar 2026)', url: 'https://www.linkedin.com/pulse/automation-debt-ai-validation-crisis-cypress-trust-gate-colantonio-ouate' },
                     { name: '📰 Gleb Bahmutov - Testing A11y Using Cypress And wick-a11y Plugin', url: 'https://glebbahmutov.com/blog/testing-a11y/' },
                     { name: '📰 Vitaly Skadorva - Accessible web testing with Cypress and wick-a11y', url: 'https://dev.to/vitalyskadorva/accessible-web-testing-with-cypress-and-wick-a11y-2ppb' },
