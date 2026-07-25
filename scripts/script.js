@@ -281,6 +281,12 @@ const NON_LINK_NEWSLETTERS = new Set([
     'Cypress.io Newsletter (June 27, 2024)'
 ]);
 
+const DEEP_LINK_STABILIZATION_DELAYS = [180, 420, 900];
+let deepLinkStabilizationTimerIds = [];
+
+const BLOG_FEATURE_HASH_PREFIX = 'blog-feature-';
+const PLUGIN_FEATURE_HASH_PREFIX = 'plugin-feature-';
+
 const PLUGIN_FEATURE_GROUPS = [
     {
         name: 'Cypress',
@@ -471,6 +477,9 @@ function createPluginHighlightsSection() {
                 </div>
                 <div class="feature-summary-meta">
                     <span class="feature-chip" id="plugin-features-count">Loading...</span>
+                    <button type="button" class="copy-link-btn copy-link-btn--panel" data-copy-hash="plugin-highlights" aria-label="Copy direct link to plugin spotlight section">
+                        Copy link
+                    </button>
                     <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
                 </div>
             </summary>
@@ -518,6 +527,8 @@ document.addEventListener('DOMContentLoaded', function () {
     loadBlogArticles();
     loadPlugins();
     renderBlogFeatures();
+    initializeDeepLinks();
+    initializeCopyLinkButtons();
 });
 
 // ===== NAVIGATION ===== 
@@ -901,12 +912,15 @@ function renderBlogFeatures() {
             featurePanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     });
+
+    applyDeepLinkWithRetries(false);
 }
 
 function createFeatureEntry(feature) {
     const mentionCount = feature.outlets.length;
     const mentionLabel = mentionCount === 1 ? 'feature' : 'features';
     const metaLabel = mentionCount ? `${mentionCount} ${mentionLabel}` : 'Original spotlight';
+    const featureId = getBlogFeatureAnchorId(feature.title);
 
     const normalizedOutlets = feature.outlets.map(normalizeOutlet);
 
@@ -919,7 +933,7 @@ function createFeatureEntry(feature) {
         : `<p class="feature-mentions feature-mentions--empty">Shared directly on dev.to</p>`;
 
     return `
-        <article class="feature-article">
+        <article class="feature-article" id="${featureId}" data-expand-panel="community-highlights" tabindex="-1">
             <div class="feature-article-header">
                 <div>
                     <h4>
@@ -928,7 +942,12 @@ function createFeatureEntry(feature) {
                         </a>
                     </h4>
                 </div>
-                <span class="feature-article-meta">${metaLabel}</span>
+                <div class="feature-article-actions">
+                    <span class="feature-article-meta">${metaLabel}</span>
+                    <button type="button" class="copy-link-btn copy-link-btn--inline" data-copy-hash="${featureId}" aria-label="Copy direct link to this article references list">
+                        Copy
+                    </button>
+                </div>
             </div>
             ${mentionsMarkup}
         </article>
@@ -1009,6 +1028,227 @@ function formatFullDate(rawDate) {
     });
 }
 
+function initializeDeepLinks() {
+    window.addEventListener('hashchange', () => {
+        applyDeepLinkWithRetries(true);
+    });
+
+    window.addEventListener('load', () => {
+        applyDeepLinkWithRetries(false);
+    });
+
+    applyDeepLinkWithRetries(false);
+}
+
+function applyDeepLinkWithRetries(useSmoothScroll, attemptsLeft = 20) {
+    const applied = applyDeepLink(useSmoothScroll);
+    if (applied || attemptsLeft <= 0) {
+        return;
+    }
+
+    window.setTimeout(() => {
+        applyDeepLinkWithRetries(useSmoothScroll, attemptsLeft - 1);
+    }, 120);
+}
+
+function applyDeepLink(useSmoothScroll) {
+    const rawHash = window.location.hash;
+    if (!rawHash || rawHash === '#') {
+        return false;
+    }
+
+    const targetId = decodeURIComponent(rawHash.slice(1));
+    if (!targetId) {
+        return false;
+    }
+
+    const target = document.getElementById(targetId);
+    if (!target) {
+        return false;
+    }
+
+    stabilizeDeepLinkTarget(targetId);
+
+    expandDeepLinkParents(target);
+
+    window.requestAnimationFrame(() => {
+        window.requestAnimationFrame(() => {
+            scrollTargetIntoVisibleArea(target, useSmoothScroll);
+            focusDeepLinkTarget(target);
+            pulseDeepLinkTarget(target);
+        });
+    });
+
+    return true;
+}
+
+function scrollTargetIntoVisibleArea(target, useSmoothScroll) {
+    const headerOffset = getHeaderOffset();
+    const viewportPadding = 12;
+    const targetRect = target.getBoundingClientRect();
+    if (isTargetInVisibleArea(targetRect, headerOffset, viewportPadding)) {
+        return;
+    }
+
+    const targetTop = window.pageYOffset + targetRect.top - headerOffset - viewportPadding;
+    window.scrollTo({
+        top: Math.max(0, targetTop),
+        behavior: useSmoothScroll ? 'smooth' : 'auto'
+    });
+}
+
+function getHeaderOffset() {
+    const navbar = document.querySelector('.navbar');
+    const navbarHeight = navbar ? navbar.offsetHeight : 0;
+    const breathingRoom = 16;
+    return navbarHeight + breathingRoom;
+}
+
+function stabilizeDeepLinkTarget(targetId) {
+    deepLinkStabilizationTimerIds.forEach(timerId => {
+        window.clearTimeout(timerId);
+    });
+    deepLinkStabilizationTimerIds = [];
+
+    DEEP_LINK_STABILIZATION_DELAYS.forEach(delay => {
+        const timerId = window.setTimeout(() => {
+            if (decodeURIComponent(window.location.hash.slice(1)) !== targetId) {
+                return;
+            }
+
+            const target = document.getElementById(targetId);
+            if (!target) {
+                return;
+            }
+
+            expandDeepLinkParents(target);
+            scrollTargetIntoVisibleArea(target, false);
+        }, delay);
+
+        deepLinkStabilizationTimerIds.push(timerId);
+    });
+}
+
+function isTargetInVisibleArea(targetRect, headerOffset, viewportPadding) {
+    const minVisibleTop = headerOffset + viewportPadding;
+    const maxVisibleBottom = window.innerHeight - viewportPadding;
+    const isAboveVisibleArea = targetRect.top < minVisibleTop;
+    const isBelowVisibleArea = targetRect.bottom > maxVisibleBottom;
+    return !isAboveVisibleArea && !isBelowVisibleArea;
+}
+
+function expandDeepLinkParents(target) {
+    const panelId = target.getAttribute('data-expand-panel');
+    if (panelId) {
+        const panel = document.getElementById(panelId);
+        if (panel && panel.tagName.toLowerCase() === 'details') {
+            panel.open = true;
+        }
+    }
+
+    if (target.tagName.toLowerCase() === 'details') {
+        target.open = true;
+    }
+
+    let detailsParent = target.closest('details');
+    while (detailsParent) {
+        detailsParent.open = true;
+        detailsParent = detailsParent.parentElement?.closest('details') || null;
+    }
+}
+
+function focusDeepLinkTarget(target) {
+    if (!target.hasAttribute('tabindex')) {
+        target.setAttribute('tabindex', '-1');
+    }
+
+    if (typeof target.focus === 'function') {
+        target.focus({ preventScroll: true });
+    }
+}
+
+function pulseDeepLinkTarget(target) {
+    target.classList.add('deep-link-hit');
+    window.setTimeout(() => {
+        target.classList.remove('deep-link-hit');
+    }, 1800);
+}
+
+function initializeCopyLinkButtons() {
+    document.addEventListener('click', async (event) => {
+        const copyButton = event.target.closest('.copy-link-btn');
+        if (!copyButton) {
+            return;
+        }
+
+        const hashId = copyButton.getAttribute('data-copy-hash');
+        if (!hashId) {
+            return;
+        }
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        const copyUrl = new URL(`#${hashId}`, window.location.href).toString();
+        const copied = await copyTextToClipboard(copyUrl);
+        if (copied) {
+            showCopyButtonState(copyButton, 'Copied!', true);
+            return;
+        }
+
+        showCopyButtonState(copyButton, 'Copy failed', false);
+    });
+}
+
+async function copyTextToClipboard(text) {
+    if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+        try {
+            await navigator.clipboard.writeText(text);
+            return true;
+        } catch (error) {
+            return copyTextWithExecCommand(text);
+        }
+    }
+
+    return copyTextWithExecCommand(text);
+}
+
+function copyTextWithExecCommand(text) {
+    const hiddenTextArea = document.createElement('textarea');
+    hiddenTextArea.value = text;
+    hiddenTextArea.setAttribute('readonly', 'readonly');
+    hiddenTextArea.style.position = 'fixed';
+    hiddenTextArea.style.top = '-9999px';
+    hiddenTextArea.style.opacity = '0';
+
+    document.body.appendChild(hiddenTextArea);
+    hiddenTextArea.select();
+    hiddenTextArea.setSelectionRange(0, hiddenTextArea.value.length);
+
+    let copied = false;
+    try {
+        copied = document.execCommand('copy');
+    } catch (error) {
+        copied = false;
+    }
+
+    document.body.removeChild(hiddenTextArea);
+    return copied;
+}
+
+function showCopyButtonState(copyButton, label, wasSuccessful) {
+    const defaultLabel = copyButton.dataset.defaultLabel || copyButton.textContent.trim() || 'Copy link';
+    copyButton.dataset.defaultLabel = defaultLabel;
+    copyButton.textContent = label;
+    copyButton.classList.toggle('copy-link-btn--success', wasSuccessful);
+    copyButton.classList.toggle('copy-link-btn--error', !wasSuccessful);
+
+    window.setTimeout(() => {
+        copyButton.textContent = defaultLabel;
+        copyButton.classList.remove('copy-link-btn--success', 'copy-link-btn--error');
+    }, 1600);
+}
+
 function formatMonthYear(rawDate) {
     const parsedDate = parseDate(rawDate);
     if (!parsedDate) {
@@ -1066,6 +1306,8 @@ function renderPluginFeatures() {
             panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     });
+
+    applyDeepLinkWithRetries(false);
 }
 
 function createPluginGroupSection(group) {
@@ -1089,6 +1331,7 @@ function createPluginGroupSection(group) {
 }
 
 function createPluginFeatureCard(plugin) {
+    const pluginId = getPluginFeatureAnchorId(plugin.plugin);
     let lastMentionType = null;
     const mentions = plugin.features.map(mention => {
         const mentionType = getMentionType(mention.name);
@@ -1098,7 +1341,7 @@ function createPluginFeatureCard(plugin) {
     }).join('');
 
     return `
-        <article class="feature-article plugin-feature-article">
+        <article class="feature-article plugin-feature-article" id="${pluginId}" data-expand-panel="plugin-highlights" tabindex="-1">
             <div class="feature-article-header">
                 <div>
                     <h4>
@@ -1107,7 +1350,12 @@ function createPluginFeatureCard(plugin) {
                         </a>
                     </h4>
                 </div>
-                <span class="feature-article-meta">${plugin.features.length} mention${plugin.features.length === 1 ? '' : 's'}</span>
+                <div class="feature-article-actions">
+                    <span class="feature-article-meta">${plugin.features.length} mention${plugin.features.length === 1 ? '' : 's'}</span>
+                    <button type="button" class="copy-link-btn copy-link-btn--inline" data-copy-hash="${pluginId}" aria-label="Copy direct link to this plugin references list">
+                        Copy
+                    </button>
+                </div>
             </div>
             <ul class="feature-mentions">
                 ${mentions}
@@ -1119,6 +1367,23 @@ function createPluginFeatureCard(plugin) {
 function getMentionType(name = '') {
     const firstChar = Array.from(name.trim())[0] || '';
     return firstChar;
+}
+
+function getBlogFeatureAnchorId(title) {
+    return `${BLOG_FEATURE_HASH_PREFIX}${slugifyForHash(title)}`;
+}
+
+function getPluginFeatureAnchorId(pluginName) {
+    return `${PLUGIN_FEATURE_HASH_PREFIX}${slugifyForHash(pluginName)}`;
+}
+
+function slugifyForHash(value = '') {
+    return value
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
 }
 
 function renderPluginMention(mention, isNewGroup) {
