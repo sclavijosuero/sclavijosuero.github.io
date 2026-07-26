@@ -45,7 +45,9 @@ const COMMUNITY_FEATURES = [
     {
         title: 'What do a Cypress fixture, a cheese pizza, and the number φ (Phi) have in common?',
         articleUrl: 'https://dev.to/sebastianclavijo/what-do-the-number-ph-phi-a-cheese-pizza-pie-and-a-cypress-fixture-have-in-common-3c3c',
-        outlets: []
+        outlets: [
+            { name: '📰 Cypress News 2024 Part 1 (Apr 2024)', url: 'https://www.dlatesterow.pl/cypress-news-2024-cz-1/' }
+        ]
     },
     {
         title: 'And the nominees for “Best Cypress Helper” are: Utility Function, Custom Command, Custom Query, Task, and External Plugin',
@@ -105,7 +107,9 @@ const COMMUNITY_FEATURES = [
         outlets: [
             { name: '📰 Software Testing Weekly Issue #239 (Oct 2024)', url: 'https://softwaretestingweekly.com/issues/239' },
             { name: '📰 Software Testing Notes Issue #145 (Oct 2024)', url: 'https://softwaretestingnotes.substack.com/p/issue-145-software-testing-notes' },
-            { name: '📰 Cypress News 2024 Part 3 (Oct 2024)', url: 'https://www.dlatesterow.pl/cypress-news-2024-cz-3/' }
+            { name: '📰 Cypress News 2024 Part 3 (Oct 2024)', url: 'https://www.dlatesterow.pl/cypress-news-2024-cz-3/' },
+            { name: '📰 Cypress News 2025 Part 2 (Mar 2025)', url: 'https://www.dlatesterow.pl/cypress-news-2025-cz-2/' },
+
         ]
     },
     {
@@ -120,7 +124,7 @@ const COMMUNITY_FEATURES = [
         articleUrl: 'https://dev.to/sebastianclavijo/but-how-much-abstraction-is-still-okay-in-cypress-to-pom-or-not-to-pom-511j',
         outlets: [
             { name: '📰 Software Testing Weekly Issue #242 (Oct 2024)', url: 'https://softwaretestingweekly.com/issues/242' },
-            { name: '📰 Software Testing Notes Issue #147 (Oct 2024)', url: 'https://softwaretestingnotes.substack.com/p/issue-147-software-testing-notes?utm_source=share&utm_medium=android&r=434g0b&triedRedirect=true' },
+            { name: '📰 Software Testing Notes Issue #147 (Oct 2024)', url: 'https://softwaretestingnotes.substack.com/p/issue-147-software-testing-notes' },
             { name: '📰 QA Avenue Issue #27: Software Testing Insights (Nov 2024)', url: 'https://qaavenue.substack.com/p/issue-27-software-testing-insights' }
         ]
     },
@@ -235,7 +239,7 @@ const COMMUNITY_FEATURES = [
         title: 'CYPRESS-FLAKY-TEST-AUDIT: thriving in the Cypress "Dual-Verse" for once!',
         articleUrl: 'https://dev.to/sebastianclavijo/cypress-flaky-testaudit-thriving-in-the-cypress-dual-verse-for-once-l4o',
         outlets: [
-            { name: '📰 Software Testing Weekly issue #298 (Jan 2026)', url: 'https://softwaretestingweekly.com/issues/298' },
+            { name: '📰 Software Testing Weekly Issue #298 (Jan 2026)', url: 'https://softwaretestingweekly.com/issues/298' },
             { name: '📰 Gleb Bahmutov Newsletter – Cypress Tips January 2026', url: 'https://cypresstips.substack.com/p/cypress-tips-january-2026' },
             { name: '📰 Ministry of Testing - Cypress Content (Jan 2026)', url: 'https://www.ministryoftesting.com/software-testing-tools/cypress' }
         ]
@@ -246,7 +250,7 @@ const COMMUNITY_FEATURES = [
         outlets: [
             { name: '📰 Software Testing Notes Issue #201 (Jan 2026)', url: 'https://softwaretestingnotes.substack.com/p/issue-201-software-testing-notes' },
             { name: '📰 Gleb Bahmutov Newsletter – Cypress Tips January 2026', url: 'https://cypresstips.substack.com/p/cypress-tips-january-2026' },
-            { name: '📰 Software Testing Weekly issue #301 (Feb 2026)', url: 'https://softwaretestingweekly.com/issues/301' },
+            { name: '📰 Software Testing Weekly Issue #301 (Feb 2026)', url: 'https://softwaretestingweekly.com/issues/301' },
         ]
     },
     {
@@ -263,14 +267,14 @@ const COMMUNITY_FEATURES = [
         articleUrl: 'https://dev.to/sebastianclavijo/wick-dom-observer-the-deterministic-cypress-plugin-for-fast-spinners-blinking-toasts-optional-4e59',
         outlets: [
             { name: '📰 Gleb Bahmutov Newsletter – Cypress Tips March 2026', url: 'https://cypresstips.substack.com/p/cypress-tips-january-2026' },
-            { name: '📰 Software Testing Weekly issue #308', url: 'https://softwaretestingweekly.com/issues/308' }
+            { name: '📰 Software Testing Weekly Issue #308', url: 'https://softwaretestingweekly.com/issues/308' }
         ]
     },
     {
         title: 'The Cypress i18n Mistake: Testing Words Instead of Meaning - i18next is your partner',
         articleUrl: 'https://dev.to/sebastianclavijo/the-cypress-i18n-mistake-testing-words-instead-of-meaning-i18next-is-your-partner-k8n',
         outlets: [
-            { name: '📰 Software Testing Weekly issue #313', url: 'https://softwaretestingweekly.com/issues/313' }
+            { name: '📰 Software Testing Weekly Issue #313', url: 'https://softwaretestingweekly.com/issues/313' }
         ]
     }
 ];
@@ -347,7 +351,10 @@ const PLUGIN_FEATURE_GROUPS = [
 
                     { name: "✏️ Gleb Bahmutov - Testing The Swag Store Course (Bonus 74: Check accessibility issues)", url: 'https://cypress.tips/courses/swag-store/lessons/bonus74' },
                     { name: "✏️ Gleb Bahmutov - TDD Calculator Course (Lesson e6 & e7: Catch accessibility issues)", url: 'https://cypress.tips/courses/tdd-calculator/lessons/e6' },
-                    { name: "✏️ Alexander Thalhammer - Accessibility in Angular Workshop", url: 'https://lxt.dev/Angular-A11Y-Quick-Intro.pdf' }
+                    { name: "✏️ Alexander Thalhammer - Accessibility in Angular Workshop", url: 'https://lxt.dev/Angular-A11Y-Quick-Intro.pdf' },
+
+                    { name: "🛠️ Daniil Shapovalov - Cypress101-tips-and-tricks", url: 'https://github.com/daniil5469/cypress101-tips-and-tricks#-tips-1---7-core-cypress-practices' },
+                    { name: "🛠️ S Chathuranga Jayasinghe - cypress-bootstrap-cucumber Automation Framework", url: 'https://github.com/s-chathuranga-j/cypress-bootstrap-cucumber' }
                 ]
             },
             {
@@ -382,16 +389,19 @@ const PLUGIN_FEATURE_GROUPS = [
                     { name: '📰 S. Chathurang - API Schema Validation with Cypress', url: 'https://dev.to/cypress/api-schema-validation-with-cypress-185m' },
                     { name: '📰 Cypress News 2025 cz. 2', url: 'https://www.dlatesterow.pl/cypress-news-2025-cz-2/' },
                     { name: '📰 Cypress News 2025 cz. 3', url: 'https://www.dlatesterow.pl/cypress-news-2025-cz-3/' },
+                    { name: '📰 Cypress News 2025 cz. 4', url: 'https://www.dlatesterow.pl/cypress-news-2025-cz-4/' },
                     { name: '📰 Cypress News 2026 cz. 1', url: 'https://www.dlatesterow.pl/cypress-news-2026-cz-1/' },
 
-                    { name: "✏️ Murat Ozcan's Udemy Course - Epic Test Arch.", url: 'https://www.udemy.com/course/epic-test-arch-test-everything-everywhere-all-at-once/?couponCode=NEWYEARCAREER' }
+                    { name: "✏️ Murat Ozcan's Udemy Course - Epic Test Arch.", url: 'https://www.udemy.com/course/epic-test-arch-test-everything-everywhere-all-at-once/?couponCode=NEWYEARCAREER' },
+
+                    { name: "🛠️ Daniil Shapovalov - Cypress101-tips-and-tricks", url: 'https://github.com/daniil5469/cypress101-tips-and-tricks#-tips-39---56-api-testing-techniques' }
                 ]
             },
             {
                 plugin: 'cypress-flaky-test-audit',
                 repoUrl: 'https://github.com/sclavijosuero/cypress-flaky-test-audit',
                 features: [
-                    { name: '📰 Software Testing Weekly issue #298', url: 'https://softwaretestingweekly.com/issues/298' },
+                    { name: '📰 Software Testing Weekly Issue #298', url: 'https://softwaretestingweekly.com/issues/298' },
                     { name: '📰 Gleb Bahmutov Newsletter - Cypress Tips January 2026', url: 'https://cypresstips.substack.com/p/cypress-tips-january-2026' },
                     { name: '📰 David Ingraham - Your Cypress Tests Are Slower Than You Think', url: 'https://medium.com/@dingraham01/your-cypress-tests-are-slower-than-you-think-218cb74761fd' }
                 ]
@@ -401,7 +411,7 @@ const PLUGIN_FEATURE_GROUPS = [
                 repoUrl: 'https://github.com/sclavijosuero/wick-dom-observer',
                 features: [
                     { name: '📰 Gleb Bahmutov Newsletter – Cypress Tips March 2026', url: 'https://cypresstips.substack.com/p/cypress-tips-march-2026' },
-                    { name: '📰 Software Testing Weekly issue #308', url: 'https://softwaretestingweekly.com/issues/308' }
+                    { name: '📰 Software Testing Weekly Issue #308', url: 'https://softwaretestingweekly.com/issues/308' }
                 ]
             }
         ]
@@ -413,8 +423,8 @@ const PLUGIN_FEATURE_GROUPS = [
                 plugin: 'pw-api-plugin',
                 repoUrl: 'https://github.com/sclavijosuero/pw-api-plugin',
                 features: [
-                    { name: '🌐 testingmaster.in - Awesome Playwright plugins (PwAPI Plugin)', url: 'https://testingmasterdotin.github.io/awesome-playwright/' },
                     { name: '🌐 Test Guild - The Best Open Source API Testing Tools for 2025', url: 'https://testguild.com/12-open-source-api-testing-tools-rest-soap-services/#Playwright_for_API_testing' },
+                    { name: '🌐 testingmaster.in - Awesome Playwright plugins (PwAPI Plugin)', url: 'https://testingmasterdotin.github.io/awesome-playwright/' },
 
                     { name: "📽️ Alan Void - Esse plugin para PLAYWRIGHT é muito bom!", url: 'https://www.youtube.com/watch?v=-VzclPt6eFA' },
                     { name: '📽️ Test Guild News Show (Mar 2025)', url: 'https://www.linkedin.com/feed/update/urn:li:activity:7302376476731916288/' },
