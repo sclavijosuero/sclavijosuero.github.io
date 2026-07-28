@@ -362,6 +362,7 @@ const PLUGIN_FEATURE_GROUPS = [
                 repoUrl: 'https://github.com/sclavijosuero/cypress-schema-validator',
                 features: [
                     { name: '🌐 TestGuild - Testing Tool Matcher', url: 'https://testguild.com/tools/cypress' },
+                    { name: '🌐 testdev.tools - cypress-schema-validator', url: 'https://testdev.tools/cypress-schema-validator/' },
 
                     { name: '📽️ Test Guild News Show (Jun 2025)', url: 'https://www.linkedin.com/posts/joecolantonio_devsecops-automationtesting-softwaretesting-activity-7337877625475919872-033I?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAJfhRkBK-_7FuzGe0IFv3r5Eej4IFAScJM' },
                     { name: '📽️ Razvan Vancea - Cypress API Schema Validator Tutorial', url: 'https://www.youtube.com/watch?v=tUwNqvcdjwg' },
@@ -1699,7 +1700,8 @@ function renderFallbackPlugins(container) {
             githubUrl: 'https://github.com/sclavijosuero/wick-a11y',
             npmUrl: 'https://www.npmjs.com/package/wick-a11y',
             icon: 'fas fa-universal-access',
-            pluginImage: 'https://raw.githubusercontent.com/sclavijosuero/wick-a11y/main/images/full-overview.gif'
+            pluginImage: 'https://raw.githubusercontent.com/sclavijosuero/wick-a11y/main/images/full-overview.gif',
+            outputSample: 'samples/Accessibility Report --- accessibility-tests-samples.js --- Test Sample Page Accessibility - All levels of severity and all rules (5-8-2026 4_37_18 PM)\Accessibility Report.html'
         },
         {
             name: 'cypress-schema-validator',
@@ -1739,7 +1741,8 @@ function renderFallbackPlugins(container) {
             githubUrl: 'https://github.com/sclavijosuero/pw-api-plugin',
             npmUrl: 'https://www.npmjs.com/package/pw-api-plugin',
             icon: 'fas fa-theater-masks',
-            pluginImage: 'https://raw.githubusercontent.com/sclavijosuero/pw-api-plugin/main/videos/overview.gif'
+            pluginImage: 'https://raw.githubusercontent.com/sclavijosuero/pw-api-plugin/main/videos/overview.gif',
+            outputSample: 'samples/flaky-demo.html'
         },
         {
             name: 'playwright-schema-validator',
