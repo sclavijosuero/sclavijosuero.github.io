@@ -1,0 +1,90 @@
+
+<html>
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/vs.min.css"/>
+            <style>
+        body { font-family: monospace; margin: 20px; }
+        h3 { font-size: 1.5em; margin-bottom: 10px; }
+        .card { margin-bottom: 10px; list-style: none; padding: 10px; border: 1px solid #ddd; border-radius: 8px; background-color:rgb(238, 251, 255); text-align: left; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3); transition: 0.3s;}
+        .total-errors { font-size: 1.5em; font-weight: bold; color: #c10000; margin-left: 20px; padding-left: 15px;}
+        .total-errors:hover { background-color: rgb(220, 240, 250); }
+        .hljs  { text-wrap: wrap; overflow-wrap: break-word;margin-bottom: 10px; padding: 10px; margin-left: 20px; border: 1px solid #ddd; border-radius: 8px; background-color: rgb(238, 251, 255); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3); transition: 0.3s;}
+        .hljs:hover { background-color: rgb(220, 240, 250); }
+        ul { padding-left: 20px; }
+        li { font-size: 1.1em; text-wrap: wrap; overflow-wrap: break-word; margin-bottom: 10px; list-style: none; padding: 10px; border: 1px solid #ddd; border-radius: 8px; background-color:rgb(238, 251, 255); text-align: left; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3); transition: 0.3s;}
+        li:hover { background-color: rgb(220, 240, 250); }
+    </style>
+        </head>
+        <body>
+            <h3>Number of schema errors</h3><div class="card total-errors"> 24</div>
+            <h3>Schema mismatches in data</h3>
+            <pre class="hljs"><span class="hljs-punctuation">[</span>
+    <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">&quot;id&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string" style="font-weight: bold; font-size: 1.3em;color: #d67e09;">&quot; ⚠️ 123456 Expected string, received number&quot;</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;age&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string" style="font-weight: bold; font-size: 1.3em;color: #d67e09;">&quot; ⚠️ &#x27;thirty&#x27; Expected number, received string&quot;</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;email&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string" style="font-weight: bold; font-size: 1.3em;color: #d67e09;">&quot; ⚠️ &#x27;invalid-email-format&#x27; Invalid email&quot;</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;created_at&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string" style="font-weight: bold; font-size: 1.3em;color: #d67e09;">&quot; ⚠️ &#x27;not-a-date&#x27; Invalid datetime&quot;</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;is_active&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string" style="font-weight: bold; font-size: 1.3em;color: #d67e09;">&quot; ⚠️ &#x27;yes&#x27; Expected boolean, received string&quot;</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;tags&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+            <span class="hljs-string">&quot;developer&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-string" style="font-weight: bold; font-size: 1.3em;color: #d67e09;">&quot; ⚠️ 123 Expected string, received number&quot;</span>
+        <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;address&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">&quot;street&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string" style="font-weight: bold; font-size: 1.3em;color: #d67e09;">&quot; ⚠️ 789 Expected string, received number&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;city&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Anytown&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;postal_code&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string" style="font-weight: bold; font-size: 1.3em; color: #c10000;">&quot;❌ Missing property&quot;</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;preferences&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">&quot;notifications&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string" style="font-weight: bold; font-size: 1.3em;color: #d67e09;">&quot; ⚠️ &#x27;yes&#x27; Expected boolean, received string&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;theme&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;dark&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;items_per_page&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string" style="font-weight: bold; font-size: 1.3em;color: #d67e09;">&quot; ⚠️ &#x27;unknown&#x27; Expected number, received string&quot;</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string" style="font-weight: bold; font-size: 1.3em; color: #c10000;">&quot;❌ Missing property&quot;</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">&quot;id&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;223e4567-e89b-12d3-a456-426614174001&quot;</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string" style="font-weight: bold; font-size: 1.3em;color: #d67e09;">&quot; ⚠️ null Expected string, received null&quot;</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;age&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">35</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;email&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string" style="font-weight: bold; font-size: 1.3em;color: #d67e09;">&quot; ⚠️ &#x27;jane.smith@example&#x27; Invalid email&quot;</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;created_at&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string" style="font-weight: bold; font-size: 1.3em;color: #d67e09;">&quot; ⚠️ null Expected string, received null&quot;</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;is_active&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">false</span></span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;tags&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+            <span class="hljs-string">&quot;manager&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-string" style="font-weight: bold; font-size: 1.3em;color: #d67e09;">&quot; ⚠️ false Expected string, received boolean&quot;</span>
+        <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;address&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">&quot;street&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;456 Elm St&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;postal_code&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;67890&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;city&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string" style="font-weight: bold; font-size: 1.3em; color: #c10000;">&quot;❌ Missing property&quot;</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;preferences&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">&quot;notifications&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">false</span></span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;theme&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string" style="font-weight: bold; font-size: 1.3em;color: #d67e09;">&quot; ⚠️ null Expected string, received null&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;items_per_page&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">10</span>
+        <span class="hljs-punctuation">}</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">&quot;id&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string" style="font-weight: bold; font-size: 1.3em;color: #d67e09;">&quot; ⚠️ null Expected string, received null&quot;</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Alice Johnson&quot;</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;age&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string" style="font-weight: bold; font-size: 1.3em;color: #d67e09;">&quot; ⚠️ null Expected number, received null&quot;</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;email&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;alice.johnson@example.com&quot;</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;created_at&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string" style="font-weight: bold; font-size: 1.3em;color: #d67e09;">&quot; ⚠️ &#x27;2023-03-10&#x27; Invalid datetime&quot;</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;is_active&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string" style="font-weight: bold; font-size: 1.3em;color: #d67e09;">&quot; ⚠️ &#x27;yes&#x27; Expected boolean, received string&quot;</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;tags&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string" style="font-weight: bold; font-size: 1.3em;color: #d67e09;">&quot; ⚠️ null Expected array, received null&quot;</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;address&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">&quot;street&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;789 Oak St&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;postal_code&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;10112&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;city&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string" style="font-weight: bold; font-size: 1.3em; color: #c10000;">&quot;❌ Missing property&quot;</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;preferences&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">&quot;notifications&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;theme&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;light&quot;</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">&quot;items_per_page&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string" style="font-weight: bold; font-size: 1.3em;color: #d67e09;">&quot; ⚠️ &#x27;fifteen&#x27; Expected number, received string&quot;</span>
+        <span class="hljs-punctuation">}</span>
+    <span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">]</span></pre>
+            </div><h3>Schema errors</h3><ul><li class="card">{"code":"invalid_type","expected":"string","received":"number","path":[0,"id"],"message":"Expected string, received number"}</li><li class="card">{"code":"invalid_type","expected":"string","received":"undefined","path":[0,"name"],"message":"Required"}</li><li class="card">{"code":"invalid_type","expected":"number","received":"string","path":[0,"age"],"message":"Expected number, received string"}</li><li class="card">{"validation":"email","code":"invalid_string","message":"Invalid email","path":[0,"email"]}</li><li class="card">{"code":"invalid_string","validation":"datetime","message":"Invalid datetime","path":[0,"created_at"]}</li><li class="card">{"code":"invalid_type","expected":"boolean","received":"string","path":[0,"is_active"],"message":"Expected boolean, received string"}</li><li class="card">{"code":"invalid_type","expected":"string","received":"number","path":[0,"tags",1],"message":"Expected string, received number"}</li><li class="card">{"code":"invalid_type","expected":"string","received":"number","path":[0,"address","street"],"message":"Expected string, received number"}</li><li class="card">{"code":"invalid_type","expected":"string","received":"undefined","path":[0,"address","postal_code"],"message":"Required"}</li><li class="card">{"code":"invalid_type","expected":"boolean","received":"string","path":[0,"preferences","notifications"],"message":"Expected boolean, received string"}</li><li class="card">{"code":"invalid_type","expected":"number","received":"string","path":[0,"preferences","items_per_page"],"message":"Expected number, received string"}</li><li class="card">{"code":"invalid_type","expected":"string","received":"null","path":[1,"name"],"message":"Expected string, received null"}</li><li class="card">{"validation":"email","code":"invalid_string","message":"Invalid email","path":[1,"email"]}</li><li class="card">{"code":"invalid_type","expected":"string","received":"null","path":[1,"created_at"],"message":"Expected string, received null"}</li><li class="card">{"code":"invalid_type","expected":"string","received":"boolean","path":[1,"tags",1],"message":"Expected string, received boolean"}</li><li class="card">{"code":"invalid_type","expected":"string","received":"undefined","path":[1,"address","city"],"message":"Required"}</li><li class="card">{"code":"invalid_type","expected":"string","received":"null","path":[1,"preferences","theme"],"message":"Expected string, received null"}</li><li class="card">{"code":"invalid_type","expected":"string","received":"null","path":[2,"id"],"message":"Expected string, received null"}</li><li class="card">{"code":"invalid_type","expected":"number","received":"null","path":[2,"age"],"message":"Expected number, received null"}</li><li class="card">{"code":"invalid_string","validation":"datetime","message":"Invalid datetime","path":[2,"created_at"]}</li><li class="card">{"code":"invalid_type","expected":"boolean","received":"string","path":[2,"is_active"],"message":"Expected boolean, received string"}</li><li class="card">{"code":"invalid_type","expected":"array","received":"null","path":[2,"tags"],"message":"Expected array, received null"}</li><li class="card">{"code":"invalid_type","expected":"string","received":"undefined","path":[2,"address","city"],"message":"Required"}</li><li class="card">{"code":"invalid_type","expected":"number","received":"string","path":[2,"preferences","items_per_page"],"message":"Expected number, received string"}</li></ul>
+        </body>
+    </html>

@@ -1721,6 +1721,8 @@ summary:focus-visible,
     --plugin-link-text: var(--primary-color);
     --plugin-link-hover-bg: var(--primary-color);
     --plugin-link-hover-text: #ffffff;
+    --plugin-link-sample-bg: var(--primary-color);
+    --plugin-link-sample-hover-bg: #000000;
     background: var(--bg-card);
     border-radius: var(--border-radius-lg);
     padding: var(--spacing-lg);
@@ -1765,6 +1767,8 @@ summary:focus-visible,
     --plugin-link-text: #0f8a52;
     --plugin-link-hover-bg: rgba(15, 138, 82, 0.18);
     --plugin-link-hover-text: #0b5c38;
+    --plugin-link-sample-bg: #0b5c38;
+    --plugin-link-sample-hover-bg: #073a23;
     border-color: rgba(15, 138, 82, 0.3);
 }
 
@@ -1776,6 +1780,8 @@ summary:focus-visible,
     --plugin-link-text: #b91c1c;
     --plugin-link-hover-bg: rgba(185, 28, 28, 0.18);
     --plugin-link-hover-text: #7f1212;
+    --plugin-link-sample-bg: #7f1212;
+    --plugin-link-sample-hover-bg: #560c0c;
     border-color: rgba(185, 28, 28, 0.3);
 }
 
@@ -1787,6 +1793,8 @@ summary:focus-visible,
     --plugin-link-text: #1d4ed8;
     --plugin-link-hover-bg: rgba(29, 78, 216, 0.18);
     --plugin-link-hover-text: #142f8a;
+    --plugin-link-sample-bg: #142f8a;
+    --plugin-link-sample-hover-bg: #0d1f5c;
     border-color: rgba(29, 78, 216, 0.3);
 }
 
@@ -1798,6 +1806,8 @@ summary:focus-visible,
     --plugin-link-text: #2b303b;
     --plugin-link-hover-bg: rgba(86, 94, 109, 0.18);
     --plugin-link-hover-text: #161a22;
+    --plugin-link-sample-bg: #161a22;
+    --plugin-link-sample-hover-bg: #000000;
     border-color: rgba(86, 94, 109, 0.35);
 }
 
@@ -1909,6 +1919,7 @@ summary:focus-visible,
 
 .plugin-links {
     display: flex;
+    flex-wrap: wrap;
     gap: var(--spacing-md);
 }
 
@@ -1938,6 +1949,21 @@ summary:focus-visible,
     color: var(--plugin-link-hover-text);
     background: var(--plugin-link-hover-bg);
     border-color: var(--plugin-link-hover-bg);
+}
+
+/* Distinctive filled treatment for the sample-report link so it isn't mistaken for NPM/GitHub */
+.plugin-link--sample {
+    background: var(--plugin-link-sample-bg);
+    color: #ffffff;
+    border-color: var(--plugin-link-sample-bg);
+    font-weight: 600;
+}
+
+.plugin-link--sample:hover,
+.plugin-link--sample:focus-visible {
+    background: var(--plugin-link-sample-hover-bg);
+    color: #ffffff;
+    border-color: var(--plugin-link-sample-hover-bg);
 }
 
 .legacy-badge {

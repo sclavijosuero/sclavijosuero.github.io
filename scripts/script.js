@@ -1701,7 +1701,7 @@ function renderFallbackPlugins(container) {
             npmUrl: 'https://www.npmjs.com/package/wick-a11y',
             icon: 'fas fa-universal-access',
             pluginImage: 'https://raw.githubusercontent.com/sclavijosuero/wick-a11y/main/images/full-overview.gif',
-            outputSample: 'samples/Accessibility Report --- accessibility-tests-samples.js --- Test Sample Page Accessibility - All levels of severity and all rules (5-8-2026 4_37_18 PM)\Accessibility Report.html'
+            outputSample: 'samples/Accessibility Report --- accessibility-tests-samples.js --- Test Sample Page Accessibility - All levels of severity and all rules (5-8-2026 4_37_18 PM)/Accessibility Report.html'
         },
         {
             name: 'cypress-schema-validator',
@@ -1721,7 +1721,8 @@ function renderFallbackPlugins(container) {
             githubUrl: 'https://github.com/sclavijosuero/cypress-flaky-test-audit',
             npmUrl: 'https://www.npmjs.com/package/cypress-flaky-test-audit',
             icon: 'fas fa-random',
-            pluginImage: 'https://raw.githubusercontent.com/sclavijosuero/cypress-flaky-test-audit/main/assets/overview.gif'
+            pluginImage: 'https://raw.githubusercontent.com/sclavijosuero/cypress-flaky-test-audit/main/assets/overview.gif',
+            outputSample: 'samples/flaky-demo.html'
         },
         {
             name: 'wick-dom-observer',
@@ -1742,7 +1743,7 @@ function renderFallbackPlugins(container) {
             npmUrl: 'https://www.npmjs.com/package/pw-api-plugin',
             icon: 'fas fa-theater-masks',
             pluginImage: 'https://raw.githubusercontent.com/sclavijosuero/pw-api-plugin/main/videos/overview.gif',
-            outputSample: 'samples/flaky-demo.html'
+            outputSample: 'samples/pw-api-post-200.html'
         },
         {
             name: 'playwright-schema-validator',
@@ -1752,7 +1753,8 @@ function renderFallbackPlugins(container) {
             githubUrl: 'https://github.com/sclavijosuero/playwright-schema-validator',
             npmUrl: 'https://www.npmjs.com/package/playwright-schema-validator',
             icon: 'fas fa-theater-masks',
-            pluginImage: 'https://raw.githubusercontent.com/sclavijosuero/playwright-ajv-schema-validator/main/videos/overview.gif'
+            pluginImage: 'https://raw.githubusercontent.com/sclavijosuero/playwright-ajv-schema-validator/main/videos/overview.gif',
+            outputSample: 'samples/schema-validator-simple.html'
         },
         {
             name: 'core-ajv-schema-validator',
@@ -1874,6 +1876,13 @@ function createFallbackPluginCard(plugin) {
 
     const legacyBadge = plugin.isLegacy ? '<span class="legacy-badge">Legacy</span>' : '';
 
+    const sampleLink = plugin.outputSample ? `
+            <a href="${encodeURI(plugin.outputSample)}" target="_blank" rel="noopener" class="plugin-link plugin-link--sample" aria-label="View ${plugin.name} sample report (opens in new tab)">
+                <i class="fas fa-file-code"></i>
+                Sample
+            </a>
+    ` : '';
+
     card.innerHTML = `
         <div class="plugin-header">
             <div class="plugin-icon">
@@ -1904,7 +1913,7 @@ function createFallbackPluginCard(plugin) {
             <a href="${plugin.githubUrl}" target="_blank" rel="noopener" class="plugin-link">
                 <i class="fab fa-github"></i>
                 GitHub
-            </a>
+            </a>${sampleLink}
         </div>
     `;
 

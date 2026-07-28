@@ -1,0 +1,136 @@
+
+<html>
+        <head>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/vs.min.css"/>
+            <style>
+    .pw-card { box-shadow: 0 4px 8px 0 #0000004D; transition: 0.3s; }
+    .pw-card:hover { box-shadow: 0 8px 16px 0 #00000080; background-color: #ADD8E6;}
+    .pw-api-container { color: #282828; }
+    .pw-api-call { background-color: #C8E6F0; border-radius: 8px; margin: 35px 12px; padding: 10px 15px; text-align: left; font-family: monospace; }
+    .pw-api-request { text-align: left; padding-bottom: 1em; }
+    .pw-api-response { text-align: left; margin-top: 1em; }
+    .pw-api-request .title, .pw-api-response .title { color: #282828; font-weight: 800; font-size: 1.8em; line-height: 2em; padding-bottom: 18px; }
+    .pw-api-request .title-property, .pw-api-response .title-property { color: #3C3C3C; font-weight: 800; font-size: 1.3em; }
+    .property { padding: 10px 0px; cursor: pointer;display: flex; color: #464646; font-weight: 800; font-size: 1.2em; margin: 10px 0 0 10px; border-radius: 6px 6px 0 0; }
+    .pw-api-hljs { font-size: 1.1em;}
+
+    .pw-api-1xx { color: #03989E!important; }
+    .pw-api-2xx { color: #008036!important; }
+    .pw-api-3xx { color: #D96220!important; }
+    .pw-api-4xx { color: #C80000!important; }
+    .pw-api-5xx { color: #A0141C!important; }
+
+    .pw-always-selected { flex-wrap: wrap; background: #EEFBFF; }
+    .pw-data-tabs { display: flex; flex-wrap: wrap; }
+    .pw-data-tabs [type="radio"] { display: none; }
+    .pw-tab-label { padding: 10px 16px; cursor: pointer; border-width: 4px 3px 0 3px; border-radius: 6px 6px 0 0; border-color: #EEFBFF; border-style: solid; }
+    .pw-tab-label:hover { color: #098085; }
+    .pw-tab-content { width: 100%; order: 1; display: none; }
+    .pw-data-tabs [type="radio"]:checked + label + .pw-tab-content { display: block; }
+    .pw-data-tabs [type="radio"]:checked + label { background: #EEFBFF; border: 0px;}
+
+    .hljs { color: #000000; background: #EEFBFF; text-wrap: wrap; overflow-wrap: break-word; padding: 6px; margin: 1px 0 15px 10px; border-radius: 6px 6px 6px 6px; line-height: 1.5em; }
+    .hljs-attr { color: #FF0000; }
+    .hljs-addition, .hljs-attribute, .hljs-literal, .hljs-section, .hljs-string, .hljs-template-tag, .hljs-template-variable, .hljs-title, .hljs-type { color: #A31515; }
+    .hljs-built_in, .hljs-keyword, .hljs-name, .hljs-selector-tag, .hljs-tag { color: #0000FF; }
+</style>
+        </head>
+        <body>
+            <div class="pw-api-call pw-card">
+        <div class="pw-api-request">
+        <label class="title">REQUEST - </label>
+        <label class="title-property">(METHOD: PUT)</label>
+        </br>
+
+        <label class="property">URL</label>
+        <pre class="hljs pw-api-hljs">https://jsonplaceholder.typicode.com/posts/1</b></pre>
+        <div class="pw-req-data-tabs-60730343 pw-data-tabs">
+             <input type="radio" name="pw-req-data-tabs-60730343" id="pw-req-body-60730343" checked="checked">
+        <label for="pw-req-body-60730343" class="property pw-tab-label">BODY</label>
+        <div class="pw-tab-content">
+           <pre class="hljs" id="req-body-60730343" data-tab-type="req-body"><span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">&quot;id&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;title&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;foo&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;body&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;bar&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;userId&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span>
+<span class="hljs-punctuation">}</span></pre>
+        </div>
+             <input type="radio" name="pw-req-data-tabs-60730343" id="pw-req-headers-60730343" >
+        <label for="pw-req-headers-60730343" class="property pw-tab-label">HEADERS</label>
+        <div class="pw-tab-content">
+           <pre class="hljs" id="req-headers-60730343" data-tab-type="req-headers"><span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">&quot;Content-type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;application/json; charset=UTF-8&quot;</span>
+<span class="hljs-punctuation">}</span></pre>
+        </div>
+             <input type="radio" name="pw-req-data-tabs-60730343" id="pw-req-params-60730343" >
+        <label for="pw-req-params-60730343" class="property pw-tab-label">PARAMS</label>
+        <div class="pw-tab-content">
+           <pre class="hljs" id="req-params-60730343" data-tab-type="req-params"><span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">&quot;_limit&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1000</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;_details&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span>
+<span class="hljs-punctuation">}</span></pre>
+        </div>
+             
+             
+             
+             <input type="radio" name="pw-req-data-tabs-60730343" id="pw-req-other-options-config-60730343" >
+        <label for="pw-req-other-options-config-60730343" class="property pw-tab-label">OTHER OPTIONS/CONFIG</label>
+        <div class="pw-tab-content">
+           <pre class="hljs" id="req-other-options-config-60730343" data-tab-type="req-other-options-config"><span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">&quot;timeout&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">2000</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;maxRetries&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span>
+<span class="hljs-punctuation">}</span></pre>
+        </div>
+        </div>
+    </div>
+        <hr>
+        <div class="pw-api-response">
+        <label class="title">RESPONSE - </label>
+        <label class="title-property pw-api-2xx">(STATUS: 200 - OK)</label><label class="title-property"> - Duration aprox. 245ms</label>
+        <br>
+        <div class="pw-res-data-tabs-60730343 pw-data-tabs">
+             <input type="radio" name="pw-res-data-tabs-60730343" id="pw-res-body-60730343" checked="checked">
+        <label for="pw-res-body-60730343" class="property pw-tab-label">BODY</label>
+        <div class="pw-tab-content">
+            <pre class="hljs" id="res-body-60730343" data-tab-type="res-body"><span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">&quot;id&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;title&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;foo&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;body&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;bar&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;userId&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span>
+<span class="hljs-punctuation">}</span></pre>
+        </div>
+             <input type="radio" name="pw-res-data-tabs-60730343" id="pw-res-headers-60730343" >
+        <label for="pw-res-headers-60730343" class="property pw-tab-label">HEADERS</label>
+        <div class="pw-tab-content">
+            <pre class="hljs" id="res-headers-60730343" data-tab-type="res-headers"><span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">&quot;date&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Tue, 28 Jul 2026 21:30:55 GMT&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;content-type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;application/json; charset=utf-8&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;transfer-encoding&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;chunked&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;connection&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;keep-alive&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;access-control-allow-credentials&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;true&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;cache-control&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;no-cache&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;etag&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;W/\&quot;3f-Z4yJeVFK+b94QunVdPorc7PTMlI\&quot;&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;expires&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;-1&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;nel&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;{\&quot;report_to\&quot;:\&quot;heroku-nel\&quot;,\&quot;response_headers\&quot;:[\&quot;Via\&quot;],\&quot;max_age\&quot;:3600,\&quot;success_fraction\&quot;:0.01,\&quot;failure_fraction\&quot;:0.1}&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;pragma&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;no-cache&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;report-to&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;{\&quot;group\&quot;:\&quot;heroku-nel\&quot;,\&quot;endpoints\&quot;:[{\&quot;url\&quot;:\&quot;https://nel.heroku.com/reports?s=CKoKjIPDFKQKR69Xt4ThMMPj%2BiJLF69dDi9QsWOuA%2FU%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1785274255\&quot;}],\&quot;max_age\&quot;:3600}&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;reporting-endpoints&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;heroku-nel=\&quot;https://nel.heroku.com/reports?s=CKoKjIPDFKQKR69Xt4ThMMPj%2BiJLF69dDi9QsWOuA%2FU%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1785274255\&quot;&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;server&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;cloudflare&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;vary&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Origin, Accept-Encoding&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;via&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;2.0 heroku-router&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;x-content-type-options&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;nosniff&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;x-powered-by&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Express&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;x-ratelimit-limit&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;1000&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;x-ratelimit-remaining&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;996&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;x-ratelimit-reset&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;1785274283&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;cf-cache-status&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;DYNAMIC&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;content-encoding&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;br&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;cf-ray&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;a226fcdf7b46afe8-PDX&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;alt-svc&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;h3=\&quot;:443\&quot;; ma=86400&quot;</span>
+<span class="hljs-punctuation">}</span></pre>
+        </div>
+         </div>
+    </div>
+    </div>
+        </body>
+    </html>
