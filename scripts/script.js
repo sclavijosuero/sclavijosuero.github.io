@@ -132,7 +132,7 @@ const COMMUNITY_FEATURES = [
         title: "Unlocking the Mystery: Deciphering the Enigmatic Code of URL's Glob Patterns in cy.intercept()",
         articleUrl: 'https://dev.to/sebastianclavijo/unlocking-the-mystery-deciphering-the-enigmatic-code-of-urls-glob-patterns-in-cyintercept-3mgg',
         outlets: [
-            { name: '📰 Critical Continuous Quality: MoT Weekly – Issue 492 (Nov 2024)', url: 'https://www.ministryoftesting.com/newsletter/critical-continuous-quality-mot-weekly-issue-492' }
+            { name: '📰 Critical Continuous Quality: MoT Weekly - Issue 492 (Nov 2024)', url: 'https://www.ministryoftesting.com/newsletter/critical-continuous-quality-mot-weekly-issue-492' }
         ]
     },
     {
@@ -160,15 +160,15 @@ const COMMUNITY_FEATURES = [
         articleUrl: 'https://dev.to/sebastianclavijo/my-top-191-favorite-cypress-plugins-for-testing-with-wick-like-precision-3fhh',
         outlets: [
             { name: '📰 Software Testing Weekly Issue #259 (Feb 2025)', url: 'https://softwaretestingweekly.com/issues/259' },
-            { name: "📰 How To Pick Cypress Plugins You Can Trust – Gleb Bahmutov's Article", url: 'https://glebbahmutov.com/blog/how-to-pick-cypress-plugins/' }
+            { name: "📰 How To Pick Cypress Plugins You Can Trust - Gleb Bahmutov's Article", url: 'https://glebbahmutov.com/blog/how-to-pick-cypress-plugins/' }
         ]
     },
     {
         title: 'The Test Drama (The Opening Salvo): Cypress vs Playwright Installation - The Good, The Bad, and the... Bug-ly!',
         articleUrl: 'https://dev.to/sebastianclavijo/the-test-drama-the-opening-salvo-cypress-vs-playwright-installation-the-good-the-bad-and-4hm6',
         outlets: [
-            { name: '📰 Gateway to the MoTaverse: MoT Weekly – Issue 502 (Jan 2025)', url: 'https://www.linkedin.com/pulse/gateway-motaverse-mot-weekly-issue-502-ministry-of-testing-inl6e/' },
-            { name: "📰 Cypress Tips January 2025 – Gleb Bahmutov's Newsletter", url: 'https://cypresstips.substack.com/p/cypress-tips-january-2025' },
+            { name: '📰 Gateway to the MoTaverse: MoT Weekly - Issue 502 (Jan 2025)', url: 'https://www.linkedin.com/pulse/gateway-motaverse-mot-weekly-issue-502-ministry-of-testing-inl6e/' },
+            { name: "📰 Cypress Tips January 2025 - Gleb Bahmutov's Newsletter", url: 'https://cypresstips.substack.com/p/cypress-tips-january-2025' },
             { name: '📰 Trending in Testing Weekly Newsletter #51 (Jan 2025)', url: 'https://trendingintesting.com/trending-in-testing-weekly-newsletter-51/' },
             { name: '📰 Software Testing Weekly Issue #258 (Feb 2025)', url: 'https://softwaretestingweekly.com/issues/258?#start' }
         ]
@@ -179,7 +179,7 @@ const COMMUNITY_FEATURES = [
         outlets: [
             { name: '📰 Software Testing Weekly Issue #269 (May 2025)', url: 'https://softwaretestingweekly.com/issues/269' },
             { name: '📰 Coding Jag by LamdaTest Issue #243 (May 2025)', url: 'https://www.linkedin.com/pulse/your-website-truly-accessible-find-out-now-lambdatest-s70yf/' },
-            { name: "📰 Cypress Tips April 2025 – Gleb Bahmutov's Newsletter", url: 'https://cypresstips.substack.com/p/cypress-tips-april-2025' }
+            { name: "📰 Cypress Tips April 2025 - Gleb Bahmutov's Newsletter", url: 'https://cypresstips.substack.com/p/cypress-tips-april-2025' }
         ]
     },
     {
@@ -240,7 +240,7 @@ const COMMUNITY_FEATURES = [
         articleUrl: 'https://dev.to/sebastianclavijo/cypress-flaky-testaudit-thriving-in-the-cypress-dual-verse-for-once-l4o',
         outlets: [
             { name: '📰 Software Testing Weekly Issue #298 (Jan 2026)', url: 'https://softwaretestingweekly.com/issues/298' },
-            { name: '📰 Gleb Bahmutov Newsletter – Cypress Tips January 2026', url: 'https://cypresstips.substack.com/p/cypress-tips-january-2026' },
+            { name: '📰 Gleb Bahmutov Newsletter - Cypress Tips January 2026', url: 'https://cypresstips.substack.com/p/cypress-tips-january-2026' },
             { name: '📰 Ministry of Testing - Cypress Content (Jan 2026)', url: 'https://www.ministryoftesting.com/software-testing-tools/cypress' }
         ]
     },
@@ -249,7 +249,7 @@ const COMMUNITY_FEATURES = [
         articleUrl: 'https://dev.to/sebastianclavijo/cypresspromiseall-and-cymapchain-two-hidden-gems-for-cypress-you-wont-let-go-once-you-try-20mj',
         outlets: [
             { name: '📰 Software Testing Notes Issue #201 (Jan 2026)', url: 'https://softwaretestingnotes.substack.com/p/issue-201-software-testing-notes' },
-            { name: '📰 Gleb Bahmutov Newsletter – Cypress Tips January 2026', url: 'https://cypresstips.substack.com/p/cypress-tips-january-2026' },
+            { name: '📰 Gleb Bahmutov Newsletter - Cypress Tips January 2026', url: 'https://cypresstips.substack.com/p/cypress-tips-january-2026' },
             { name: '📰 Software Testing Weekly Issue #301 (Feb 2026)', url: 'https://softwaretestingweekly.com/issues/301' },
         ]
     },
@@ -258,7 +258,7 @@ const COMMUNITY_FEATURES = [
         articleUrl: 'https://dev.to/sebastianclavijo/wick-a11y-v301-cypress-v16-ready-upgrade-without-fear-fully-backward-compatible-77m',
         outlets: [
             { name: '📽️ TestGuild News Show (March, 2026)', url: 'https://www.linkedin.com/feed/update/urn:li:activity:7439410355727982592/' },
-            
+
             { name: '📰 TestGuild Automation in DevSecOps Newsletter (March, 2026)', url: 'https://www.linkedin.com/pulse/automation-debt-ai-validation-crisis-cypress-trust-gate-colantonio-ouate' }
         ]
     },
@@ -266,7 +266,7 @@ const COMMUNITY_FEATURES = [
         title: 'WICK-DOM-OBSERVER: The Deterministic Cypress Plugin for Fast Spinners, Blinking Toasts, Optional Overlays, and UI’s Most Wanted',
         articleUrl: 'https://dev.to/sebastianclavijo/wick-dom-observer-the-deterministic-cypress-plugin-for-fast-spinners-blinking-toasts-optional-4e59',
         outlets: [
-            { name: '📰 Gleb Bahmutov Newsletter – Cypress Tips March 2026', url: 'https://cypresstips.substack.com/p/cypress-tips-january-2026' },
+            { name: '📰 Gleb Bahmutov Newsletter - Cypress Tips March 2026', url: 'https://cypresstips.substack.com/p/cypress-tips-january-2026' },
             { name: '📰 Software Testing Weekly Issue #308', url: 'https://softwaretestingweekly.com/issues/308' }
         ]
     },
@@ -274,7 +274,8 @@ const COMMUNITY_FEATURES = [
         title: 'The Cypress i18n Mistake: Testing Words Instead of Meaning - i18next is your partner',
         articleUrl: 'https://dev.to/sebastianclavijo/the-cypress-i18n-mistake-testing-words-instead-of-meaning-i18next-is-your-partner-k8n',
         outlets: [
-            { name: '📰 Software Testing Weekly Issue #313', url: 'https://softwaretestingweekly.com/issues/313' }
+            { name: '📰 Software Testing Weekly Issue #313', url: 'https://softwaretestingweekly.com/issues/313' },
+            { name: '📰 Cypress.io Newsletter August edition (Aug 2026)', url: 'https://go.cypress.io/cypress-newsletter.-check-out-whats-new-with-cypress?ecid=&utm_campaign=20260804-August-Newsletter' }
         ]
     }
 ];
@@ -319,7 +320,7 @@ const PLUGIN_FEATURE_GROUPS = [
                     { name: "📽️ Joan Esquivel Montero - Cypress Accessibility Testing powered by WICK-A11Y", url: 'https://www.youtube.com/watch?v=LVxyJMW6EJw' },
                     { name: '📽️ Joan Esquivel Montero - Pruebas Automatizadas de Accesibilidad con Cypress + WickA11y', url: 'https://www.youtube.com/watch?v=96Sz2QCXE7I' },
                     { name: '📽️ Ioan Solderea - European Accessibility Act 2025: Compliance Deadline Nears', url: 'https://www.youtube.com/watch?v=joP3TNdLjF8' },
-                    { name: '📽️ Ioan Solderea - Wick A11y – Cypress Plugin for Automated Accessibility Checks', url: 'https://www.youtube.com/watch?v=tqeZTopcy50' },
+                    { name: '📽️ Ioan Solderea - Wick A11y - Cypress Plugin for Automated Accessibility Checks', url: 'https://www.youtube.com/watch?v=tqeZTopcy50' },
                     { name: "📽️ Peter Michael Souza Jr - 20 Things I'd Tell Myself If I Was Learning Cypress for the First Time - Video & Article", url: 'https://www.petermsouzajr.com/blog/20-things-id-tell-myself-if-i-was-learning-cypress-for-the-first-time' },
                     { name: '📽️ Test Guild News Show (Mar 2025)', url: 'https://www.linkedin.com/feed/update/urn:li:activity:7439410355727982592/' },
 
@@ -331,7 +332,7 @@ const PLUGIN_FEATURE_GROUPS = [
                     { name: "📰 James Wadley - Let's talk about wick-a11y…", url: 'https://dev.to/w4dd325/lets-talk-about-wick-a11y-1afa' },
                     { name: '📰 A11y-evaluation-tools Sheet', url: 'https://docs.google.com/spreadsheets/d/10CTezA0iDdaWggaqxuHawj-5u8YXdZeWBJsIkuvJ364/edit?gid=347324347#gid=347324347' },
                     { name: '📰 TestGuild Automation in DevSecOps Newsletter (Nov 2024)', url: 'https://www.linkedin.com/pulse/digital-testing-al-driven-mobile-attacks-plugins-more-joe-colantonio-lpume' },
-                    { name: '📰 Gleb Bahmutov Newsletter – Cypress Tips December 2024', url: 'https://cypresstips.substack.com/p/cypress-tips-december-2024' },
+                    { name: '📰 Gleb Bahmutov Newsletter - Cypress Tips December 2024', url: 'https://cypresstips.substack.com/p/cypress-tips-december-2024' },
                     { name: '📰 Ravindre Ramjiawan - Accessibility tools', url: 'https://techhub.iodigital.com/articles/accessibility-tools' },
                     { name: '📰 talent500.com - Exploring Open Source Accessibility Plugins in Cypress', url: 'https://talent500.com/blog/open-source-accessibility-plugins-cypress/' },
                     { name: "📰 Fatih Soysal - WICK-A11Y 1.4.0: Not Everything Needs to Fail the Test!", url: 'https://fatihsoysal.com/blog/wick-a11y-1-4-0-her-seyin-testi-basarisiz-olmasina-gerek-yok/' },
@@ -411,7 +412,7 @@ const PLUGIN_FEATURE_GROUPS = [
                 plugin: 'wick-dom-observer',
                 repoUrl: 'https://github.com/sclavijosuero/wick-dom-observer',
                 features: [
-                    { name: '📰 Gleb Bahmutov Newsletter – Cypress Tips March 2026', url: 'https://cypresstips.substack.com/p/cypress-tips-march-2026' },
+                    { name: '📰 Gleb Bahmutov Newsletter - Cypress Tips March 2026', url: 'https://cypresstips.substack.com/p/cypress-tips-march-2026' },
                     { name: '📰 Software Testing Weekly Issue #308', url: 'https://softwaretestingweekly.com/issues/308' }
                 ]
             }
@@ -1696,7 +1697,7 @@ function renderFallbackPlugins(container) {
             name: 'wick-a11y',
             group: 'green',
             description: 'Cypress plugin for configurable accessibility analysis supporting WCAG 2.2 (A-AAA). It provides a detailed list of violations in the Cypress log, visual feedback directly in the Cypress runner, and generates a comprehensive, severity-based HTML report that includes per-violation details, fix guidance, and a screenshot with interactive elements for each accessibility issue. The plugin uses axe-core and cypress-axe to deliver comprehensive accessibility testing.',
-            version: '3.0.1',
+            version: '3.0.2',
             githubUrl: 'https://github.com/sclavijosuero/wick-a11y',
             npmUrl: 'https://www.npmjs.com/package/wick-a11y',
             icon: 'fas fa-universal-access',
@@ -1707,7 +1708,7 @@ function renderFallbackPlugins(container) {
             name: 'cypress-schema-validator',
             group: 'green',
             description: 'Cypress plugin for API schema validation. It leverages the core-ajv-schema-validator powered by the AJV package (for plain JSON schemas, Swagger documents, and OpenAPI schemas) as well as the core-zod-schema-validator powered by the ZOD package (for Zod schemas).',
-            version: '1.0.1',
+            version: '2.0.0',
             githubUrl: 'https://github.com/sclavijosuero/cypress-schema-validator',
             npmUrl: 'https://www.npmjs.com/package/cypress-schema-validator',
             icon: 'fas fa-check-circle',
@@ -1717,7 +1718,7 @@ function renderFallbackPlugins(container) {
             name: 'cypress-flaky-test-audit',
             group: 'green',
             description: 'A Cypress plugin that tracks the order in which Cypress commands are entered into the command queue and delivers detailed, per-command analytics for your test runs. It helps identify flaky tests, performance bottlenecks, and commands that don’t execute, and presents audit results in the browser console, terminal output, and an HTML report with visual graphs of Cypress command execution',
-            version: '1.0.0',
+            version: '2.0.0',
             githubUrl: 'https://github.com/sclavijosuero/cypress-flaky-test-audit',
             npmUrl: 'https://www.npmjs.com/package/cypress-flaky-test-audit',
             icon: 'fas fa-random',
@@ -1728,7 +1729,7 @@ function renderFallbackPlugins(container) {
             name: 'wick-dom-observer',
             group: 'green',
             description: 'Cypress commands to reliably detect UI elements that may appear/disappear quickly: clickAndWatchForElement (click + observe) and watchForElement (observe only). It supports required/optional appearance, optional disappearance checks, custom timeout/polling, and minimum visible duration (mustLast) with a synchronous assertion callback.',
-            version: '1.0.2',
+            version: '1.0.4',
             githubUrl: 'https://github.com/sclavijosuero/wick-dom-observer',
             npmUrl: 'https://www.npmjs.com/package/wick-dom-observer',
             icon: 'fas fa-random',
