@@ -274,6 +274,8 @@ const COMMUNITY_FEATURES = [
         title: 'The Cypress i18n Mistake: Testing Words Instead of Meaning - i18next is your partner',
         articleUrl: 'https://dev.to/sebastianclavijo/the-cypress-i18n-mistake-testing-words-instead-of-meaning-i18next-is-your-partner-k8n',
         outlets: [
+            { name: '📽️ Ioan Solderea (Rester Test) - The Cypress i18n Mistake: Testing Words Instead of Meaning - i18next is your partner', url: 'https://www.youtube.com/watch?v=dNOIobfxcsM' },
+
             { name: '📰 Software Testing Weekly Issue #313', url: 'https://softwaretestingweekly.com/issues/313' },
             { name: '📰 Cypress.io Newsletter August edition (Aug 2026)', url: 'https://go.cypress.io/cypress-newsletter.-check-out-whats-new-with-cypress?ecid=&utm_campaign=20260804-August-Newsletter' }
         ]
@@ -317,10 +319,10 @@ const PLUGIN_FEATURE_GROUPS = [
                     { name: '📽️ Test Guild News Show (Sep 2024) - Voice Feature', url: 'https://www.linkedin.com/feed/update/urn:li:activity:7246557474520989696/' },
                     { name: '📽️ Test Guild News Show (Nov 2024)', url: 'https://www.linkedin.com/posts/joecolantonio_how-do-you-automate-across-multiple-systems-activity-7261785050751340545-8CM6?utm_source=share&utm_medium=member_desktop' },
                     { name: "📽️ Gleb Bahmutov - Check Page Accessibility Using wick-a11y Plugin (Oct 7, 2025)", url: 'https://www.youtube.com/watch?v=G1tpXv0hv0s' },
-                    { name: "📽️ Joan Esquivel Montero - Cypress Accessibility Testing powered by WICK-A11Y", url: 'https://www.youtube.com/watch?v=LVxyJMW6EJw' },
-                    { name: '📽️ Joan Esquivel Montero - Pruebas Automatizadas de Accesibilidad con Cypress + WickA11y', url: 'https://www.youtube.com/watch?v=96Sz2QCXE7I' },
-                    { name: '📽️ Ioan Solderea - European Accessibility Act 2025: Compliance Deadline Nears', url: 'https://www.youtube.com/watch?v=joP3TNdLjF8' },
-                    { name: '📽️ Ioan Solderea - Wick A11y - Cypress Plugin for Automated Accessibility Checks', url: 'https://www.youtube.com/watch?v=tqeZTopcy50' },
+                    { name: "📽️ Joan Esquivel Montero (JoanMedia) - Cypress Accessibility Testing powered by WICK-A11Y", url: 'https://www.youtube.com/watch?v=LVxyJMW6EJw' },
+                    { name: '📽️ Joan Esquivel Montero (JoanMedia) - Pruebas Automatizadas de Accesibilidad con Cypress + WickA11y', url: 'https://www.youtube.com/watch?v=96Sz2QCXE7I' },
+                    { name: '📽️ Ioan Solderea (Rester Test) - European Accessibility Act 2025: Compliance Deadline Nears', url: 'https://www.youtube.com/watch?v=joP3TNdLjF8' },
+                    { name: '📽️ Ioan Solderea (Rester Test) - Wick A11y - Cypress Plugin for Automated Accessibility Checks', url: 'https://www.youtube.com/watch?v=tqeZTopcy50' },
                     { name: "📽️ Peter Michael Souza Jr - 20 Things I'd Tell Myself If I Was Learning Cypress for the First Time - Video & Article", url: 'https://www.petermsouzajr.com/blog/20-things-id-tell-myself-if-i-was-learning-cypress-for-the-first-time' },
                     { name: '📽️ Test Guild News Show (Mar 2025)', url: 'https://www.linkedin.com/feed/update/urn:li:activity:7439410355727982592/' },
 
@@ -338,7 +340,7 @@ const PLUGIN_FEATURE_GROUPS = [
                     { name: "📰 Fatih Soysal - WICK-A11Y 1.4.0: Not Everything Needs to Fail the Test!", url: 'https://fatihsoysal.com/blog/wick-a11y-1-4-0-her-seyin-testi-basarisiz-olmasina-gerek-yok/' },
                     { name: '📰 testdriver.ai - How to Effectively Use Accessibility Testing Tools in Your Development Process', url: 'https://testdriver.ai/articles/how-to-effectively-use-accessibility-testing-tools-in-your-development-process' },
                     { name: '📰 Software Testing Notes Issue #157', url: 'https://softwaretestingnotes.substack.com/p/issue-157-software-testing-notes' },
-                    { name: "📰 Ioan Solderea - Understanding the European Accessibility Act 2025: Compliance is Key", url: 'https://dev.to/cypress/understanding-the-european-accessibility-act-2025-compliance-is-key-3fif' },
+                    { name: "📰 Ioan Solderea (Rester Test) - Understanding the European Accessibility Act 2025: Compliance is Key", url: 'https://dev.to/cypress/understanding-the-european-accessibility-act-2025-compliance-is-key-3fif' },
                     { name: '📰 Ádám Szentiványi - Comparison of Accessibility Tools', url: 'https://prezi.com/p/aklj2f6-bviu/comparison-of-accessibility-tools/' },
                     { name: '📰 Vast Green: The Accessibility Improvement Act - BFSG - Conclusion', url: 'https://vast-green.com/bfsg-abschluss/' },
                     { name: '📰 Kite Metric: Understanding the European Accessibility Act (EAA) 2025: Ensuring Digital Inclusion', url: 'https://kitemetric.com/blogs/understanding-the-european-accessibility-act-eaa-2025-ensuring-digital-inclusion#recommended-accessibility-testing-tools' },
@@ -383,7 +385,7 @@ const PLUGIN_FEATURE_GROUPS = [
                     { name: '🌐 Cypress.io Product Blog - Elevate Your Cypress Testing: Top 10 Essential Plugins', url: 'https://www.cypress.io/blog/elevate-your-cypress-testing-top-10-essential-plugins?utm_medium=blog&utm_source=social_media&utm_term=linkedin&utm_content=10_plugins' },
                     { name: '🌐 testdev.tools - cypress-ajv-schema-validator', url: 'https://testdev.tools/cypress-ajv-schema-validator/' },
 
-                    { name: '📽️ Joan Esquivel Montero - Cypress API Testing: AJV Schema Validator', url: 'https://www.youtube.com/watch?v=SPmJvH5mYaU' },
+                    { name: '📽️ Joan Esquivel Montero (JoanMedia) - Cypress API Testing: AJV Schema Validator', url: 'https://www.youtube.com/watch?v=SPmJvH5mYaU' },
                     { name: '📽️ Murat Ozcan - Schema validation using cypress-ajv-schema-validator vs Optic', url: 'https://www.youtube.com/watch?v=ysCADOh9aJU&t=13s' },
                     { name: '📽️ Murat Ozcan - Demo comparing API e2e vs Schema testing', url: 'https://www.youtube.com/watch?v=ePjcKMq4c2o' },
 
