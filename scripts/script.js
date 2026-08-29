@@ -351,6 +351,7 @@ const PLUGIN_FEATURE_GROUPS = [
                     { name: '📰 Cypress.io - Plugin Select: wick-a11y', url: 'https://www.linkedin.com/posts/cypress.io_wick-a11y-plugin-select-accessibility-activity-7452385761556996098-s5YW/' },
                     { name: '📰 Vitaly Skadorva - Accessibility Testing: Best Practices', url: 'https://dev.to/vitalyskadorva/accessibility-testing-best-practices-3li9' },
                     { name: '📰 nevercodealone.de - Was ist Axe DevTools mit Cypress?', url: 'https://nevercodealone.de/de/accessibility-webdesign-frontend/axe-devtools-cypress-accessibility-testing' },
+                    { name: "📰 Abigail Armijo - Solution to Challenge 4 - Accessibility testing", url: 'https://dev.to/abigail_armijo/solution-to-challenge-4-accessibility-testing-3ggn' },
 
                     { name: "✏️ Gleb Bahmutov - Testing The Swag Store Course (Bonus 74: Check accessibility issues)", url: 'https://cypress.tips/courses/swag-store/lessons/bonus74' },
                     { name: "✏️ Gleb Bahmutov - TDD Calculator Course (Lesson e6 & e7: Catch accessibility issues)", url: 'https://cypress.tips/courses/tdd-calculator/lessons/e6' },
