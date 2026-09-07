@@ -277,7 +277,8 @@ const COMMUNITY_FEATURES = [
             { name: '📽️ Ioan Solderea (Rester Test) - The Cypress i18n Mistake: Testing Words Instead of Meaning - i18next is your partner', url: 'https://www.youtube.com/watch?v=dNOIobfxcsM' },
 
             { name: '📰 Software Testing Weekly Issue #313', url: 'https://softwaretestingweekly.com/issues/313' },
-            { name: '📰 Cypress.io Newsletter August edition (Aug 2026)', url: 'https://go.cypress.io/cypress-newsletter.-check-out-whats-new-with-cypress?ecid=&utm_campaign=20260804-August-Newsletter' }
+            { name: '📰 Cypress.io Newsletter August edition (Aug 2026)', url: 'https://go.cypress.io/cypress-newsletter.-check-out-whats-new-with-cypress' },
+            { name: '📰 Cypress.io Newsletter September edition (Sep 2026)', url: 'https://go.cypress.io/cypress-newsletter-september-2026' }
         ]
     }
 ];
